@@ -5,123 +5,82 @@
 	<title>Kurbikus</title>
 	<meta content="width=device-width,minimum-scale=1,initial-scale=1" name="viewport">
 	<style>
-		html, body {
-			margin: 0;
-			padding: 0;
-			position: fixed;
-		}
-
-		::-webkit-scrollbar {
-			/*width: 5px;*/
-			/*height: 5px;*/
-		}
-
-		::-webkit-scrollbar-button {
-			/*width: 5px;*/
-			/*height: 5px;*/
-		}
-
-		div {
+		* {
 			box-sizing: border-box;
 		}
 
-		body {
-			/*background: #111;*/
-		}
-
-		.horizontal-scroll-wrapper {
-			position: fixed;
-			display: block;
-			/*top: -270px;*/
-			/*left: 270px;*/
-
-			top: 0;
-			left: 0;
-			width: 100vh;
-			height: 100vw;
+		html, body {
 			margin: 0;
-			/*background: #abc;*/
-			overflow-y: auto;
-			overflow-x: hidden;
-			transform: rotate(-90deg) scaleX(-1);
-			transform-origin: left top;
-			-webkit-overflow-scrolling: touch;
-			background-color: black;
+			padding: 0;
 		}
 
-		.horizontal-scroll-wrapper > div {
-			display: block;
-			/*padding: 5px;*/
-			/*background: #cab;*/
-			transform: rotate(90deg) scaleY(-1);
-			transform-origin: left top;
-		}
-
-		.squares {
-			/*padding: 60px 0 0 0;*/
-		}
-
-		.squares > div {
-			/*width: 60px;*/
-			/*height: 60px;*/
-			/*margin: 10px;*/
-		}
-
-		.rectangles {
-			/*top: 100px;*/
-			/*padding: 100px 0 0 0;*/
-
-		}
-
-		.rectangles > div {
-			width: 100%;
-			height: 100%;
-			/*margin: 50px 10px;*/
-			/*padding: 5px;*/
-			/*background: #cab;*/
-			/*transform: rotate(90deg);*/
-			/*transform-origin: right top;*/
-		}
-
-		.slide {
+		main > .section-wrapper > section {
 			height: 100vh;
 			width: 100vw;
 			background-color: #111;
 			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
-		.rectangles > div:nth-child(odd) > .slide {
+		main > .section-wrapper:nth-child(odd) > section {
 			background-color: #999;
+		}
+
+		@media (min-width: 1025px) {
+			main {
+				position: fixed;
+				width: 100vh;
+				height: 100vw;
+				overflow-y: auto;
+				overflow-x: hidden;
+				transform: rotate(-90deg) scaleX(-1);
+				transform-origin: left top;
+			}
+
+			main > .section-wrapper {
+				transform: rotate(90deg) scaleY(-1);
+				transform-origin: left top;
+				width: 100%;
+				height: 100%;
+			}
+
+			main > .section-wrapper > section {
+				height: 100vh;
+				width: 100vw;
+			}
 		}
 
 	</style>
 </head>
 <body class="">
-<div class="horizontal-scroll-wrapper  rectangles">
-	<div>
-		<div class="slide">item 1</div>
+<main>
+	<div class="section-wrapper">
+		<section>
+			Content
+		</section>
 	</div>
-	<div>
-		<div class="slide">item 2</div>
+	<div class="section-wrapper">
+		<section>
+			Content
+		</section>
 	</div>
-	<div>
-		<div class="slide">item 3</div>
+	<div class="section-wrapper">
+		<section>
+			Content
+		</section>
 	</div>
-	<div>
-		<div class="slide">item 4</div>
+	<div class="section-wrapper">
+		<section>
+			Content
+		</section>
 	</div>
-	<div>
-		<div class="slide">item 4</div>
+	<div class="section-wrapper">
+		<section>
+			Content
+		</section>
 	</div>
-	<div>
-		<div class="slide">item 4</div>
-	</div>
-	<div>
-		<div class="slide">item 4</div>
-	</div>
-	<div>
-		<div class="slide">item 4</div>
-	</div>
-</div>
+</main>
 </body>
 </html>
