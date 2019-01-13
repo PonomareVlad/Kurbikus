@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kurbikus</title>
+	<style>
+		html,body{
+			margin: 0;
+			padding: 0;
+		}
+
+		::-webkit-scrollbar {
+			width: 0px;
+			height: 0px;
+		}
+
+		::-webkit-scrollbar-button {
+			width: 0px;
+			height: 0px;
+		}
+
+		div {
+			box-sizing: border-box;
+		}
+
+		body {
+			/*background: #111;*/
+		}
+
+		.horizontal-scroll-wrapper {
+			position: fixed;
+			display: block;
+			/*top: 50vw;*/
+			/*left: 50vh;*/
+			width: 100vmax;
+			height: 100vmax;
+			margin: 0;
+			/*background: #abc;*/
+			overflow-y: auto;
+			overflow-x: hidden;
+			transform: rotate(-90deg);
+			/*transform-origin: left top;*/
+		}
+
+		.horizontal-scroll-wrapper > div {
+			display: block;
+			/*padding: 5px;*/
+			/*background: #cab;*/
+			transform: rotate(90deg);
+			/*transform-origin: right top;*/
+		}
+
+		.squares {
+			/*padding: 60px 0 0 0;*/
+		}
+
+		.squares > div {
+			/*width: 60px;*/
+			/*height: 60px;*/
+			/*margin: 10px;*/
+		}
+
+		.rectangles {
+			/*top: 100px;*/
+			/*padding: 100px 0 0 0;*/
+
+		}
+
+		.rectangles > div {
+			width: 100vmax;
+			height: 100vmax;
+			/*margin: 50px 10px;*/
+			/*padding: 5px;*/
+			/*background: #cab;*/
+			transform: rotate(90deg);
+			/*transform-origin: right top;*/
+		}
+
+		.slide{
+			height: 100vh;
+			width: 100vw;
+			background-color: #111;
+			color: white;
+		}
+
+		.rectangles > div:nth-child(odd) > .slide{
+			background-color: #999;
+		}
+
+	</style>
+</head>
+<body class="">
+<div class="horizontal-scroll-wrapper  rectangles">
+	<div>
+		<div class="slide">item 1</div>
+	</div>
+	<div><div class="slide">item 2</div></div>
+	<div><div class="slide">item 3</div></div>
+	<div><div class="slide">item 4</div></div>
+	<div><div class="slide">item 4</div></div>
+	<div><div class="slide">item 4</div></div>
+	<div><div class="slide">item 4</div></div>
+	<div><div class="slide">item 4</div></div>
+</div>
+</body>
+</html>
