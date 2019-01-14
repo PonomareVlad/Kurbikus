@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Kurbikus</title>
 	<meta content="width=device-width,minimum-scale=1,initial-scale=1" name="viewport">
+	<link href="assets/css/fonts.css" rel="stylesheet">
 	<link href="assets/css/base.css" rel="stylesheet">
 	<link href="assets/css/desktop.css" media="(min-width: 1025px)" rel="stylesheet">
 </head>
@@ -13,18 +14,18 @@
 		<figure class="logo"></figure>
 		<nav>
 			<a href="#intro">Главная</a>
-			<a class="mobile-menu" href="#products">Продукты</a>
+			<a class="hide-in-desktop" href="#products">Продукты</a>
 			<a href="#about">О нас</a>
 			<a href="#command">Команда</a>
 			<a href="#contacts">Контакты</a>
 		</nav>
 	</div>
 	<div>
-		<div class="desktop-menu">
+		<div class="hide-in-mobile">
 			<a href="#">Обратная связь</a>
 			<a href="#">EN</a>
 		</div>
-		<div class="mobile-menu">
+		<div class="hide-in-desktop">
 			<a href="#">📞</a>
 			<a class="open-menu" href="#menu">☰</a>
 			<a class="close-menu" href="#">✕</a>
@@ -32,11 +33,11 @@
 	</div>
 	<div class="background-decoration"></div>
 </header>
-<main>
+<main class="horizontal-scroll">
 	<div class="section-wrapper">
 		<section id="intro">
-			<h1>Готовые мобильные приложения для строителей</h1>
-			<div class="section capture-form">
+			<h1 class="title">Готовые мобильные приложения для строителей</h1>
+			<div class="block capture-form">
 				<p>Установите AR-приложение и получите 2 модели дома в дополненной реальности бесплатно</p>
 				<form>
 					<input placeholder="Телефон" type="tel">
@@ -44,10 +45,10 @@
 					<button type="submit">Получить</button>
 				</form>
 			</div>
-			<div class="products" id="products">
+			<div class="products header-space" id="products">
 				<a class="product-item red" href="project.html">
-					<div class="product-button">
-						<div>
+					<div class="block product-button">
+						<div class="product-button-content">
 							<h3>Для сайта</h3>
 							<p>3D-калькулятор домов на вашем сайте</p>
 						</div>
@@ -71,16 +72,16 @@
 						</video>
 					</article>
 				</a>
-				<a class="product-item blue" href="magazine.html">
-					<div class="product-button">
+				<a class=" product-item blue" href="magazine.html">
+					<div class="block product-button">
 						<div>
 							<h3>AR - приложение</h3>
 							<p>Мобильный католог домов в дополенной реальности</p>
 						</div>
 					</div>
 				</a>
-				<a class="product-item yellow" href="foreman.html">
-					<div class="product-button">
+				<a class=" product-item yellow" href="foreman.html">
+					<div class="block product-button">
 						<div>
 							<h3>Мобильный прораб</h3>
 							<p>Котроль скрытых работ в дополненной реальности</p>

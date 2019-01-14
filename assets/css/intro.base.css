@@ -1,0 +1,135 @@
+section#intro {
+    display: flex;
+    flex-direction: column;
+}
+
+section#intro > .background-decoration:before {
+    content: '';
+    position: absolute;
+    top: -50vmin;
+    left: -25vmin;
+    width: 150vmin;
+    height: 150vmin;
+    transform: rotate(-15deg);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #34517f;
+}
+
+section#intro .title {
+    font-size: 33px;
+    font-weight: bold;
+    color: white;
+}
+
+section#intro .block {
+    border-radius: 15px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    padding: var(--root-padding);
+}
+
+section#intro .capture-form {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+section#intro .capture-form form {
+    display: flex;
+    flex-direction: column;;
+}
+
+section#intro .capture-form input {
+    -webkit-appearance: none;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+section#intro .capture-form button {
+    -webkit-appearance: none;
+    background: white;
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #34517f;
+}
+
+section#intro .products {
+
+}
+
+section#intro .products .product-item {
+    counter-increment: section;
+    display: block;
+    margin-top: 40px;
+    padding: unset;
+}
+
+section#intro .products .product-item > * {
+    display: none;
+}
+
+section#intro .products .product-item .product-button {
+    position: relative;
+    display: flex;
+    /*border-radius: 15px;*/
+    padding: 40px 15px;
+}
+
+section#intro .products .product-item:first-child .product-button {
+    margin-top: unset;
+}
+
+section#intro .products .product-item .product-button .product-button-content {
+
+}
+
+section#intro .product-button-content .title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+section#intro .product-button-content .caption {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+section#intro .products .product-item > .product-button:before {
+    content: counter(section);
+    font-size: 132px;
+    line-height: 132px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+section#intro .products .product-item > .product-button:after {
+    content: 'Узнать больше';
+    position: absolute;
+    bottom: var(--root-padding);
+    left: var(--root-padding);
+    text-decoration: underline;
+}
+
+.red *, .blue *, .yellow * {
+    color: white;
+}
+
+section#intro .red .product-button {
+    background-color: #661f1f;
+}
+
+section#intro .blue .product-button {
+    background-color: #34517f;
+}
+
+section#intro .yellow .product-button {
+    background-color: #f0b919;
+}

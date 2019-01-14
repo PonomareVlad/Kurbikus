@@ -1,0 +1,42 @@
+:root {
+    --root-padding: 45px;
+    --header-height: 80px;
+}
+
+header {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+header nav {
+    display: flex;
+}
+
+main {
+
+}
+
+main.horizontal-scroll {
+    position: fixed;
+    width: 100vh;
+    height: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(-90deg) scaleX(-1);
+    transform-origin: left top;
+}
+
+main.horizontal-scroll > .section-wrapper {
+    transform: rotate(90deg) scaleY(-1);
+    transform-origin: left top;
+    width: 100%;
+    height: 100%;
+}
+
+main > .section-wrapper > section {
+    height: 100vh;
+    width: 100vw;
+}
+
+.hide-in-desktop {
+    display: none !important;
+}
