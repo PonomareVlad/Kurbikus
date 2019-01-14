@@ -1,0 +1,329 @@
+@font-face {
+    font-family: Gilroy;
+    font-weight: normal;
+    src: url("../fonts/Gilroy-Regular.ttf");
+}
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: bold;
+    src: url("../fonts/Gilroy-Bold.ttf");
+}
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: 300;
+    src: url("../fonts/Gilroy-Light.ttf");
+}
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: 900;
+    src: url("../fonts/Gilroy-Heavy.ttf");
+}
+
+
+* {
+    box-sizing: border-box;
+    color: #121414;
+}
+
+:root {
+    --root-padding: 20px;
+    font-family: Gilroy, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--root-padding);
+    box-shadow: 0 2px 15px 0 rgba(124, 124, 124, 0.5);
+
+    font-size: 25px;
+    font-weight: 500;
+}
+
+header .logo {
+    background: url("../img/logo.png") no-repeat center/contain;
+    height: 52px;
+    width: 144px;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav {
+    display: none;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.open-menu, .close-menu {
+    display: inline-block;
+    height: 100%;
+    width: 50px;
+    font-size: 35px;
+    line-height: 50px;
+    margin-left: 10px;
+    margin-right: -10px;
+    text-align: center;
+}
+
+.close-menu {
+    display: none;
+}
+
+#menu:target {
+    background: none;
+    box-shadow: none;
+}
+
+#menu:target:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: calc(100% - (var(--root-padding) * 2));
+    left: var(--root-padding);
+    height: 1px;
+    background-color: white;
+}
+
+#menu:target * {
+    color: white;
+}
+
+#menu:target .logo {
+    background-image: url("../img/logo.gray.png");
+}
+
+#menu:target .open-menu {
+    display: none;
+}
+
+#menu:target .close-menu {
+    display: inline-block;
+}
+
+#menu:target nav {
+    display: flex;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#menu:target nav > * {
+    margin-bottom: 25px;
+}
+
+#menu > .background-decoration {
+    display: none;
+}
+
+#menu:target > .background-decoration {
+    display: initial;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#menu:target > .background-decoration:before {
+    content: '';
+    position: absolute;
+    top: -35vmin;
+    left: -25vmin;
+    width: 150vmin;
+    height: 150vmin;
+    transform: rotate(-15deg);
+    box-shadow: 0 8px 15px 0 rgba(61, 61, 61, 0.5);
+    background-color: #34517f;
+}
+
+#menu:target > .background-decoration:after {
+    content: '';
+    position: absolute;
+    top: -100vmin;
+    left: -25vmin;
+    width: 150vmin;
+    height: 150vmin;
+    transform: rotate(15deg);
+    box-shadow: 0 8px 15px 0 rgba(55, 55, 55, 0.5);
+    background-color: #34517f;
+}
+
+main > .section-wrapper > section {
+    display: flex;
+    flex-direction: column;
+    padding: var(--root-padding);
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+main > .section-wrapper > section, #products {
+    padding-top: calc(70px + var(--root-padding));
+}
+
+.products > .product-item > article {
+    display: none;
+}
+
+#intro > .background-decoration {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#intro > .background-decoration:before {
+    content: '';
+    position: absolute;
+    top: -50vmin;
+    left: -25vmin;
+    width: 150vmin;
+    height: 150vmin;
+    transform: rotate(-15deg);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #34517f;
+}
+
+#intro h1 {
+    font-size: 33px;
+    font-weight: 500;
+    color: white;
+}
+
+.section, .products .product-button {
+    border-radius: 15px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    padding: var(--root-padding);
+}
+
+section > *:first-child, .section > *:first-child, .products .product-button > div > *:first-child {
+    margin-top: unset;
+}
+
+.capture-form {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.capture-form form {
+    display: flex;
+    flex-direction: column;;
+}
+
+.capture-form input {
+    -webkit-appearance: none;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+}
+
+.capture-form button {
+    -webkit-appearance: none;
+    background: none;
+    font-size: 15px;
+    font-weight: 500;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #34517f;
+}
+
+#intro .products .product-item {
+    counter-increment: section;
+    display: block;
+    text-decoration: none;
+}
+
+.products .product-button {
+    position: relative;
+    margin-top: 40px;
+    /*padding-left: 90px;*/
+    display: flex;
+    padding: 15px;
+    padding-bottom: 40px;
+}
+
+.products .product-item:first-child .product-button {
+    margin-top: 0;
+}
+
+#intro .products .product-item > .product-button h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+#intro .products .product-item > .product-button p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#intro .products .product-item > .product-button:before {
+    content: counter(section);
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*width: 80px;*/
+    /*text-align: right;*/
+    font-size: 132px;
+    line-height: 132px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+#intro .products .product-item > .product-button:after {
+    content: 'Узнать больше';
+    position: absolute;
+    bottom: var(--root-padding);
+    left: var(--root-padding);
+    text-decoration: underline;
+}
+
+.red *, .blue *, .yellow * {
+    color: white;
+}
+
+.red .product-button {
+    background-color: #661f1f;
+}
+
+.blue .product-button {
+    background-color: #34517f;
+}
+
+.yellow .product-button {
+    background-color: #f0b919;
+}
