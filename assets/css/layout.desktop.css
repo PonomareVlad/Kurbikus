@@ -4,6 +4,11 @@
     --header-height: 80px;
 }
 
+.background-decoration {
+    width: 100vw;
+    height: 100vh;
+}
+
 header {
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
 }
@@ -130,10 +135,10 @@ main > .section-wrapper > section {
     font-weight: bold;
     color: white;
     margin-left: 30px;
+    cursor: pointer;
 }
 
 .close-feedback {
-    display: none;
     position: absolute;
     z-index: 1;
     left: 0;
@@ -142,6 +147,16 @@ main > .section-wrapper > section {
     width: 100vw;
     background: rgba(255, 255, 255, 0.7);
     color: transparent;
+    cursor: default;
+}
+
+@supports (-webkit-backdrop-filter: blur(15px)) {
+
+    .close-feedback {
+        background: rgba(255, 255, 255, 0.5);
+        -webkit-backdrop-filter: blur(15px)
+    }
+
 }
 
 .feedback-menu:target {

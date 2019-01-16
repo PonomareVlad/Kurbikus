@@ -33,6 +33,7 @@ section#intro .capture-form form {
 section#intro .capture-form input {
     border: none;
     height: 50px;
+    width: 100%;
     border-radius: initial;
     margin-bottom: unset;
     padding: unset;
@@ -45,12 +46,14 @@ section#intro .capture-form button {
     position: relative;
     font-size: 16px;
     height: 100%;
-    width: 200px;
+    min-width: 200px;
+    margin-right: 0;
     font-weight: bold;
     border-radius: 25px;
     border: unset;
     background-color: #34517f;
     color: var(--secondary-text-color);
+    cursor: pointer;
 }
 
 section#intro .capture-form button:before, section#intro .capture-form button:after {
@@ -100,6 +103,7 @@ section#intro .products .product-item:not(:first-child):before {
     height: calc(var(--product-button-height) - (20px * 2));
     margin-top: 20px;
     background: #34517f;
+    -webkit-transform: translate3d(0, 0, 0);
 }
 
 section#intro .products .product-item > .product-button {
@@ -236,11 +240,69 @@ section#intro .products .product-item:hover > article {
 }
 
 section#intro > .background-decoration:before {
-    display: none;
+    top: unset;
+    right: unset;
+    left: -47vmin;
+    bottom: -7vmin;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 25px;
+    background-color: #661f1f;
+    box-shadow: unset;
+    transform: rotate(-30deg);
 }
+
+section#intro > .background-decoration > figure {
+    display: block;
+    position: absolute;
+    top: -20vmin;
+    right: -35vmin;
+    width: 90vmin;
+    height: 90vmin;
+    border-radius: 25px;
+    transform: rotate(-30deg);
+    background-color: #34517f;
+    box-shadow: 0 2px 25px 0 #212121;
+}
+
+section#intro > .background-decoration > figure:nth-child(2) {
+    top: 20vmin;
+    right: -70vmin;
+    background-color: #661f1f;
+}
+
+section#intro > .background-decoration > figure:nth-child(3) {
+    top: -50vmin;
+    right: -50vmin;
+    background-color: #eec13b;
+}
+
+/*@supports (-webkit-backdrop-filter: blur(15px)) {
+    section#intro > .background-decoration > figure{
+        -webkit-backdrop-filter: blur(15px);
+    }
+    section#intro > .background-decoration > figure:nth-child(1){
+        background-color: rgba(52, 81, 127, 0.8);
+    }
+    section#intro > .background-decoration > figure:nth-child(2){
+        background-color: rgba(102, 31, 31, 0.8);
+    }
+    section#intro > .background-decoration > figure:nth-child(3){
+        background-color: rgba(238, 193, 59, 0.8);
+    }
+}*/
 
 .red *, .blue *, .yellow * {
     color: inherit;
+}
+
+@supports (-webkit-backdrop-filter: blur(15px)) {
+
+    section#intro .red .product-button {
+        -webkit-backdrop-filter: blur(15px);
+        background-color: rgba(102, 31, 31, 0.5);
+    }
+
 }
 
 section#intro .red.product-item:not(:hover) .product-button {
@@ -252,6 +314,15 @@ section#intro .red article > .content {
     background-color: rgba(102, 31, 31, 0.4) !important;
 }
 
+@supports (-webkit-backdrop-filter: blur(15px)) {
+
+    section#intro .blue .product-button {
+        -webkit-backdrop-filter: blur(15px);
+        background-color: rgba(52, 81, 127, 0.5);
+    }
+
+}
+
 section#intro .blue.product-item:not(:hover) .product-button {
     color: #34517f;
     background-color: white;
@@ -259,6 +330,15 @@ section#intro .blue.product-item:not(:hover) .product-button {
 
 section#intro .blue article > .content {
     background-color: rgba(52, 81, 127, 0.4) !important;
+}
+
+@supports (-webkit-backdrop-filter: blur(15px)) {
+
+    section#intro .yellow .product-button {
+        -webkit-backdrop-filter: blur(15px);
+        background-color: rgba(240, 185, 25, 0.5);
+    }
+
 }
 
 section#intro .yellow.product-item:not(:hover) .product-button {

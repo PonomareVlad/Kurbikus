@@ -32,6 +32,10 @@ a, a:active, a:visited {
     overflow: hidden;
 }
 
+.background-decoration * {
+    display: none;
+}
+
 header {
     position: fixed;
     z-index: 1000;
@@ -45,6 +49,13 @@ header {
     box-shadow: 0 2px 15px 0 rgba(124, 124, 124, 0.5);
     font-size: 25px;
     font-weight: 500;
+}
+
+@supports (-webkit-backdrop-filter: blur(15px)) {
+    header {
+        -webkit-backdrop-filter: blur(15px);
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 }
 
 header a:active {
@@ -91,7 +102,7 @@ header > .background-decoration:after {
     transform: rotate(15deg);
 }
 
-header nav, header:not(:target) .close-menu, header:target .open-menu, header:not(:target) > .background-decoration {
+header nav, header:not(:target) .close-menu, header:target .open-menu, header:not(:target) > .background-decoration, .feedback-menu, .close-feedback {
     display: none;
 }
 
@@ -145,10 +156,6 @@ main > .section-wrapper > section {
 
 main > .section-wrapper > section {
     padding-top: calc(var(--header-height) + var(--root-vertical-padding));
-}
-
-.feedback-menu {
-    display: none;
 }
 
 @media (max-width: 1024px) {
