@@ -95,16 +95,16 @@ header nav, header:not(:target) .close-menu, header:target .open-menu, header:no
     display: none;
 }
 
-header:target {
+header:target, .feedback-menu:target ~ header {
     background: none;
     box-shadow: none;
 }
 
-header:target * {
+header:target *, .feedback-menu:target ~ header * {
     color: white;
 }
 
-header:target:after {
+header:target:after, .feedback-menu:target ~ header:after {
     content: '';
     position: absolute;
     display: block;
@@ -115,7 +115,7 @@ header:target:after {
     background-color: white;
 }
 
-header:target .logo {
+header:target .logo, .feedback-menu:target ~ header .logo {
     background-image: url("../img/logo.gray.png");
 }
 
@@ -145,6 +145,10 @@ main > .section-wrapper > section {
 
 main > .section-wrapper > section {
     padding-top: calc(var(--header-height) + var(--root-vertical-padding));
+}
+
+.feedback-menu {
+    display: none;
 }
 
 @media (max-width: 1024px) {

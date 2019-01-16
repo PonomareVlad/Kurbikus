@@ -42,6 +42,7 @@ section#intro .capture-form input {
 }
 
 section#intro .capture-form button {
+    position: relative;
     font-size: 16px;
     height: 100%;
     width: 200px;
@@ -50,6 +51,21 @@ section#intro .capture-form button {
     border: unset;
     background-color: #34517f;
     color: var(--secondary-text-color);
+}
+
+section#intro .capture-form button:before, section#intro .capture-form button:after {
+    content: '';
+    position: absolute;
+    right: -70px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: url(../img/ios.svg) no-repeat center/25px;
+}
+
+section#intro .capture-form button:after {
+    right: -120px;
+    background: url(../img/android.svg) no-repeat center/30px;
 }
 
 section#intro .products {
