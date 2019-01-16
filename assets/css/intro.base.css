@@ -3,22 +3,10 @@ section#intro {
     flex-direction: column;
 }
 
-section#intro > .background-decoration:before {
-    content: '';
-    position: absolute;
-    top: -50vmin;
-    left: -25vmin;
-    width: 150vmin;
-    height: 150vmin;
-    transform: rotate(-15deg);
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
-    background-color: #34517f;
-}
-
-section#intro .title {
+section#intro > .title {
     font-size: 33px;
     font-weight: bold;
-    color: white;
+    color: var(--secondary-text-color);
 }
 
 section#intro .block {
@@ -29,9 +17,9 @@ section#intro .block {
 }
 
 section#intro .capture-form {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.25;
+    font-size: 15px;
+    line-height: 1.33;
+    color: var(--secondary-text-color);
 }
 
 section#intro .capture-form form {
@@ -79,7 +67,8 @@ section#intro .products .product-item > * {
 section#intro .products .product-item .product-button {
     position: relative;
     display: flex;
-    /*border-radius: 15px;*/
+    border-radius: 15px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
     padding: 40px 15px;
 }
 
@@ -118,8 +107,20 @@ section#intro .products .product-item > .product-button:after {
     text-decoration: underline;
 }
 
-.red *, .blue *, .yellow * {
-    color: white;
+section#intro > .background-decoration:before {
+    content: '';
+    position: absolute;
+    top: -50vh;
+    left: -25vmax;
+    width: 150vmax;
+    height: 100vh;
+    transform: rotate(-15deg);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #34517f;
+}
+
+.red, .blue, .yellow {
+    color: white !important;
 }
 
 section#intro .red .product-button {

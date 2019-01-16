@@ -1,5 +1,6 @@
 :root {
     --root-padding: 45px;
+    --root-vertical-padding: var(--root-padding);
     --header-height: 80px;
 }
 
@@ -7,8 +8,41 @@ header {
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
+header > div {
+    display: flex;
+    align-items: center;
+}
+
 header nav {
     display: flex;
+    margin-left: 50px;
+}
+
+header nav > a {
+    padding: 0 20px;
+    font-size: 20px;
+    line-height: var(--header-height);
+    font-weight: 500;
+}
+
+.feedback-button {
+    display: inline-block;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #34517f !important;
+    border: 1px solid #34517f;
+    width: 200px;
+}
+
+.language-button {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(18, 20, 20, 0.6);
+    margin: 20px;
 }
 
 main {
@@ -39,4 +73,15 @@ main > .section-wrapper > section {
 
 .hide-in-desktop {
     display: none !important;
+}
+
+@media (max-height: 800px) {
+    :root {
+        --root-vertical-padding: 20px;
+    }
+
+    main > .section-wrapper > section {
+        /*padding: var(--root-padding);*/
+        /*padding-top: calc(var(--header-height) + var(--root-padding));*/
+    }
 }

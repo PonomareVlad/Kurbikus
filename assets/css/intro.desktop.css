@@ -1,13 +1,69 @@
 section#intro {
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section#intro > .title {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    max-width: 50%;
+    min-width: 800px;
+    margin: unset;
+}
+
+section#intro .capture-form {
+    font-size: 25px;
+    line-height: initial;
+    color: var(--primary-text-color);
+    max-width: 50%;
+    min-width: 800px;
+}
+
+section#intro .capture-form form {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: 0 2px 15px 0 rgba(108, 108, 108, 0.5);
+    background-color: white;
+    padding-left: 25px;
+}
+
+section#intro .capture-form input {
+    border: none;
+    height: 50px;
+    border-radius: initial;
+    margin-bottom: unset;
+    padding: unset;
+    box-shadow: unset;
+    background-color: unset;
+    font-weight: bold;
+}
+
+section#intro .capture-form button {
+    font-size: 16px;
+    height: 100%;
+    width: 200px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: unset;
+    background-color: #34517f;
+    color: var(--secondary-text-color);
 }
 
 section#intro .products {
-    --product-button-width: 340px;
-    --product-button-height: 210px;
+    --section-width: calc(100vw - (var(--root-padding) * 2));
+    --product-button-width: calc(var(--section-width) / 3);
+    --product-button-height: 200px;
     counter-reset: section;
+    align-self: stretch;
     display: flex;
     justify-content: space-between;
+    border-radius: 15px;
+    min-height: var(--product-button-height);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
 }
 
 section#intro .products .product-item {
@@ -15,8 +71,19 @@ section#intro .products .product-item {
     /*display: block;*/
     width: var(--product-button-width);
     height: var(--product-button-height);
+    margin-top: unset;
     /*border-radius: 15px;*/
     /*text-decoration: none;*/
+}
+
+section#intro .products .product-item:not(:first-child):before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 1px;
+    height: calc(var(--product-button-height) - (20px * 2));
+    margin-top: 20px;
+    background: #34517f;
 }
 
 section#intro .products .product-item > .product-button {
@@ -24,11 +91,38 @@ section#intro .products .product-item > .product-button {
     height: var(--product-button-height);
     /*border-radius: 15px;*/
     /*background-color: gray;*/
+    padding-top: 20px;
+}
+
+section#intro .products .product-item:not(:hover) > .product-button {
+    box-shadow: unset;
+}
+
+section#intro .products .product-item > .product-button:before {
+    content: counter(section);
+    font-size: 132px;
+    line-height: 132px;
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 section#intro .products .product-item > .product-button:after {
     /*content: none;*/
     display: none;
+}
+
+section#intro .product-button-content .title {
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+section#intro .product-button-content .caption {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+section#intro .product-item:not(:hover) .product-button-content .caption {
+    color: var(--primary-text-color) !important;
 }
 
 section#intro .products .product-item > article {
@@ -43,6 +137,7 @@ section#intro .products .product-item > article {
     justify-content: center;
     align-items: center;
     background: white;
+    will-change: all;
 }
 
 section#intro .products .product-item > article * {
@@ -51,21 +146,51 @@ section#intro .products .product-item > article * {
 
 section#intro .products .product-item > article > .content {
     position: absolute;
+    width: calc(100vw - (var(--root-padding) * 2));
+    height: calc(100% - var(--header-height) - (var(--root-vertical-padding) * 3) - var(--product-button-height));
     z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(17, 34, 51, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
+    top: calc(var(--header-height) + var(--root-vertical-padding));
+    padding: var(--root-vertical-padding) calc(130px);
 }
 
 section#intro .products .product-item > article > .content > figure {
-    width: 236px;
+    height: 100%;
+    min-width: 263px;
+    max-width: 40%;
     text-align: center;
+    padding: 0;
+    margin-top: 0;
+}
+
+section#intro .products .product-item > article > .content > figure > img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
 }
 
 section#intro .products .product-item > article > .content > .description {
-    width: 668px;
+    min-width: 668px;
+    max-width: 60%;
+}
+
+section#intro .products .product-item > article > .content > .description > .title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.25;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+section#intro .products .product-item > article > .content > .description > .caption {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-top: 40px;
+    margin-bottom: 0;
 }
 
 section#intro .products .product-item > article > .background-video {
@@ -73,13 +198,76 @@ section#intro .products .product-item > article > .background-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 1;
 }
 
 section#intro .products .product-item:hover > .product-button {
     position: absolute;
     z-index: 100;
+    -webkit-transform: translate3d(0, 0, 0);
 }
+
+section#intro .products .product-item:hover ~ .product-item:before {
+    content: unset;
+    display: none;
+}
+
 
 section#intro .products .product-item:hover > article {
     display: flex;
+}
+
+section#intro > .background-decoration:before {
+    display: none;
+}
+
+.red *, .blue *, .yellow * {
+    color: inherit;
+}
+
+section#intro .red .product-button:not(:hover) {
+    color: #661f1f;
+    background-color: white;
+}
+
+section#intro .red article > .content {
+    background-color: rgba(102, 31, 31, 0.4) !important;
+}
+
+section#intro .blue .product-button:not(:hover) {
+    color: #34517f;
+    background-color: white;
+}
+
+section#intro .blue article > .content {
+    background-color: rgba(52, 81, 127, 0.4) !important;
+}
+
+section#intro .yellow .product-button:not(:hover) {
+    color: #f0b919;
+    background-color: white;
+}
+
+section#intro .yellow article > .content {
+    background-color: rgba(174, 150, 80, 0.4) !important;
+}
+
+@media (max-height: 800px) {
+    section#intro > .title {
+        max-width: 100%;
+        min-width: 100%;
+        line-height: 1em;
+    }
+
+    section#intro > .capture-form p {
+        margin: 10px 0;
+    }
+
+    section#intro .products {
+        --product-button-height: 160px;
+    }
+
+    section#intro .products .product-item > article > .content {
+        padding: var(--root-vertical-padding) var(--root-padding);
+    }
 }
