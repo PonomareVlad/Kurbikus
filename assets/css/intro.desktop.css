@@ -153,6 +153,9 @@ section#intro .products .product-item > article > .content {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
+    background-position: bottom -1px right -1px;
+    background-repeat: no-repeat;
+    background-size: 7%;
     border-radius: 15px;
     top: calc(var(--header-height) + var(--root-vertical-padding));
     padding: var(--root-vertical-padding) calc(130px);
@@ -212,7 +215,6 @@ section#intro .products .product-item:hover ~ .product-item:before {
     display: none;
 }
 
-
 section#intro .products .product-item:hover > article {
     display: flex;
 }
@@ -225,7 +227,7 @@ section#intro > .background-decoration:before {
     color: inherit;
 }
 
-section#intro .red .product-button:not(:hover) {
+section#intro .red.product-item:not(:hover) .product-button {
     color: #661f1f;
     background-color: white;
 }
@@ -234,7 +236,7 @@ section#intro .red article > .content {
     background-color: rgba(102, 31, 31, 0.4) !important;
 }
 
-section#intro .blue .product-button:not(:hover) {
+section#intro .blue.product-item:not(:hover) .product-button {
     color: #34517f;
     background-color: white;
 }
@@ -243,7 +245,7 @@ section#intro .blue article > .content {
     background-color: rgba(52, 81, 127, 0.4) !important;
 }
 
-section#intro .yellow .product-button:not(:hover) {
+section#intro .yellow.product-item:not(:hover) .product-button {
     color: #f0b919;
     background-color: white;
 }

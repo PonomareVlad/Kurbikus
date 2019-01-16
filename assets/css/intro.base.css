@@ -110,7 +110,7 @@ section#intro .products .product-item > .product-button:after {
 section#intro > .background-decoration:before {
     content: '';
     position: absolute;
-    top: -50vh;
+    top: -40vh;
     left: -25vmax;
     width: 150vmax;
     height: 100vh;
@@ -133,4 +133,23 @@ section#intro .blue .product-button {
 
 section#intro .yellow .product-button {
     background-color: #f0b919;
+}
+
+@media (min-width: 350px) and (min-height: 600px) {
+    section#intro > .background-decoration:before {
+        top: -50vh;
+    }
+}
+
+@media (min-width: 400px) and (min-height: 700px) {
+    section#intro > .background-decoration:before {
+        top: -60vh;
+    }
+}
+
+@media (orientation: landscape) {
+    section#intro > .background-decoration:before {
+        transform: rotate(-5deg);
+        top: -20vh;
+    }
 }
