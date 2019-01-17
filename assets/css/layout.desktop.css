@@ -181,12 +181,15 @@ main > .section-wrapper > section {
 }
 
 @media (max-height: 800px) {
-    :root {
-        --root-vertical-padding: 20px;
-    }
 
     main > .section-wrapper > section {
         /*padding: var(--root-padding);*/
         /*padding-top: calc(var(--header-height) + var(--root-padding));*/
+    }
+}
+
+@media (max-height: 600px) {
+    :root {
+        --root-vertical-padding: 20px;
     }
 }
