@@ -365,6 +365,10 @@ section#intro .yellow article > .content {
         --product-button-height: 160px;
     }
 
+    section#intro .product-button-content .title {
+        margin-top: unset;
+    }
+
     section#intro .products .product-item > article > .content {
         padding: var(--root-vertical-padding) var(--root-padding);
     }
