@@ -3,5 +3,70 @@ section#contacts {
 }
 
 section#contacts .title {
+    font-size: 33px;
+    font-weight: bold;
+}
 
+section#contacts .contacts-slider {
+    margin-left: calc(var(--root-padding) * -1);
+    width: 100vw;
+    display: flex;
+    overflow-x: scroll;
+    padding: 0 var(--root-padding);
+    padding-top: 15px;
+    padding-bottom: 30px;
+    -webkit-overflow-scrolling: touch;
+}
+
+section#contacts .contacts-slider .city-card {
+    min-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    margin-right: var(--root-padding);
+    padding: var(--root-padding);
+}
+
+section#contacts .contacts-slider .city-card:last-child {
+    margin-right: unset;
+}
+
+section#contacts .contacts-slider:after {
+    content: '';
+    display: block;
+    min-height: 100%;
+    min-width: var(--root-padding);
+}
+
+section#contacts .contacts-slider .city-card .title {
+    font-size: 30px;
+    font-weight: 500;
+    margin: unset;
+}
+
+section#contacts .contacts-slider .city-card > div {
+    margin: var(--root-vertical-padding) 0;
+}
+
+section#contacts .contacts-slider .city-card .label {
+    font-size: 25px;
+    font-weight: 500;
+    margin: unset;
+}
+
+section#contacts .contacts-slider .city-card .caption {
+    font-size: 25px;
+    font-weight: 300;
+    margin: unset;
+}
+
+section#contacts .contacts-slider .city-card .show-map-button {
+    -webkit-appearance: none;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #34517f;
+    border: 1px solid #34517f;
+    border-radius: 25px;
+    background: unset;
+    width: 100%;
 }

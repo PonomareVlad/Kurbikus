@@ -74,7 +74,7 @@ section#command .team-slider .team-card .description .title {
 
 section#command .team-slider .team-card .description .caption {
     font-size: 25px;
-    margin-top: var(--root-padding);
+    margin-top: calc(var(--root-padding) * .5);
     margin-bottom: unset;
 }
 

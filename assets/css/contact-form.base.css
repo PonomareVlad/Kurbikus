@@ -1,0 +1,37 @@
+section#contact-form {
+
+}
+
+section#contact-form > .title {
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 1.18;
+
+}
+
+section#contact-form form {
+    display: flex;
+    flex-direction: column;;
+}
+
+section#contact-form input {
+    -webkit-appearance: none;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+section#contact-form button {
+    -webkit-appearance: none;
+    background: white;
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #34517f;
+}
