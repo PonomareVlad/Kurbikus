@@ -1,5 +1,7 @@
 section#about {
 
+    --video-height: 200px;
+
 }
 
 section#about > .title {
@@ -9,19 +11,23 @@ section#about > .title {
 
 section#about .about-video {
     position: absolute;
-    width: 250px;
-    height: 300px;
-    left: -20px;
+    width: calc(100vw - (var(--root-padding) * 2));
+    /*width: 70vw;*/
+    height: var(--video-height);
+    /*left: -10vw;*/
     border-radius: 15px;
     background-color: #d8d8d8;
     object-fit: cover;
+    transform: translateX(-35vw);
+    transition: all .5s;
 }
 
 section#about .about-video.focus {
-    width: calc(100vw - (var(--root-padding) * 2));
-    left: var(--root-padding);
+    /*width: calc(100vw - (var(--root-padding) * 2));*/
+    /*left: var(--root-padding);*/
+    transform: none;
 }
 
 section#about .description {
-    margin-top: 360px;
+    margin-top: calc(var(--video-height) + (var(--root-padding) * 3));
 }
