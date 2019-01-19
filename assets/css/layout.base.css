@@ -88,7 +88,7 @@ header > .background-decoration {
 header > .background-decoration:before, header > .background-decoration:after {
     content: '';
     position: absolute;
-    top: -35vh;
+    top: -30vh;
     left: -25vmax;
     width: 150vmax;
     height: 100vh;

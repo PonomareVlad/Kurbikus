@@ -1,3 +1,94 @@
 section#command {
 
 }
+
+section#command > .title {
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+section#command .team-slider {
+    margin-left: calc(var(--root-padding) * -1);
+    width: 100vw;
+    display: flex;
+    overflow-x: scroll;
+    padding: 0 var(--root-padding);
+    padding-top: 15px;
+    padding-bottom: 30px;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 30vh;
+}
+
+section#command .team-slider .team-card {
+    counter-increment: section;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    color: var(--primary-text-color);
+    margin-right: var(--root-padding);
+}
+
+section#command .team-slider .team-card:last-child {
+    margin-right: unset;
+}
+
+section#command .team-slider:after {
+    content: '';
+    display: block;
+    min-height: 100%;
+    min-width: var(--root-padding);
+}
+
+section#command .team-slider .team-card .pic {
+    height: calc(100vmin - (var(--root-padding) * 2));
+    max-height: 325px;
+    width: 100%;
+    padding: unset;
+    margin: unset;
+    border-radius: 15px;
+    background-color: #969696;
+    overflow: hidden;
+}
+
+section#command .team-slider .team-card .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section#command .team-slider .team-card .description {
+    padding: var(--root-padding) calc(var(--root-padding) * 2);
+}
+
+section#command .team-slider .team-card .description .title {
+    margin: unset;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+section#command .team-slider .team-card .description .caption {
+    font-size: 25px;
+    margin-top: var(--root-padding);
+    margin-bottom: unset;
+}
+
+section#command > .background-decoration:before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: unset;
+    right: -25vmax;
+    width: 150vmax;
+    height: 80vh;
+    border-radius: 15px;
+    transform: rotate(-15deg);
+    transform-origin: right top;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #34517f;
+}
