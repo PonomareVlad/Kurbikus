@@ -43,6 +43,11 @@ header nav > a {
     width: 200px;
 }
 
+.feedback-button:hover {
+    background: #34517f;
+    color: var(--secondary-text-color) !important;
+}
+
 .language-button {
     font-size: 20px;
     font-weight: 500;

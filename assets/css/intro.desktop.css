@@ -112,10 +112,11 @@ section#intro .products .product-item > .product-button {
     /*border-radius: 15px;*/
     /*background-color: gray;*/
     padding-top: 20px;
+    box-shadow: unset;
 }
 
 section#intro .products .product-item:not(:hover) > .product-button {
-    box-shadow: unset;
+    /*box-shadow: unset;*/
 }
 
 section#intro .products .product-item > .product-button:before {
@@ -167,7 +168,7 @@ section#intro .products .product-item > article * {
 section#intro .products .product-item > article > .content {
     position: absolute;
     width: calc(100vw - (var(--root-padding) * 2));
-    height: calc(100% - var(--header-height) - (var(--root-vertical-padding) * 3) - var(--product-button-height));
+    height: calc(100% - var(--header-height) - (var(--root-vertical-padding) * 2.5) - var(--product-button-height));
     z-index: 100;
     display: flex;
     justify-content: center;
