@@ -51,7 +51,7 @@ section#intro .capture-form button {
 }
 
 section#intro .products {
-
+    counter-reset: section;
 }
 
 section#intro .products .product-item {

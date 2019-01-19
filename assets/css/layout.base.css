@@ -149,6 +149,7 @@ main {
 }
 
 main > .section-wrapper > section {
+    position: relative;
     padding: var(--root-vertical-padding) var(--root-padding);
     max-width: 100vw;
     overflow-x: hidden;

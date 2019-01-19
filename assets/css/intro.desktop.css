@@ -76,7 +76,7 @@ section#intro .products {
     --section-width: calc(100vw - (var(--root-padding) * 2));
     --product-button-width: calc(var(--section-width) / 3);
     --product-button-height: 200px;
-    counter-reset: section;
+    /*counter-reset: section;*/
     align-self: stretch;
     display: flex;
     justify-content: space-between;
