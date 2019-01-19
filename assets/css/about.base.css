@@ -17,7 +17,7 @@ section#about .about-video {
     object-fit: cover;
 }
 
-section#about .about-video:focus {
+section#about .about-video.focus {
     width: calc(100vw - (var(--root-padding) * 2));
     left: var(--root-padding);
 }
