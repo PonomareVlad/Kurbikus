@@ -28,7 +28,7 @@ section#about .about-video-wrapper video {
     height: 100%;
 }
 
-section#about .about-video-wrapper:focus {
+section#about .about-video-wrapper:focus, section#about .about-video-wrapper:hover, section#about .about-video-wrapper:active {
     /*width: calc(100vw - (var(--root-padding) * 2));*/
     /*left: var(--root-padding);*/
     transform: none;
