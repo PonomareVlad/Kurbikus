@@ -1,5 +1,6 @@
 @import "layout.base.css";
 @import "intro.base.css";
+@import "about.base.css";
 
 section > *:first-child, .section > *:first-child, .products .product-button > div > *:first-child {
     margin-top: unset;

@@ -1,0 +1,27 @@
+section#about {
+
+}
+
+section#about > .title {
+    font-size: 33px;
+    font-weight: bold;
+}
+
+section#about .about-video {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    left: -20px;
+    border-radius: 15px;
+    background-color: #d8d8d8;
+    object-fit: cover;
+}
+
+section#about .about-video:focus {
+    width: calc(100vw - (var(--root-padding) * 2));
+    left: var(--root-padding);
+}
+
+section#about .description {
+    margin-top: 360px;
+}

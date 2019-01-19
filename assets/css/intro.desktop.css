@@ -6,6 +6,7 @@ section#intro {
 section#intro > .title {
     font-size: 60px;
     font-weight: bold;
+    line-height: 1.22;
     color: var(--primary-text-color);
     max-width: 50%;
     min-width: 800px;
