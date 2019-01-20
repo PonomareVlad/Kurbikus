@@ -62,6 +62,11 @@ header a:active {
     opacity: .5;
 }
 
+header div {
+    display: flex;
+    align-items: center;
+}
+
 header .logo {
     background: url("../img/logo.png") no-repeat center left/contain;
     height: calc(var(--header-height) - (var(--root-padding) / 2));
@@ -70,13 +75,21 @@ header .logo {
     padding: 0;
 }
 
+header .call {
+    display: inline-block;
+    height: 100%;
+    width: 50px;
+    /*margin-right: 10px;*/
+    background: url("../img/call.svg") no-repeat center/25px;
+}
+
 header .open-menu, header .close-menu {
     display: inline-block;
     height: 100%;
     width: 50px;
     font-size: 30px;
     line-height: 50px;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     margin-right: -10px;
     text-align: center;
 }
@@ -128,6 +141,10 @@ header:target:after, .feedback-menu:target ~ header:after {
 
 header:target .logo, .feedback-menu:target ~ header .logo {
     background-image: url("../img/logo.gray.png");
+}
+
+header:target .call, .feedback-menu:target ~ header .call {
+    background-image: url("../img/call-inverted.svg");
 }
 
 header:target nav {

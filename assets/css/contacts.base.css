@@ -47,6 +47,10 @@ section#contacts .contacts-slider .city-card > div {
     margin: var(--root-vertical-padding) 0;
 }
 
+section#contacts .contacts-slider .city-card > div:last-child {
+    margin-bottom: unset;
+}
+
 section#contacts .contacts-slider .city-card .label {
     font-size: 25px;
     font-weight: 500;
@@ -69,4 +73,31 @@ section#contacts .contacts-slider .city-card .show-map-button {
     border-radius: 25px;
     background: unset;
     width: 100%;
+}
+
+section#contacts .social-icons {
+    display: flex;
+}
+
+section#contacts .social-icons a {
+    margin-right: 20px;
+}
+
+.vk-icon, .fb-icon, .yt-icon, .ok-icon {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../img/vk.svg") no-repeat center/contain;
+}
+
+.fb-icon {
+    background-image: url("../img/fb.svg");
+}
+
+.yt-icon {
+    background-image: url("../img/yt.svg");
+}
+
+.ok-icon {
+    background-image: url("../img/ok.svg");
 }
