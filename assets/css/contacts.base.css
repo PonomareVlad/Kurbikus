@@ -15,6 +15,7 @@ section#contacts .contacts-slider {
     padding: 0 var(--root-padding);
     padding-top: 15px;
     padding-bottom: 30px;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -24,6 +25,7 @@ section#contacts .contacts-slider .city-card {
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
     margin-right: var(--root-padding);
     padding: var(--root-padding);
+    scroll-snap-align: start;
 }
 
 section#contacts .contacts-slider .city-card:last-child {

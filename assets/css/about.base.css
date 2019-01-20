@@ -43,8 +43,9 @@ section#about .description {
     overflow-x: scroll;
     padding: 0 var(--root-padding);
     padding-bottom: 30px;
-    -webkit-overflow-scrolling: touch;
     margin-bottom: 20vh;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 section#about .description > .item {
@@ -59,6 +60,7 @@ section#about .description > .item {
     color: var(--primary-text-color);
     margin-right: var(--root-padding);
     padding: calc(var(--root-padding) * 2) calc(var(--root-padding) * 1);
+    scroll-snap-align: start;
 }
 
 section#about .description > .item:last-child {

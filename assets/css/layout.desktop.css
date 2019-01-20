@@ -68,6 +68,7 @@ main.horizontal-scroll {
     overflow-x: hidden;
     transform: rotate(-90deg) scaleX(-1);
     transform-origin: left top;
+    scroll-snap-type: y mandatory;
 }
 
 main.horizontal-scroll > .section-wrapper {
@@ -75,6 +76,7 @@ main.horizontal-scroll > .section-wrapper {
     transform-origin: left top;
     width: 100%;
     height: 100%;
+    scroll-snap-align: start;
 }
 
 main > .section-wrapper > section {
