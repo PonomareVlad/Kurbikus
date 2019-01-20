@@ -112,7 +112,7 @@ section#intro .products .product-item > .product-button {
     height: var(--product-button-height);
     /*border-radius: 15px;*/
     /*background-color: gray;*/
-    padding-top: 20px;
+    padding-top: 40px;
     box-shadow: unset;
 }
 
@@ -134,7 +134,7 @@ section#intro .products .product-item > .product-button:after {
 }
 
 section#intro .product-button-content .title {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     font-size: 35px;
 }
 
