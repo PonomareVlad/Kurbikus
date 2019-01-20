@@ -65,6 +65,7 @@ header a:active {
 header div {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 header .logo {

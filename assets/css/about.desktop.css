@@ -1,0 +1,84 @@
+section#about {
+    padding-left: 30vw;
+    --video-height: 30vh;
+    overflow-y: hidden;
+}
+
+section#about:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 45vh;
+    margin-left: -50px;
+    margin-top: 20px;
+    background-color: #3d3d3d;
+}
+
+section#about > .title {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--primary-text-color);
+}
+
+section#about .about-video-wrapper {
+    /*display: none;*/
+    left: var(--root-padding);
+    border-radius: 10px;
+    transform: translateY(50vh);
+}
+
+section#about .about-video-wrapper:hover {
+    transform: translateY(45vh);
+}
+
+section#about .about-video-wrapper:focus, section#about .about-video-wrapper:active {
+    transform: none;
+    --video-height: 60vh;
+}
+
+section#about .description {
+    /*counter-reset: section;*/
+    margin: unset;
+    width: unset;
+    display: initial;
+    overflow: initial;
+    padding: unset;
+    -webkit-overflow-scrolling: initial;
+}
+
+section#about .description:after {
+    content: none;
+}
+
+section#about .description > .item {
+    position: initial;
+    display: block;
+    flex-direction: initial;
+    min-width: initial;
+    /*min-height: 320px;*/
+    border-radius: initial;
+    background-color: initial;
+    margin: initial;
+    margin-top: var(--root-vertical-padding);
+    padding: initial;
+}
+
+section#about .description .item .title {
+    margin: initial;
+    z-index: initial;
+}
+
+section#about .description .item .caption {
+    margin: initial;
+    margin-top: calc(var(--root-vertical-padding) * .5);
+    z-index: initial;
+}
+
+section#about .description .item:before {
+    content: unset;
+}
+
+section#about > .background-decoration:before, section#about > .background-decoration:after {
+    content: none;
+}

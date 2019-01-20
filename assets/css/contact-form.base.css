@@ -1,20 +1,20 @@
-section#contact-form {
+#contact-form {
 
 }
 
-section#contact-form > .title {
+#contact-form > .title {
     font-size: 33px;
     font-weight: bold;
     line-height: 1.18;
 
 }
 
-section#contact-form form {
+#contact-form form {
     display: flex;
     flex-direction: column;;
 }
 
-section#contact-form input {
+#contact-form input {
     -webkit-appearance: none;
     border: none;
     height: 40px;
@@ -26,7 +26,7 @@ section#contact-form input {
     background-color: white;
 }
 
-section#contact-form button {
+#contact-form button {
     -webkit-appearance: none;
     background: white;
     font-size: 16px;
