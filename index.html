@@ -16,11 +16,11 @@
 <body>
 <aside class="feedback-menu" id="feedback">
 	<h5 class="title">Обсудить продукты</h5>
-	<form action="#">
+	<form action="https://formspree.io/o.a.bezhentseva@gmail.com" method="POST">
 		<div class="input-line">
-			<input placeholder="Имя" required type="text">
-			<input placeholder="Телефон" required type="tel">
-			<input placeholder="Почта" required type="email">
+			<input name="name" placeholder="Имя" required type="text">
+			<input name="phone" placeholder="Телефон" required type="tel">
+			<input name="email" placeholder="Почта" required type="email">
 		</div>
 		<button type="submit">Получить</button>
 	</form>
@@ -58,9 +58,9 @@
 			<h1 class="title">Готовые мобильные приложения для строителей</h1>
 			<div class="capture-form">
 				<p>Установите AR-приложение и получите 2 модели дома в дополненной реальности бесплатно</p>
-				<form action="#">
-					<input placeholder="Телефон" required type="tel">
-					<input placeholder="Имя" required type="text">
+				<form action="https://formspree.io/o.a.bezhentseva@gmail.com" method="POST">
+					<input name="phone" placeholder="Телефон" required type="tel">
+					<input name="name" placeholder="Имя" required type="text">
 					<button type="submit">Получить</button>
 				</form>
 			</div>
@@ -221,7 +221,8 @@
 		<section id="contacts">
 			<div class="hide-in-desktop" id="contact-form">
 				<h3 class="title">Связаться с нами и обсудить Ваши задачи</h3>
-				<form action="#">
+				<form action="https://formspree.io/o.a.bezhentseva@gmail.com" method="POST"
+				      onsubmit="fetch(this.action, {method: this.method, body: this});return false;">
 					<input placeholder="Email" required type="email">
 					<input placeholder="Имя" required type="text">
 					<input placeholder="Телефон" required type="tel">
@@ -308,5 +309,12 @@
 		</section>
 	</div>
 </main>
+<script>
+    document.querySelectorAll('form').forEach(form => form.onsubmit = (event) => fetch(event.target.action, {
+        method: event.target.method,
+        body: event.target
+    }).then(() => event.target.innerHTML =
+        event.target.name.value + ', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' + event.target.phone.value) && false)
+</script>
 </body>
 </html>
