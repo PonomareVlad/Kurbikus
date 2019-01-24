@@ -13,7 +13,7 @@
 	<link href="assets/css/base.css" rel="stylesheet">
 	<link href="assets/css/desktop.css" media="(min-width: 1025px)" rel="stylesheet">
 </head>
-<body class="red-landing">
+<body class="landing red-landing">
 <aside class="feedback-menu" id="feedback">
 	<h5 class="title">Обсудить продукты</h5>
 	<form action="#">
@@ -54,29 +54,33 @@
 </header>
 <main class="landing extended-landing">
 	<section class="intro">
-		<h1 class="section-title">3D калькулятор домов на вашем сайте и в мобильном приложении</h1>
-		<div class="capture-form white">
-			<p>Получите 2 модели дома в дополненной реальности:</p>
-			<form action="#">
-				<div>
-					<input placeholder="Телефон" required type="tel">
-					<input placeholder="Имя" required type="text">
-				</div>
-				<button type="submit">Получить</button>
-			</form>
+		<div class="description">
+			<h1 class="section-title">3D калькулятор домов на вашем сайте и в мобильном приложении</h1>
+			<div class="capture-form white">
+				<p>Получите 2 модели дома в дополненной реальности:</p>
+				<form action="#">
+					<div>
+						<input placeholder="Телефон" required type="tel">
+						<input placeholder="Имя" required type="text">
+					</div>
+					<button type="submit">Получить</button>
+				</form>
+			</div>
 		</div>
 		<figure class="preview-section"></figure>
 	</section>
 	<section class="how-work">
 		<h2 class="section-title">Как работает Cyber Project?</h2>
 		<a class="youtube-link hide-in-mobile" href="#">Kurbikus digital на YouTube</a>
-		<div class="how-work-video-wrapper" tabindex="-1">
-			<video controls poster="assets/video/promo.png" preload="metadata">
-				<source src="assets/video/promo.mp4" type="video/mp4">
-			</video>
+		<div class="layer-context">
+			<div class="how-work-video-wrapper" tabindex="-1">
+				<video controls poster="assets/video/promo.png" preload="metadata">
+					<source src="assets/video/promo.mp4" type="video/mp4">
+				</video>
+			</div>
 		</div>
 	</section>
-	<section class="hide-in-mobile">
+	<section class="customer-journey hide-in-mobile">
 		<h2 class="section-title">Пройдите путь своего клиента</h2>
 		<figure class="demo-section"></figure>
 	</section>
@@ -98,7 +102,7 @@
 		</div>
 	</section>
 	<section class="what-you-get">
-		<div>
+		<div class="description">
 			<h2 class="section-title">Что Вы получаете</h2>
 		</div>
 		<div class="card-items-slider">
@@ -112,14 +116,16 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="feedback">
 		<h2 class="section-title">Обсудить проект</h2>
-		<div class="capture-form">
+		<div class="capture-form white">
 			<p class="hide-in-mobile">Узнайте стоимость установки калькулятора на ваш сайт</p>
 			<form action="#">
-				<input placeholder="Телефон" required type="tel">
-				<input placeholder="Имя" required type="text">
-				<button type="submit">Получить</button>
+				<div>
+					<input placeholder="Телефон" required type="tel">
+					<input placeholder="Имя" required type="text">
+				</div>
+				<button class="contrast-in-mobile" type="submit">Получить</button>
 			</form>
 		</div>
 	</section>
