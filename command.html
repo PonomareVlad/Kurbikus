@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kurbikus Digital</title>
+	<link href="/assets/img/icon.jpeg" rel="icon">
+	<meta content="width=device-width,minimum-scale=1,initial-scale=1" name="viewport">
+	<meta content="Kurbikus Digital" property="og:title">
+	<meta content="https://Kurbikus.PonomareVlad.com" property="og:url">
+	<meta content="https://kurbikus.ponomarevlad.ru/assets/img/icon.jpeg" property="og:image">
+	<meta content="https://kurbikus.ponomarevlad.ru/assets/img/logo.png" property="og:image">
+	<link href="assets/css/fonts.css" rel="stylesheet">
+	<link href="assets/css/base.css" rel="stylesheet">
+	<link href="assets/css/desktop.css" media="(min-width: 1025px)" rel="stylesheet">
+</head>
+<body>
+<aside class="feedback-menu" id="feedback">
+	<h5 class="title">Обсудить продукты</h5>
+	<form action="https://formspree.io/o.a.bezhentseva@gmail.com" method="POST">
+		<div class="input-line">
+			<input name="name" placeholder="Имя" required type="text">
+			<input name="phone" placeholder="Телефон" required type="tel">
+			<input name="email" placeholder="Почта" required type="email">
+		</div>
+		<button type="submit">Получить</button>
+	</form>
+</aside>
+<a class="close-feedback" href="#" title="Закрыть меню обратной связи"></a>
+<header id="menu">
+	<div>
+		<figure class="logo"></figure>
+		<nav>
+			<a href="/index.html#intro">Главная</a>
+			<a class="hide-in-mobile" href="/index.html#about">О нас</a>
+			<a class="hide-in-desktop" href="/project.html">3D калькулятор</a>
+			<a class="hide-in-desktop" href="/magazine.html">Каталог домов</a>
+			<a class="hide-in-desktop" href="/foreman.html">Мобильный прораб</a>
+			<a class="hide-in-desktop" href="/command.html">Команда</a>
+			<a class="hide-in-mobile" href="/index.html#command">Команда</a>
+			<a href="/index.html#contacts">Контакты</a>
+		</nav>
+	</div>
+	<div>
+		<div class="hide-in-mobile">
+			<a class="feedback-button" href="#feedback">Обратная связь</a>
+			<a class="language-button" href="#">EN</a>
+		</div>
+		<div class="hide-in-desktop">
+			<a class="call" href="#"></a>
+			<a class="open-menu" href="#menu">☰</a>
+			<a class="close-menu" href="#">✕</a>
+		</div>
+	</div>
+	<div class="background-decoration"></div>
+</header>
+<main class="horizontal-scroll">
+	<div class="section-wrapper hide-in-mobile">
+		<section id="command">
+			<h2 class="title">Команда</h2>
+			<div class="team-slider">
+				<div class="team-card">
+					<figure class="pic">
+						<img src="https://picsum.photos/600?random0">
+					</figure>
+					<div class="description">
+						<h3 class="title">Максим Бызов</h3>
+						<p class="caption">Архитектор</p>
+					</div>
+				</div>
+				<div class="team-card">
+					<figure class="pic">
+						<img src="https://picsum.photos/600?random1">
+					</figure>
+					<div class="description">
+						<h3 class="title">Максим Бызов</h3>
+						<p class="caption">Архитектор</p>
+					</div>
+				</div>
+				<div class="team-card">
+					<figure class="pic">
+						<img src="https://picsum.photos/600?random2">
+					</figure>
+					<div class="description">
+						<h3 class="title">Максим Бызов</h3>
+						<p class="caption">Архитектор</p>
+					</div>
+				</div>
+			</div>
+			<div class="background-decoration">
+				<figure></figure>
+				<figure></figure>
+				<figure></figure>
+				<figure></figure>
+				<figure></figure>
+				<figure></figure>
+			</div>
+		</section>
+	</div>
+</main>
+<script>
+    document.querySelectorAll('form').forEach(form => form.onsubmit = (event) => fetch(event.target.action, {
+        method: event.target.method,
+        body: event.target
+    }).then(() => event.target.innerHTML =
+        event.target.name.value + ', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' + event.target.phone.value) && false)
+</script>
+</body>
+</html>
