@@ -8,7 +8,6 @@ body.red-landing header {
 
 }
 
-
 body.red-landing .feedback-button {
     color: #661f1f !important;
     border: 1px solid #661f1f;
@@ -23,8 +22,44 @@ body.red-landing .feedback-menu {
     background-color: #661f1f;
 }
 
-.feedback-menu button {
+body.red-landing .feedback-menu button {
     background-color: #661f1f;
+}
+
+body.blue-landing .feedback-button {
+    color: #34517f !important;
+    border: 1px solid #34517f;
+}
+
+body.blue-landing .feedback-button:hover {
+    background: #34517f;
+    color: var(--secondary-text-color) !important;
+}
+
+body.blue-landing .feedback-menu {
+    background-color: #34517f;
+}
+
+body.blue-landing .feedback-menu button {
+    background-color: #34517f;
+}
+
+body.yellow-landing .feedback-button {
+    color: #f0b919 !important;
+    border: 1px solid #f0b919;
+}
+
+body.yellow-landing .feedback-button:hover {
+    background: #f0b919;
+    color: var(--secondary-text-color) !important;
+}
+
+body.yellow-landing .feedback-menu {
+    background-color: #f0b919;
+}
+
+body.yellow-landing .feedback-menu button {
+    background-color: #f0b919;
 }
 
 main.landing {
@@ -54,6 +89,7 @@ main.landing > section {
 
 main.landing > section.intro {
     padding-top: calc(var(--header-height) + 120px);
+    padding-bottom: 120px;
     padding-right: unset;
     display: flex;
     /*flex-direction: column;*/
@@ -130,7 +166,18 @@ main.landing .preview-section {
     min-width: 40vw;
     right: 0;
     /*overflow: hidden;*/
-    background: url("../img/imac.png") no-repeat top right -10vw/50vw;
+}
+
+main.landing .preview-section.frame-iMac {
+    background: url("../img/imac.png") no-repeat top right -10vw/50vw 100%;
+}
+
+main.landing .preview-section.frame-iPad {
+    background: url("../img/ipad.svg") no-repeat top center/100% 100%;
+}
+
+main.landing .preview-section.frame-iPhone {
+    background: url("../img/iphone.svg") no-repeat top center/100% 100%;
 }
 
 main.landing .how-work {
@@ -191,6 +238,10 @@ main.landing .how-work-video-wrapper:focus, main.landing .how-work-video-wrapper
     transform: none;
     width: 90vw;
     right: 5vw;
+}
+
+main.landing:not(.extended-landing) .customer-journey {
+    display: none;
 }
 
 main.landing .customer-journey {
@@ -335,6 +386,22 @@ body.red-landing .card-items-slider > .item.phone-decoration {
     background-image: url("../img/phone-red.svg");
 }
 
+body.blue-landing .card-items-slider > .item.laptop-decoration {
+    background-image: url("../img/laptop-blue.svg");
+}
+
+body.blue-landing .card-items-slider > .item.phone-decoration {
+    background-image: url("../img/phone-blue.svg");
+}
+
+body.yellow-landing .card-items-slider > .item.laptop-decoration {
+    background-image: url("../img/laptop-yellow.svg");
+}
+
+body.yellow-landing .card-items-slider > .item.phone-decoration {
+    background-image: url("../img/phone-yellow.svg");
+}
+
 main.landing .feedback {
     min-height: auto;
     height: auto;
@@ -357,7 +424,6 @@ main.landing .background-decoration:before {
     transform: rotate(10deg);
     border-radius: 15px;
     box-shadow: 0 2px 25px 0 #2a2626;
-    background-color: #661f1f;
     z-index: -1;
 }
 
@@ -372,7 +438,6 @@ main.landing .background-decoration > figure:nth-child(1) {
     transform-origin: left top;
     border-radius: 15px;
     box-shadow: 0 2px 25px 0 #2a2626;
-    background-color: #661f1f;
     z-index: -1;
 }
 
@@ -387,11 +452,10 @@ main.landing .background-decoration > figure:nth-child(2) {
     transform-origin: left top;
     border-radius: 15px;
     box-shadow: 0 2px 25px 0 #2a2626;
-    background-color: #661f1f;
     z-index: -2;
 }
 
-main.landing .background-decoration:after {
+main.landing.extended-landing .background-decoration:after {
     content: '';
     position: absolute;
     top: unset;
@@ -402,6 +466,5 @@ main.landing .background-decoration:after {
     transform: rotate(30deg);
     border-radius: 15px;
     box-shadow: 0 2px 25px 0 #2a2626;
-    background-color: #661f1f;
     z-index: -1;
 }
