@@ -146,6 +146,20 @@ main.landing .how-work .section-title {
     width: 50%;
 }
 
+main.landing .youtube-link {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 25px;
+    text-align: center;
+    min-width: 200px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    color: var(--secondary-text-color);
+    border: 1px solid var(--secondary-text-color);
+}
+
 main.landing .how-work-video-wrapper {
     /*position: absolute;*/
     /*width: calc(100vw - (var(--root-padding) * 2));*/
@@ -239,6 +253,10 @@ main.landing .count-items-slider .item .caption {
     margin: unset;
 }
 
+main.landing .count-items-slider:after {
+    min-width: 1px;
+}
+
 main.landing .what-you-get {
     display: flex;
     justify-content: center;
@@ -295,6 +313,26 @@ main.landing .what-you-get .card-items-slider > .item {
 main.landing .card-items-slider .item .caption {
     line-height: initial;
     margin-top: 30px;
+}
+
+main.landing .card-items-slider > .item.laptop-decoration {
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 30px;
+    background-size: 40% 30%;
+}
+
+main.landing .card-items-slider > .item.phone-decoration {
+    background-repeat: no-repeat;
+    background-position: right bottom 30px;
+    background-size: 40% 30%;
+}
+
+body.red-landing .card-items-slider > .item.laptop-decoration {
+    background-image: url("../img/laptop-red.svg");
+}
+
+body.red-landing .card-items-slider > .item.phone-decoration {
+    background-image: url("../img/phone-red.svg");
 }
 
 main.landing .feedback {

@@ -16,11 +16,11 @@
 <body class="landing red-landing">
 <aside class="feedback-menu" id="feedback">
 	<h5 class="title">Обсудить продукты</h5>
-	<form action="#">
+	<form action="https://formspree.io/o.a.bezhentseva@gmail.com" method="POST">
 		<div class="input-line">
-			<input placeholder="Имя" required type="text">
-			<input placeholder="Телефон" required type="tel">
-			<input placeholder="Почта" required type="email">
+			<input name="name" placeholder="Имя" required type="text">
+			<input name="phone" placeholder="Телефон" required type="tel">
+			<input name="email" placeholder="Почта" required type="email">
 		</div>
 		<button type="submit">Получить</button>
 	</form>
@@ -58,10 +58,10 @@
 			<h1 class="section-title">3D калькулятор домов на вашем сайте и в мобильном приложении</h1>
 			<div class="capture-form white">
 				<p>Получите 2 модели дома в дополненной реальности:</p>
-				<form action="#">
+				<form action="https://formspree.io/o.a.bezhentseva@gmail.com" method="POST">
 					<div>
-						<input placeholder="Телефон" required type="tel">
-						<input placeholder="Имя" required type="text">
+						<input name="phone" placeholder="Телефон" required type="tel">
+						<input name="name" placeholder="Имя" required type="text">
 					</div>
 					<button type="submit">Получить</button>
 				</form>
@@ -106,11 +106,11 @@
 			<h2 class="section-title">Что Вы получаете</h2>
 		</div>
 		<div class="card-items-slider">
-			<div class="item">
+			<div class="item laptop-decoration">
 				<h3 class="title">3D-калькулятор на вашем сайте</h3>
 				<p class="caption">Дайте клиенту на сайте собрать свой дом в игровой форме</p>
 			</div>
-			<div class="item">
+			<div class="item phone-decoration">
 				<h3 class="title">Мобильное приложение - AR</h3>
 				<p class="caption">Выводите модели домов, которые собрали ваши клиенты в дополненную реальность</p>
 			</div>
@@ -120,10 +120,10 @@
 		<h2 class="section-title">Обсудить проект</h2>
 		<div class="capture-form white">
 			<p class="hide-in-mobile">Узнайте стоимость установки калькулятора на ваш сайт</p>
-			<form action="#">
+			<form action="https://formspree.io/o.a.bezhentseva@gmail.com" method="POST">
 				<div>
-					<input placeholder="Телефон" required type="tel">
-					<input placeholder="Имя" required type="text">
+					<input name="phone" placeholder="Телефон" required type="tel">
+					<input name="name" placeholder="Имя" required type="text">
 				</div>
 				<button class="contrast-in-mobile" type="submit">Получить</button>
 			</form>
@@ -135,5 +135,12 @@
 		<figure></figure>
 	</div>
 </main>
+<script>
+    document.querySelectorAll('form').forEach(form => form.onsubmit = (event) => fetch(event.target.action, {
+        method: event.target.method,
+        body: event.target
+    }).then(() => event.target.innerHTML =
+        event.target.name.value + ', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' + event.target.phone.value) && false)
+</script>
 </body>
 </html>
