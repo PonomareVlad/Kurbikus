@@ -120,12 +120,13 @@ header > .background-decoration:after {
     transform: rotate(15deg);
 }
 
-header nav, header:not(:target) .close-menu, header:target .open-menu, header:not(:target) > .background-decoration, .feedback-menu, .close-feedback {
+header nav, header:not(:target) .close-menu, header:target .open-menu, header:not(:target) > .background-decoration, .feedback-menu, .close-feedback, .language-menu, .close-language {
     display: none;
 }
 
-header:target, .feedback-menu:target ~ header {
+header:target, .feedback-menu:target ~ header, .language-menu:target ~ header {
     background: none;
+    -webkit-backdrop-filter: unset;
     box-shadow: none;
 }
 
@@ -133,7 +134,7 @@ header:target *, .feedback-menu:target ~ header * {
     color: white;
 }
 
-header:target:after, .feedback-menu:target ~ header:after {
+header:target:after, .feedback-menu:target ~ header:after, .language-menu:target ~ header:after {
     content: '';
     position: absolute;
     display: block;
@@ -142,6 +143,10 @@ header:target:after, .feedback-menu:target ~ header:after {
     left: var(--root-padding);
     height: 1px;
     background-color: white;
+}
+
+.language-menu:target ~ header:after {
+    background-color: black;
 }
 
 header:target .logo, .feedback-menu:target ~ header .logo {

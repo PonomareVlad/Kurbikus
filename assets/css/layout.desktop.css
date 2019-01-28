@@ -84,17 +84,37 @@ main > .section-wrapper > section {
     width: 100vw;
 }
 
-.feedback-menu {
+.feedback-menu, .language-menu {
     position: fixed;
     flex-direction: column;
     width: 100%;
-    height: 350px;
+    height: auto;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
     background-color: #34517f;
     padding: var(--root-vertical-padding) var(--root-padding);
     padding-top: calc(var(--header-height) + var(--root-vertical-padding));
     color: white;
     z-index: 1000;
+}
+
+.language-menu {
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.language-menu > a {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    height: 50px;
+    line-height: 50px;
+    padding: 0 50px;
+    margin: 15px;
+    border-radius: 25px;
+    border: 1px solid #121414;
 }
 
 .feedback-menu > .title {
@@ -145,7 +165,7 @@ main > .section-wrapper > section {
     cursor: pointer;
 }
 
-.close-feedback {
+.close-feedback, .close-language {
     position: fixed;
     z-index: 10;
     left: 0;
@@ -159,22 +179,22 @@ main > .section-wrapper > section {
 
 @supports (-webkit-backdrop-filter: blur(15px)) {
 
-    .close-feedback {
+    .close-feedback, .close-language {
         background: rgba(255, 255, 255, 0.5);
         -webkit-backdrop-filter: blur(15px)
     }
 
 }
 
-.feedback-menu:target {
+.feedback-menu:target, .language-menu:target {
     display: flex;
 }
 
-.feedback-menu:target ~ .close-feedback {
+.feedback-menu:target ~ .close-feedback, .language-menu:target ~ .close-language {
     display: initial;
 }
 
-.feedback-menu:target ~ header {
+.feedback-menu:target ~ header, .language-menu:target ~ header {
     z-index: 10000;
 }
 
