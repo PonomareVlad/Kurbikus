@@ -1,11 +1,161 @@
 section#command {
+    --root-padding: 160px;
+    padding-bottom: var(--root-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+section#command .title {
+    font-size: 60px;
+    font-weight: bold;
 }
 
 section#command .team-slider {
-    display: none;
+    /*display: none;*/
+    counter-reset: section;
+    padding: unset;
+    margin: unset;
+    margin-left: calc(var(--root-padding) * -1);
+    padding-left: var(--root-padding);
+    height: auto;
+    min-height: auto;
+    --root-vertical-padding: var(--root-padding);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+section#command .team-slider .team-card {
+    counter-increment: section;
+    display: flex;
+    flex-direction: row;
+    background: unset;
+    box-shadow: unset;
+    padding: unset;
+    margin: unset;
+    height: auto;
+    min-height: auto;
+    min-width: auto;
+    margin-right: 100px;
+    min-width: 60vw;
+
+}
+
+section#command .team-slider .team-card .pic {
+    min-height: auto;
+    min-width: auto;
+    max-height: unset;
+    max-width: unset;
+    width: 411px;
+    height: 411px;
+    padding: unset;
+    margin: unset;
+}
+
+section#command .team-slider .team-card .description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    min-width: auto;
+    min-height: auto;
+    padding: unset;
+    margin-left: 50px;
+    padding-top: 50px;
+    padding-left: 30px;
+    /*margin: 0 auto;*/
+}
+
+section#command .team-slider .team-card .description:before {
+    content: counter(section);
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-size: 132px;
+    line-height: 132px;
+    font-weight: bold;
+    opacity: .5;
+    color: #34517f;
+}
+
+section#command .team-slider .team-card .description .title {
+    font-size: 35px;
+    line-height: initial;
+    font-weight: bold;
+}
+
+section#command .team-slider .team-card .description .caption {
+    font-size: 25px;
+    line-height: initial;
+    margin: unset;
+    margin-top: 20px;
 }
 
 section#command > .background-decoration:before {
     content: none;
+}
+
+section#command > .background-decoration > figure {
+    display: block;
+    position: absolute;
+    top: unset;
+    bottom: unset;
+    right: unset;
+    left: unset;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 25px;
+    transform: rotate(60deg);
+    box-shadow: 0 2px 25px 0 #212121;
+}
+
+section#command > .background-decoration > figure:nth-child(1) {
+    left: -45vmin;
+    bottom: -5vmin;
+    background-color: #34517f;
+    z-index: -1;
+}
+
+section#command > .background-decoration > figure:nth-child(2) {
+    bottom: -45vmin;
+    left: 0;
+    background-color: #661f1f;
+    z-index: -3;
+}
+
+section#command > .background-decoration > figure:nth-child(3) {
+    top: -35vmin;
+    left: -10vmin;
+    background-color: #eec13b;
+    z-index: -2;
+}
+
+
+section#command > .background-decoration > figure:nth-child(4) {
+    right: -35vmin;
+    top: -5vmin;
+    height: 80vmin;
+    width: 80vmin;
+    background-color: #34517f;
+    z-index: -3;
+}
+
+section#command > .background-decoration > figure:nth-child(5) {
+    right: -75vmin;
+    bottom: -30vmin;
+    height: 80vmin;
+    width: 80vmin;
+    background-color: #661f1f;
+    z-index: -2;
+}
+
+section#command > .background-decoration > figure:nth-child(6) {
+    right: -55vmin;
+    top: -30vmin;
+    height: 80vmin;
+    width: 80vmin;
+    background-color: #eec13b;
+    z-index: -1;
 }
