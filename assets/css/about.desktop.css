@@ -32,6 +32,7 @@ section#about .about-video-wrapper {
     border-bottom-right-radius: unset;
     transform: translateY(60vh);
     background-color: black;
+    overflow: initial;
 }
 
 section#about .about-video-wrapper:after {
@@ -45,6 +46,11 @@ section#about .about-video-wrapper:after {
     background: linear-gradient(to top, black, transparent);
 }
 
+section#about .about-video-wrapper video {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 section#about .about-video-wrapper:hover {
     transform: translateY(55vh);
 }
@@ -52,6 +58,33 @@ section#about .about-video-wrapper:hover {
 section#about .about-video-wrapper:focus, section#about .about-video-wrapper:active {
     transform: none;
     --video-height: 60vh;
+}
+
+section#about .about-video-wrapper .close-video {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: -25px;
+    right: -25px;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+section#about .about-video-wrapper .close-video:before {
+    content: '✕';
+    position: absolute;
+    width: 50px;
+    height: 48px;
+    line-height: 50px;
+    bottom: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+section#about .about-video-wrapper:focus .close-video, section#about .about-video-wrapper:active .close-video {
+    display: block;
 }
 
 section#about .description {
@@ -98,4 +131,41 @@ section#about .description .item:before {
 
 section#about > .background-decoration:before, section#about > .background-decoration:after {
     content: none;
+}
+
+section#about > .background-decoration > figure {
+    display: block;
+    position: absolute;
+    top: unset;
+    bottom: unset;
+    right: unset;
+    left: unset;
+    width: 90vmin;
+    height: 90vmin;
+    border-radius: 25px;
+    transform: rotate(30deg);
+    box-shadow: 0 2px 25px 0 #212121;
+}
+
+section#about > .background-decoration > figure:nth-child(1) {
+    top: 0;
+    left: -83vmin;
+    background-color: #34517f;
+    z-index: -1;
+}
+
+section#about > .background-decoration > figure:nth-child(2) {
+    top: 40vmin;
+    left: -65vmin;
+    background-color: #661f1f;
+    z-index: -3;
+}
+
+section#about > .background-decoration > figure:nth-child(3) {
+    top: -10vmin;
+    left: -63vmin;
+    width: 90vmin;
+    height: 70vmin;
+    background-color: #eec13b;
+    z-index: -2;
 }

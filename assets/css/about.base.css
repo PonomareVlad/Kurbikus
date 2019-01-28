@@ -34,6 +34,10 @@ section#about .about-video-wrapper:focus, section#about .about-video-wrapper:hov
     transform: none;
 }
 
+section#about .about-video-wrapper .close-video {
+    display: none;
+}
+
 section#about .description {
     counter-reset: section;
     margin-left: calc(var(--root-padding) * -1);

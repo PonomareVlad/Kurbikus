@@ -165,10 +165,11 @@
 	<div class="section-wrapper">
 		<section id="about">
 			<h2 class="title">О нас</h2>
-			<div class="about-video-wrapper" tabindex="-1">
+			<div class="about-video-wrapper" onblur="this.querySelector('video').pause();" tabindex="-1">
 				<video controls poster="assets/video/promo.png" preload="metadata">
 					<source src="assets/video/promo.mp4" type="video/mp4">
 				</video>
+				<a class="close-video" href="#about" title="Закрыть видео"></a>
 			</div>
 			<div class="description">
 				<div class="item">
