@@ -374,4 +374,8 @@ section#intro .yellow article > .content {
     section#intro .products .product-item > article > .content {
         padding: var(--root-vertical-padding) var(--root-padding);
     }
+
+    section#intro .products .product-item > .product-button {
+        padding-top: 20px;
+    }
 }
