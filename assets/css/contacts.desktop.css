@@ -30,6 +30,7 @@ section#contacts .dropdown-menu {
     background-repeat: no-repeat;
     background-position: right 25px center;
     background-size: 20px 20px;
+    min-width: 300px;
 }
 
 section#contacts .contacts-slider {

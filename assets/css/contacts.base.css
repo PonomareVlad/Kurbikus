@@ -22,9 +22,6 @@ section#contacts .contacts-slider {
 section#contacts .contacts-slider .city-card,
 section#contacts .contacts-slider .country-card,
 section#contacts .contacts-slider .index-card {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: space-between;*/
     min-width: 100%;
     border-radius: 15px;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
@@ -32,6 +29,12 @@ section#contacts .contacts-slider .index-card {
     padding: var(--root-padding);
     scroll-snap-align: center;
     background: white;
+}
+
+section#contacts .contacts-slider .index-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 section#contacts .contacts-slider > *:last-child {
@@ -166,7 +169,6 @@ section#contacts .dropdown-menu {
     border: none;
     color: #808080;
     margin: 20px 0;
-    min-width: 300px;
 }
 
 section#contacts .social-icons {
