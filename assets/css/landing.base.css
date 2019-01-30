@@ -163,7 +163,7 @@ main.landing .count-items-slider .item {
     /*margin-right: var(--root-padding);*/
     padding-top: calc(var(--root-padding) * 2);
     padding-left: 30px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 main.landing .count-items-slider .item:last-child {
@@ -216,7 +216,7 @@ main.landing .card-items-slider > .item {
     color: var(--primary-text-color);
     margin-right: var(--root-padding);
     padding: calc(var(--root-padding) * 2) calc(var(--root-padding) * 1);
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 main.landing .card-items-slider > .item:last-child {

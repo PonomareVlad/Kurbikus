@@ -55,7 +55,7 @@
 	</div>
 	<div>
 		<div class="hide-in-mobile">
-			<a class="feedback-button" href="#feedback">Обратная связь</a>
+			<a class="feedback-button" href="#feedback">Оставить заявку</a>
 			<a class="language-button" href="#language">EN</a>
 		</div>
 		<div class="hide-in-desktop">
@@ -244,82 +244,151 @@
 					<button type="submit">Отправить</button>
 				</form>
 			</div>
-			<h2 class="title">Контакты</h2>
-			<div class="hide-in-desktop">
-				<div class="contacts-slider">
-					<div class="city-card">
-						<h3 class="title">Екатеринбург</h3>
-						<div>
-							<h4 class="label">Адрес:</h4>
-							<p class="caption">Сибирский тракт 12 к.1А</p>
+			<div class="header">
+				<h2 class="title">Контакты</h2>
+				<select class="dropdown-menu hide-in-mobile">
+					<option disabled>Выберете страну</option>
+				</select>
+			</div>
+			<div class="contacts-slider">
+				<div class="index-card hide-in-desktop">
+					<label class="title" for="contacts-country-select">Выберете страну</label>
+					<select class="dropdown-menu" id="contacts-country-select">
+						<option disabled>Выберете страну</option>
+					</select>
+					<label class="title" for="contacts-city-select">Выберете город</label>
+					<select class="dropdown-menu" id="contacts-city-select">
+						<option disabled>Выберете город</option>
+					</select>
+					<button class="show-city-button" onclick="alert('Необходимо выбрать город')">Показать адрес/время
+						работы
+					</button>
+					<button class="show-map-button" onclick="alert('Необходимо выбрать город')">Показать на карте
+					</button>
+					<div class="social-icons">
+						<a class="vk-icon" href="#"></a>
+						<a class="fb-icon" href="#"></a>
+						<a class="yt-icon" href="#"></a>
+						<a class="ok-icon" href="#"></a>
+					</div>
+				</div>
+				<div class="city-card hide-in-desktop">
+					<h3 class="title">Екатеринбург</h3>
+					<div>
+						<h4 class="label">Адрес:</h4>
+						<p class="caption">Сибирский тракт 12 к.1А</p>
+					</div>
+					<div>
+						<h4 class="label">Рабочее время:</h4>
+						<p class="caption">С 9:00 до 18:00</p>
+					</div>
+					<div>
+						<h4 class="label">Email</h4>
+						<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
+					</div>
+					<button class="show-map-button">Показать на карте</button>
+					<div class="social-icons">
+						<a class="vk-icon" href="#"></a>
+						<a class="fb-icon" href="#"></a>
+						<a class="yt-icon" href="#"></a>
+						<a class="ok-icon" href="#"></a>
+					</div>
+				</div>
+				<div class="country-card hide-in-mobile">
+					<h3 class="title">Россия</h3>
+					<div class="country-content">
+						<div class="cities-section">
+							<a class="primary-city" href="#">Москва</a>
+							<a class="primary-city" href="#">Екатеринбург</a>
+							<a class="primary-city" href="#">Краснодар</a>
+							<a class="primary-city" href="#">Крым</a>
+							<a href="#">Новосибирск</a>
+							<a href="#">Ростов</a>
+							<a href="#">Сочи</a>
+							<a href="#">Санкт-Петербург</a>
+							<a href="#">Small town</a>
+							<a href="#">One more city</a>
+							<a href="#">City name</a>
+							<a href="#">City</a>
+							<a href="#">Small town</a>
+							<a href="#">One more city</a>
+							<a href="#">City name</a>
+							<a href="#">City</a>
+							<a href="#">Small town</a>
 						</div>
-						<div>
-							<h4 class="label">Рабочее время:</h4>
-							<p class="caption">С 9:00 до 18:00</p>
-						</div>
-						<div>
-							<h4 class="label">Email</h4>
-							<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
-						</div>
-						<button class="show-map-button">Показать на карте</button>
-						<div class="social-icons">
-							<a class="vk-icon" href="#"></a>
-							<a class="fb-icon" href="#"></a>
-							<a class="yt-icon" href="#"></a>
-							<a class="ok-icon" href="#"></a>
+						<div class="contacts-details">
+							<div>
+								<h4 class="label">Адрес:</h4>
+								<p class="caption">Сибирский тракт 12 к.1А</p>
+							</div>
+							<div>
+								<h4 class="label">Рабочее время:</h4>
+								<p class="caption">С 9:00 до 18:00</p>
+							</div>
+							<div>
+								<h4 class="label">Email</h4>
+								<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
+							</div>
+							<a class="show-feedback-button" href="#feedback">Оставить заявку</a>
+							<div class="social-icons">
+								<a class="vk-icon" href="#"></a>
+								<a class="fb-icon" href="#"></a>
+								<a class="yt-icon" href="#"></a>
+								<a class="ok-icon" href="#"></a>
+							</div>
 						</div>
 					</div>
-					<div class="city-card">
-						<h3 class="title">Екатеринбург</h3>
-						<div>
-							<h4 class="label">Адрес:</h4>
-							<p class="caption">Сибирский тракт 12 к.1А</p>
+				</div>
+				<div class="country-card hide-in-mobile">
+					<h3 class="title">Ukraine</h3>
+					<div class="country-content">
+						<div class="cities-section">
+							<a class="primary-city" href="#">Kiev</a>
+							<a class="primary-city" href="#">City</a>
+							<a class="primary-city" href="#">City with long name</a>
+							<a href="#">One more city</a>
+							<a href="#">City name</a>
+							<a href="#">City</a>
+							<a href="#">Small town</a>
+							<a href="#">City</a>
+							<a href="#">Small town</a>
+							<a href="#">One more city</a>
+							<a href="#">City name</a>
+							<a href="#">City</a>
+							<a href="#">Small town</a>
+							<a href="#">One more city</a>
+							<a href="#">City name</a>
+							<a href="#">City</a>
+							<a href="#">Small town</a>
 						</div>
-						<div>
-							<h4 class="label">Рабочее время:</h4>
-							<p class="caption">С 9:00 до 18:00</p>
-						</div>
-						<div>
-							<h4 class="label">Email</h4>
-							<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
-						</div>
-						<button class="show-map-button">Показать на карте</button>
-						<div class="social-icons">
-							<a class="vk-icon" href="#"></a>
-							<a class="fb-icon" href="#"></a>
-							<a class="yt-icon" href="#"></a>
-							<a class="ok-icon" href="#"></a>
+						<div class="contacts-details">
+							<div>
+								<h4 class="label">Адрес:</h4>
+								<p class="caption">Сибирский тракт 12 к.1А</p>
+							</div>
+							<div>
+								<h4 class="label">Рабочее время:</h4>
+								<p class="caption">С 9:00 до 18:00</p>
+							</div>
+							<div>
+								<h4 class="label">Email</h4>
+								<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
+							</div>
+							<a class="show-feedback-button" href="#feedback">Оставить заявку</a>
+							<div class="social-icons">
+								<a class="vk-icon" href="#"></a>
+								<a class="fb-icon" href="#"></a>
+								<a class="yt-icon" href="#"></a>
+								<a class="ok-icon" href="#"></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="hide-in-mobile">
-				<div>
-					<select>
-						<option>Выберете страну</option>
-					</select>
-				</div>
-				<div class="contacts-slider">
-					<div class="country-card">
-						<h3>Россия</h3>
-						<div class="country-content">
-							<div class="cities-section">
-								<a href="#">Москва</a>
-								<a href="#">Екатеринбург</a>
-								<a href="#">Краснодар</a>
-							</div>
-							<div class="contacts-details">
-								<span>Адрес:</span>
-								<address>Сибирский тракт 12 к.1А</address>
-								<span>Рабочее время:</span>
-								<p>С 9:00 до 18:00</p>
-								<span>Email</span>
-								<a href="mailto:Example@mail.com">Example@mail.com</a>
-								<a href="#feedback">Оставить заявку</a>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="background-decoration">
+				<figure></figure>
+				<figure></figure>
+				<figure></figure>
 			</div>
 		</section>
 	</div>

@@ -33,7 +33,7 @@ section#command .team-slider .team-card {
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
     color: var(--primary-text-color);
     margin-right: var(--root-padding);
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 section#command .team-slider .team-card:last-child {

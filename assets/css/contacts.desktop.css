@@ -1,0 +1,92 @@
+section#contacts {
+    --root-padding: 160px;
+    /*padding-bottom: var(--root-padding);*/
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+}
+
+section#contacts > .header {
+    display: flex;
+    align-items: center;
+}
+
+section#contacts .header .title {
+    font-size: 60px;
+    font-weight: bold;
+    margin: unset;
+    margin-right: 60px;
+}
+
+section#contacts .dropdown-menu {
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 25px;
+    box-shadow: 0 2px 15px 0 rgba(108, 108, 108, 0.5);
+    font-size: 15px;
+    font-weight: bold;
+    color: #808080;
+    background-image: url("../img/down-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 25px center;
+    background-size: 20px 20px;
+}
+
+section#contacts .contacts-slider {
+    margin-top: 60px;
+}
+
+section#contacts .contacts-slider > * {
+    min-width: 90% !important;
+    max-width: 90% !important;
+    margin-right: 30px !important;
+}
+
+section#contacts .contacts-slider .index-card .show-city-button {
+    background: unset;
+    color: #34517f;
+    border: 1px solid #34517f;
+}
+
+section#contacts .social-icons {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: flex-start;
+}
+
+section#contacts > .background-decoration > figure {
+    display: block;
+    position: absolute;
+    top: unset;
+    bottom: unset;
+    right: unset;
+    left: unset;
+    width: 90vmin;
+    height: 90vmin;
+    border-radius: 25px;
+    transform: rotate(30deg);
+    box-shadow: 0 2px 25px 0 #212121;
+}
+
+section#contacts > .background-decoration > figure:nth-child(1) {
+    top: 0;
+    left: -83vmin;
+    background-color: #34517f;
+    z-index: -1;
+}
+
+section#contacts > .background-decoration > figure:nth-child(2) {
+    top: 40vmin;
+    left: -65vmin;
+    background-color: #661f1f;
+    z-index: -3;
+}
+
+section#contacts > .background-decoration > figure:nth-child(3) {
+    top: -15vmin;
+    left: -63vmin;
+    width: 90vmin;
+    height: 70vmin;
+    background-color: #eec13b;
+    z-index: -2;
+}

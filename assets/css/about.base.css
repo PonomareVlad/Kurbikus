@@ -64,7 +64,7 @@ section#about .description > .item {
     color: var(--primary-text-color);
     margin-right: var(--root-padding);
     padding: calc(var(--root-padding) * 2) calc(var(--root-padding) * 1);
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 section#about .description > .item:last-child {

@@ -19,16 +19,22 @@ section#contacts .contacts-slider {
     -webkit-overflow-scrolling: touch;
 }
 
-section#contacts .contacts-slider .city-card {
+section#contacts .contacts-slider .city-card,
+section#contacts .contacts-slider .country-card,
+section#contacts .contacts-slider .index-card {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
     min-width: 100%;
     border-radius: 15px;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
     margin-right: var(--root-padding);
     padding: var(--root-padding);
-    scroll-snap-align: start;
+    scroll-snap-align: center;
+    background: white;
 }
 
-section#contacts .contacts-slider .city-card:last-child {
+section#contacts .contacts-slider > *:last-child {
     margin-right: unset;
 }
 
@@ -36,54 +42,147 @@ section#contacts .contacts-slider:after {
     content: '';
     display: block;
     min-height: 100%;
-    min-width: var(--root-padding);
+    /*min-width: var(--root-padding);*/
+    min-width: 1px;
 }
 
-section#contacts .contacts-slider .city-card .title {
+section#contacts .contacts-slider .city-card .title,
+section#contacts .contacts-slider .index-card .title {
     font-size: 30px;
     font-weight: 500;
     margin: unset;
 }
 
-section#contacts .contacts-slider .city-card > div {
+section#contacts .contacts-slider .city-card > div,
+section#contacts .contacts-slider .index-card > div,
+section#contacts .contacts-slider .contacts-details > div {
+    display: flex;
+    flex-direction: column;
     margin: var(--root-vertical-padding) 0;
 }
 
-section#contacts .contacts-slider .city-card > div:last-child {
+section#contacts .contacts-slider .contacts-details > div {
+    margin: 20px 0;
+}
+
+section#contacts .contacts-slider .contacts-details > div:first-child {
+    margin-top: unset;
+}
+
+section#contacts .contacts-slider .city-card > div:last-child,
+section#contacts .contacts-slider .index-card > div:last-child {
     margin-bottom: unset;
 }
 
-section#contacts .contacts-slider .city-card .label {
+section#contacts .contacts-slider .label {
     font-size: 25px;
     font-weight: 500;
     margin: unset;
 }
 
-section#contacts .contacts-slider .city-card .caption {
+section#contacts .contacts-slider .caption {
     font-size: 25px;
     font-weight: 300;
     margin: unset;
 }
 
-section#contacts .contacts-slider .city-card .show-map-button {
+section#contacts .contacts-slider .show-map-button,
+section#contacts .contacts-slider .show-feedback-button,
+section#contacts .contacts-slider .show-city-button {
     -webkit-appearance: none;
+    display: inline-block;
     padding: 10px 0;
     font-size: 15px;
+    text-align: center;
     font-weight: bold;
     color: #34517f;
     border: 1px solid #34517f;
     border-radius: 25px;
     background: unset;
-    width: 100%;
+    min-width: 200px;
+    /*width: 100%;*/
+}
+
+section#contacts .contacts-slider .index-card .show-city-button {
+    background: #34517f;
+    color: white;
+}
+
+section#contacts .contacts-slider .country-card {
+    padding: 25px 30px 40px 30px;
+}
+
+section#contacts .contacts-slider .country-card > .title {
+    margin: unset;
+    margin-bottom: 20px;
+}
+
+section#contacts .contacts-slider .country-card .country-content {
+    display: flex;
+    max-height: 370px;
+}
+
+section#contacts .contacts-slider .country-card .country-content .cities-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60%;
+    max-height: 100%;
+}
+
+section#contacts .contacts-slider .country-card .country-content .cities-section a {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    /*display: inline-block;*/
+    max-width: 50%;
+}
+
+section#contacts .contacts-slider .country-card .country-content .cities-section a:hover,
+section#contacts .contacts-slider .country-card .country-content .cities-section a:active {
+    text-decoration: underline;
+}
+
+section#contacts .contacts-slider .country-card .country-content .cities-section a.primary-city {
+    font-weight: 500;
+}
+
+section#contacts .contacts-slider .country-card .country-content .contacts-details {
+    width: 40%;
+    border-left: 1px solid #34517f;
+    padding-left: 40px;
+}
+
+section#contacts .dropdown-menu {
+    -webkit-appearance: none;
+    padding: 0 25px;
+    display: inline-block;
+    height: 40px;
+    border-radius: 25px;
+    box-shadow: 0 2px 15px 0 #606060;
+    background-color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    color: #808080;
+    margin: 20px 0;
+    min-width: 300px;
 }
 
 section#contacts .social-icons {
     display: flex;
+    flex-direction: row !important;
+    justify-content: center;
 }
 
-section#contacts .social-icons a {
+section#contacts .social-icons > * {
     margin-right: 20px;
 }
+
+section#contacts .social-icons > *:last-child {
+    margin-right: unset;
+}
+
 
 .vk-icon, .fb-icon, .yt-icon, .ok-icon {
     display: inline-block;
