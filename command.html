@@ -16,11 +16,11 @@
 <body>
 <aside class="feedback-menu" id="feedback">
 	<h5 class="title">Обсудить продукты</h5>
-	<form action="https://formspree.io/o.a.bezhentseva@gmail.com" method="POST">
+	<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
 		<div class="input-line">
-			<input name="name" placeholder="Имя" required type="text">
-			<input name="phone" placeholder="Телефон" required type="tel">
-			<input name="email" placeholder="Почта" required type="email">
+			<input name="value1" placeholder="Имя" required type="text">
+			<input name="value2" placeholder="Телефон" required type="tel">
+			<input name="value3" placeholder="Почта" required type="email">
 		</div>
 		<button type="submit">Получить</button>
 	</form>
@@ -111,11 +111,11 @@
 	</div>
 </main>
 <script>
-    document.querySelectorAll('form').forEach(form => form.onsubmit = (event) => fetch(event.target.action, {
-        method: event.target.method,
-        body: event.target
-    }).then(() => event.target.innerHTML =
-        event.target.name.value + ', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' + event.target.phone.value) && false)
+    document.querySelectorAll('form').forEach(form => form.onsubmit = (event) =>
+        fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
+            .then(() => event.target.innerHTML = event.target.value1.value +
+                ', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' +
+                event.target.value2.value) && false)
 </script>
 </body>
 </html>
