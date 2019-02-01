@@ -1,0 +1,85 @@
+{
+  "Russia": {
+    "title": {
+      "ru": "Россия",
+      "en": "Russia"
+    },
+    "cities": {
+      "Moscow": {
+        "title": {
+          "ru": "Москва",
+          "en": "Moscow"
+        },
+        "primary": true,
+        "address": {
+          "ru": "Сибирский тракт 12 к.1А",
+          "en": "Siberian tract 12 k.1A"
+        },
+        "time": {
+          "ru": "С 9:00 до 18:00",
+          "en": "9:00 to 18:00"
+        },
+        "phone": "",
+        "email": "Example@mail.com"
+      },
+      "Ekaterinburg": {
+        "title": {
+          "ru": "Екатеринбург",
+          "en": "Ekaterinburg"
+        },
+        "primary": true,
+        "address": {
+          "ru": "Сибирский тракт 12 к.1А",
+          "en": "Siberian tract 12 k.1A"
+        },
+        "time": {
+          "ru": "С 9:00 до 18:00",
+          "en": "9:00 to 18:00"
+        },
+        "phone": "",
+        "email": "Example@mail.com"
+      }
+    }
+  },
+  "Ukraine": {
+    "title": {
+      "ru": "Украина",
+      "en": "Ukraine"
+    },
+    "cities": {
+      "Kiev": {
+        "title": {
+          "ru": "Киев",
+          "en": "Kiev"
+        },
+        "primary": true,
+        "address": {
+          "ru": "Сибирский тракт 12 к.1А",
+          "en": "Siberian tract 12 k.1A"
+        },
+        "time": {
+          "ru": "С 9:00 до 18:00",
+          "en": "9:00 to 18:00"
+        },
+        "phone": "",
+        "email": "Example@mail.com"
+      },
+      "City": {
+        "title": {
+          "en": "City"
+        },
+        "primary": true,
+        "address": {
+          "ru": "Сибирский тракт 12 к.1А",
+          "en": "Siberian tract 12 k.1A"
+        },
+        "time": {
+          "ru": "С 9:00 до 18:00",
+          "en": "9:00 to 18:00"
+        },
+        "phone": "",
+        "email": "Example@mail.com"
+      }
+    }
+  }
+}

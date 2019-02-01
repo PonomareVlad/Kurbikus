@@ -270,7 +270,7 @@
 			</div>
 			<div class="header header-space" id="contacts-section">
 				<h2 class="title">Контакты</h2>
-				<select class="dropdown-menu hide-in-mobile">
+				<select class="dropdown-menu hide-in-mobile" id="countriesMenu">
 					<option disabled>Выберете страну</option>
 				</select>
 			</div>
@@ -417,7 +417,9 @@
 		</section>
 	</div>
 </main>
-<script>
+<script type="module">
+    import Contacts from './assets/js/contacts.js';
+
     document.querySelectorAll('form').forEach(form => (form.onsubmit = (event) =>
         fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
             .then(() => event.target.parentNode.classList.toggle('form-result', true) && event.target.parentNode.querySelector('.form-result-message') ?
@@ -429,6 +431,8 @@
 
     if (window.matchMedia("(min-width: 1025px)").matches)
         document.querySelectorAll('.background-video').forEach(video => (video.preload = 'auto') && (video.autoplay = true));
+
+    console.debug(new Contacts());
 </script>
 </body>
 </html>
