@@ -18,14 +18,14 @@ section#intro .block {
 }
 
 section#intro .capture-form {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.33;
     color: var(--secondary-text-color);
 }
 
-section#intro .capture-form form {
+section#intro .capture-form form, section#intro .capture-form form > div {
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
 }
 
 section#intro .capture-form input {
@@ -42,11 +42,31 @@ section#intro .capture-form input {
 
 section#intro .capture-form button {
     -webkit-appearance: none;
-    background: white;
+    background-color: white;
     font-size: 16px;
     font-weight: 500;
     height: 40px;
     border-radius: 25px;
+    border: 1px solid #34517f;
+}
+
+section#intro .capture-form .form-result-message {
+    color: var(--primary-text-color);
+    font-size: 20px;
+    line-height: 1.25;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    padding: var(--root-vertical-padding) var(--root-padding);
+}
+
+section#intro .capture-form .form-result-buttons > * {
+    width: 100%;
+}
+
+section#intro .capture-form .invert-button {
+    color: var(--primary-text-color);
+    background-color: transparent;
     border: 1px solid #34517f;
 }
 
@@ -71,7 +91,7 @@ section#intro .products .product-item .product-button {
     border-radius: 15px;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
     padding: 30px 15px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 section#intro .products .product-item:first-child .product-button {

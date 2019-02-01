@@ -47,7 +47,7 @@ main.landing > section .section-title {
 
 
 main.landing .capture-form {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.33;
     color: var(--secondary-text-color);
 }
@@ -71,7 +71,7 @@ main.landing .capture-form input {
 
 main.landing .capture-form button {
     -webkit-appearance: none;
-    background: white;
+    background-color: white;
     font-size: 16px;
     font-weight: 500;
     height: 40px;
@@ -85,6 +85,26 @@ main.landing .capture-form.white button {
     border: 1px solid white;
 }
 
+main.landing .capture-form .form-result-message {
+    color: var(--primary-text-color);
+    font-size: 20px;
+    line-height: 1.25;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    padding: var(--root-vertical-padding) var(--root-padding);
+}
+
+main.landing .capture-form .form-result-buttons > * {
+    width: 100%;
+}
+
+main.landing .capture-form .invert-button {
+    color: var(--primary-text-color);
+    background-color: transparent;
+    border: 1px solid #34517f;
+}
+
 @media (max-width: 1024px) {
 
     main.landing .capture-form button.contrast-in-mobile {
@@ -92,7 +112,6 @@ main.landing .capture-form.white button {
         border: 1px solid #34517f;
     }
 }
-
 
 main.landing .how-work {
     margin-top: 10vh;

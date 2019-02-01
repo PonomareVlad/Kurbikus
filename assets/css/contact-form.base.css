@@ -35,3 +35,23 @@
     border-radius: 25px;
     border: 1px solid #34517f;
 }
+
+#contact-form .form-result-message {
+    color: var(--primary-text-color);
+    font-size: 20px;
+    line-height: 1.25;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    padding: var(--root-vertical-padding) var(--root-padding);
+}
+
+#contact-form .form-result-buttons > * {
+    width: 100%;
+}
+
+#contact-form .invert-button {
+    background-color: transparent;
+    border: 1px solid #34517f;
+    color: #34517f;
+}

@@ -120,8 +120,30 @@ header > .background-decoration:after {
     transform: rotate(15deg);
 }
 
+.feedback-menu form, .feedback-menu .form-result-section {
+    display: flex;
+}
+
+.form-result-message {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-result-message:first-letter {
+    text-transform: uppercase;
+}
+
+.form-result-buttons {
+    margin-top: 30px;
+    display: flex;
+}
+
 header nav, header:not(:target) .close-menu, header:target .open-menu, header:not(:target) > .background-decoration, .feedback-menu, .close-feedback, .language-menu, .close-language {
     display: none;
+}
+
+*:not(.form-result) > .form-result-section, .form-result > form {
+    display: none !important;
 }
 
 header:target, .feedback-menu:target ~ header, .language-menu:target ~ header {

@@ -95,7 +95,7 @@ section#contacts .contacts-slider .show-city-button {
     -webkit-appearance: none;
     display: inline-block;
     padding: 10px 0;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     font-weight: bold;
     color: #34517f;
@@ -164,7 +164,7 @@ section#contacts .dropdown-menu {
     border-radius: 25px;
     box-shadow: 0 2px 15px 0 #606060;
     background-color: #ffffff;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     border: none;
     color: #808080;

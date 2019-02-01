@@ -24,6 +24,13 @@
 		</div>
 		<button type="submit">Получить</button>
 	</form>
+	<div class="form-result-section">
+		<div class="form-result-message"></div>
+		<div class="form-result-buttons">
+			<button class="form-reset-button">Изменить</button>
+			<a class="button invert-button" href="#">Главная</a>
+		</div>
+	</div>
 </aside>
 <a class="close-feedback" href="#" title="Закрыть меню обратной связи"></a>
 <aside class="language-menu" id="language">
@@ -50,7 +57,8 @@
 			<a class="hide-in-desktop" href="/foreman.html">Мобильный прораб</a>
 			<a class="hide-in-desktop" href="/command.html">Команда</a>
 			<a class="hide-in-mobile" href="#command">Команда</a>
-			<a href="#contacts">Контакты</a>
+			<a class="hide-in-mobile" href="#contacts">Контакты</a>
+			<a class="hide-in-desktop" href="#contacts-section">Контакты</a>
 		</nav>
 	</div>
 	<div>
@@ -71,12 +79,20 @@
 		<section id="intro">
 			<h1 class="title">Готовые мобильные приложения для строителей</h1>
 			<div class="capture-form">
-				<p>Установите AR-приложение и получите 2 модели дома в дополненной реальности бесплатно</p>
 				<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
-					<input name="value2" placeholder="Телефон" required type="tel">
-					<input name="value1" placeholder="Имя" required type="text">
-					<button type="submit">Получить</button>
+					<p>Установите AR-приложение и получите 2 модели дома в дополненной реальности бесплатно</p>
+					<div>
+						<input name="value2" placeholder="Телефон" required type="tel">
+						<input name="value1" placeholder="Имя" required type="text">
+						<button type="submit">Получить</button>
+					</div>
 				</form>
+				<div class="form-result-section">
+					<div class="form-result-message"></div>
+					<div class="form-result-buttons">
+						<button class="form-reset-button invert-button">Изменить</button>
+					</div>
+				</div>
 			</div>
 			<div class="products header-space" id="products">
 				<a class="product-item red" href="/project.html"
@@ -242,8 +258,14 @@
 					<input name="value2" placeholder="Телефон" required type="tel">
 					<button type="submit">Отправить</button>
 				</form>
+				<div class="form-result-section">
+					<div class="form-result-message"></div>
+					<div class="form-result-buttons">
+						<button class="form-reset-button invert-button">Изменить</button>
+					</div>
+				</div>
 			</div>
-			<div class="header">
+			<div class="header header-space" id="contacts-section">
 				<h2 class="title">Контакты</h2>
 				<select class="dropdown-menu hide-in-mobile">
 					<option disabled>Выберете страну</option>
@@ -393,11 +415,14 @@
 	</div>
 </main>
 <script>
-    document.querySelectorAll('form').forEach(form => form.onsubmit = (event) =>
+    document.querySelectorAll('form').forEach(form => (form.onsubmit = (event) =>
         fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
-            .then(() => event.target.innerHTML = event.target.value1.value +
-                ', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' +
-                event.target.value2.value) && false)
+            .then(() => event.target.parentNode.classList.toggle('form-result', true) && event.target.parentNode.querySelector('.form-result-message') ?
+                (event.target.parentNode.querySelector('.form-result-message').innerHTML = event.target.value1.value +
+                    ', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' +
+                    event.target.value2.value) : false) && false) && form.parentNode.querySelector('.form-reset-button') ?
+        (form.parentNode.querySelector('.form-reset-button').onclick = () => form.reset() ||
+            form.parentNode.classList.toggle('form-result', false)) : false)
 </script>
 </body>
 </html>

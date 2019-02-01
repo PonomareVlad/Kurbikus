@@ -21,7 +21,7 @@ section#intro .capture-form {
     min-width: 800px;
 }
 
-section#intro .capture-form form {
+section#intro .capture-form form > div {
     flex-direction: row;
     justify-content: space-between;
     height: 50px;
@@ -47,6 +47,7 @@ section#intro .capture-form button {
     position: relative;
     font-size: 16px;
     height: 100%;
+    min-height: 50px;
     min-width: 200px;
     margin-right: 0;
     font-weight: bold;
@@ -57,7 +58,7 @@ section#intro .capture-form button {
     cursor: pointer;
 }
 
-section#intro .capture-form button:before, section#intro .capture-form button:after {
+section#intro .capture-form button[type="submit"]:before, section#intro .capture-form button[type="submit"]:after {
     content: '';
     position: absolute;
     right: -70px;
@@ -67,9 +68,23 @@ section#intro .capture-form button:before, section#intro .capture-form button:af
     background: url(../img/ios.svg) no-repeat center/25px;
 }
 
-section#intro .capture-form button:after {
+section#intro .capture-form button[type="submit"]:after {
     right: -120px;
     background: url(../img/android.svg) no-repeat center/30px;
+}
+
+section#intro .capture-form .form-result-message {
+    color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: initial;
+    border-radius: initial;
+    box-shadow: initial;
+    background-color: initial;
+    padding: initial;
+}
+
+section#intro .capture-form .form-result-buttons > * {
+    width: initial;
 }
 
 section#intro .products {
