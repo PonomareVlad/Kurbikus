@@ -122,13 +122,15 @@ main.landing .capture-form {
 }
 
 main.landing .capture-form form {
-    display: flex;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+}
+
+main.landing .capture-form form div {
     flex-direction: row;
 }
 
-main.landing .capture-form form > div {
-    display: flex;
-    flex-direction: row;
+main.landing .capture-form form > div > div {
     justify-content: space-between;
     height: 50px;
     border-radius: 25px;
@@ -154,13 +156,30 @@ main.landing .capture-form button {
     font-size: 16px;
     height: 50px;
     min-width: 200px;
-    margin-left: 30px;
     font-weight: bold;
     border-radius: 25px;
     border: unset;
     background-color: #34517f;
     color: var(--secondary-text-color);
     cursor: pointer;
+}
+
+main.landing .capture-form button[type="submit"] {
+    margin-left: 30px;
+}
+
+main.landing .capture-form .form-result-message {
+    color: var(--secondary-text-color);
+    font-size: 16px;
+    line-height: initial;
+    border-radius: initial;
+    box-shadow: initial;
+    background-color: initial;
+    padding: initial;
+}
+
+main.landing .capture-form .form-result-buttons > * {
+    width: initial;
 }
 
 main.landing .preview-section {
