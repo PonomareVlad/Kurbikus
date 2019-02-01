@@ -420,6 +420,8 @@
 <script type="module">
     import Contacts from './assets/js/contacts.js';
 
+    const desktop = window.matchMedia("(min-width: 1025px)").matches;
+
     document.querySelectorAll('form').forEach(form => (form.onsubmit = (event) =>
         fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
             .then(() => event.target.parentNode.classList.toggle('form-result', true) && event.target.parentNode.querySelector('.form-result-message') ?
@@ -429,10 +431,9 @@
         (form.parentNode.querySelector('.form-reset-button').onclick = () => form.reset() ||
             form.parentNode.classList.toggle('form-result', false)) : false);
 
-    if (window.matchMedia("(min-width: 1025px)").matches)
-        document.querySelectorAll('.background-video').forEach(video => (video.preload = 'auto') && (video.autoplay = true));
+    if (desktop) document.querySelectorAll('.background-video').forEach(video => (video.preload = 'auto') && (video.autoplay = true));
 
-    console.debug(new Contacts());
+    console.debug(new Contacts({desktop}));
 </script>
 </body>
 </html>
