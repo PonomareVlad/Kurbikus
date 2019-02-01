@@ -12,6 +12,9 @@
 	<link href="assets/css/fonts.css" rel="stylesheet">
 	<link href="assets/css/base.css" rel="stylesheet">
 	<link href="assets/css/desktop.css" media="(min-width: 1025px)" rel="stylesheet">
+	<link href="/project.html" rel="prerender">
+	<link href="/magazine.html" rel="prerender">
+	<link href="/foreman.html" rel="prerender">
 </head>
 <body>
 <aside class="feedback-menu" id="feedback">
@@ -115,7 +118,7 @@
 								</p>
 							</div>
 						</div>
-						<video autoplay class="background-video" loop muted poster="assets/video/CP.png" preload="auto">
+						<video class="background-video" loop muted poster="assets/video/CP.png">
 							<source src="assets/video/CP.mp4" type="video/mp4">
 						</video>
 					</article>
@@ -140,7 +143,7 @@
 								</p>
 							</div>
 						</div>
-						<video autoplay class="background-video" loop muted poster="assets/video/CM.png" preload="auto">
+						<video class="background-video" loop muted poster="assets/video/CM.png">
 							<source src="assets/video/CM.mp4" type="video/mp4">
 						</video>
 					</article>
@@ -165,7 +168,7 @@
 								</p>
 							</div>
 						</div>
-						<video autoplay class="background-video" loop muted poster="assets/video/CF.png" preload="auto">
+						<video class="background-video" loop muted poster="assets/video/CF.png">
 							<source src="assets/video/CF.mp4" type="video/mp4">
 						</video>
 					</article>
@@ -422,7 +425,10 @@
                     ', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' +
                     event.target.value2.value) : false) && false) && form.parentNode.querySelector('.form-reset-button') ?
         (form.parentNode.querySelector('.form-reset-button').onclick = () => form.reset() ||
-            form.parentNode.classList.toggle('form-result', false)) : false)
+            form.parentNode.classList.toggle('form-result', false)) : false);
+
+    if (window.matchMedia("(min-width: 1025px)").matches)
+        document.querySelectorAll('.background-video').forEach(video => (video.preload = 'auto') && (video.autoplay = true));
 </script>
 </body>
 </html>
