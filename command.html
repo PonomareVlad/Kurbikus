@@ -157,8 +157,7 @@
                 (event.target.parentNode.querySelector('.form-result-message').innerHTML = event.target.value1.value +
                     ', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' +
                     event.target.value2.value) : false) && false) && form.parentNode.querySelector('.form-reset-button') ?
-        (form.parentNode.querySelector('.form-reset-button').onclick = () => form.reset() ||
-            form.parentNode.classList.toggle('form-result', false)) : false)
+		(form.parentNode.querySelector('.form-reset-button').onclick = () => form.parentNode.classList.toggle('form-result', false)) : false)
 </script>
 </body>
 </html>
