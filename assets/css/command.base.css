@@ -2,6 +2,10 @@ section#command {
 
 }
 
+body#command-page section#command {
+    overflow: initial;
+}
+
 section#command > .title {
     font-size: 33px;
     font-weight: bold;
@@ -20,6 +24,10 @@ section#command .team-slider {
     margin-bottom: 30vh;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+}
+
+body#command-page section#command .team-slider {
+    margin-bottom: 100px;
 }
 
 section#command .team-slider .team-card {
@@ -85,12 +93,36 @@ section#command > .background-decoration:before {
     position: absolute;
     top: 40px;
     left: unset;
-    right: -25vmax;
-    width: 150vmax;
-    height: 80vh;
+    right: -25vmin;
+    width: 200vmin;
+    height: 130vmin;
     border-radius: 15px;
     transform: rotate(-15deg);
     transform-origin: right top;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
     background-color: #34517f;
+}
+
+@media (min-width: 380px) {
+    section#command > .background-decoration:before {
+        height: 120vmin;
+    }
+}
+
+@media (min-width: 415px) {
+    section#command > .background-decoration:before {
+        height: 100vmin;
+    }
+}
+
+@media (min-width: 470px) {
+    section#command > .background-decoration:before {
+        height: 90vmin;
+    }
+}
+
+@media (min-width: 500px) {
+    section#command > .background-decoration:before {
+        height: 80vmin;
+    }
 }

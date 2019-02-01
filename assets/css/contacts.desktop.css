@@ -91,3 +91,7 @@ section#contacts > .background-decoration > figure:nth-child(3) {
     background-color: #eec13b;
     z-index: -2;
 }
+
+body#contacts-page section#contacts > .background-decoration:before {
+    content: unset;
+}

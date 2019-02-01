@@ -185,6 +185,44 @@ section#contacts .social-icons > *:last-child {
     margin-right: unset;
 }
 
+body#contacts-page section#contacts > .background-decoration:before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: unset;
+    right: -25vmin;
+    width: 200vmin;
+    height: 200vmin;
+    border-radius: 15px;
+    transform: rotate(-15deg);
+    transform-origin: right top;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: #34517f;
+}
+
+@media (min-width: 350px) {
+    body#contacts-page section#contacts > .background-decoration:before {
+        height: 180vmin;
+    }
+}
+
+@media (min-width: 380px) {
+    body#contacts-page section#contacts > .background-decoration:before {
+        height: 150vmin;
+    }
+}
+
+@media (min-width: 450px) {
+    body#contacts-page section#contacts > .background-decoration:before {
+        height: 130vmin;
+    }
+}
+
+@media (min-width: 500px) {
+    body#contacts-page section#contacts > .background-decoration:before {
+        height: 110vmin;
+    }
+}
 
 .vk-icon, .fb-icon, .yt-icon, .ok-icon {
     display: inline-block;

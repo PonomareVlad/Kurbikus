@@ -13,7 +13,7 @@
 	<link href="assets/css/base.css" rel="stylesheet">
 	<link href="assets/css/desktop.css" media="(min-width: 1025px)" rel="stylesheet">
 </head>
-<body>
+<body id="contacts-page">
 <aside class="feedback-menu" id="feedback">
 	<h5 class="title">Обсудить продукты</h5>
 	<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
@@ -50,14 +50,14 @@
 	<div>
 		<a class="logo" href="/" title="На главную"></a>
 		<nav>
-			<a href="#intro">Главная</a>
-			<a class="hide-in-mobile" href="#about">О нас</a>
+			<a href="/#intro">Главная</a>
+			<a class="hide-in-mobile" href="/#about">О нас</a>
 			<a class="hide-in-desktop" href="/project.html">3D калькулятор</a>
 			<a class="hide-in-desktop" href="/magazine.html">Каталог домов</a>
 			<a class="hide-in-desktop" href="/foreman.html">Мобильный прораб</a>
 			<a class="hide-in-desktop" href="/command.html">Команда</a>
-			<a class="hide-in-mobile" href="#command">Команда</a>
-			<a class="hide-in-mobile" href="#contacts">Контакты</a>
+			<a class="hide-in-mobile" href="/#command">Команда</a>
+			<a class="hide-in-mobile" href="/#contacts">Контакты</a>
 			<a class="hide-in-desktop" href="/contacts.html">Контакты</a>
 		</nav>
 	</div>
@@ -76,196 +76,8 @@
 </header>
 <main class="horizontal-scroll">
 	<div class="section-wrapper">
-		<section id="intro">
-			<h1 class="title">Готовые мобильные приложения для строителей</h1>
-			<div class="capture-form">
-				<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
-					<p>Установите AR-приложение и получите 2 модели дома в дополненной реальности бесплатно</p>
-					<div>
-						<input name="value2" placeholder="Телефон" required type="tel">
-						<input name="value1" placeholder="Имя" required type="text">
-						<button type="submit">Получить</button>
-					</div>
-				</form>
-				<div class="form-result-section">
-					<div class="form-result-message"></div>
-					<div class="form-result-buttons">
-						<button class="form-reset-button invert-button">Изменить</button>
-					</div>
-				</div>
-			</div>
-			<div class="products header-space" id="products">
-				<a class="product-item red" href="/project.html"
-				   onmouseenter="this.querySelector('video').currentTime=0;">
-					<div class="product-button">
-						<div class="product-button-content">
-							<h3 class="title">Для сайта</h3>
-							<p class="caption">3D-калькулятор домов на вашем сайте</p>
-						</div>
-					</div>
-					<article>
-						<div class="content" style="background-image: url(assets/img/cp-angle.svg)">
-							<figure>
-								<img src="assets/img/CP.svg">
-							</figure>
-							<div class="description">
-								<h5 class="title">Дайте собрать клиенту свой дом прямо у Вас на сайте</h5>
-								<p class="caption">
-									В этот же день примерьте готовый проект в дополненной реальности у него на участке
-								</p>
-							</div>
-						</div>
-						<video autoplay class="background-video" loop muted poster="assets/video/CP.png" preload="auto">
-							<source src="assets/video/CP.mp4" type="video/mp4">
-						</video>
-					</article>
-				</a>
-				<a class=" product-item blue" href="/magazine.html"
-				   onmouseenter="this.querySelector('video').currentTime=0;">
-					<div class="product-button">
-						<div class="product-button-content">
-							<h3 class="title">AR - приложение</h3>
-							<p class="caption">Мобильный католог домов в дополенной реальности</p>
-						</div>
-					</div>
-					<article>
-						<div class="content" style="background-image: url(assets/img/cm-angle.svg)">
-							<figure>
-								<img src="assets/img/CM.svg">
-							</figure>
-							<div class="description">
-								<h5 class="title">Покажите Ваш фирменный каталог домов клиенту, через приложение.</h5>
-								<p class="caption">
-									Выводите любой дом в дополненную реальность уже на встрече с клиентом
-								</p>
-							</div>
-						</div>
-						<video autoplay class="background-video" loop muted poster="assets/video/CM.png" preload="auto">
-							<source src="assets/video/CM.mp4" type="video/mp4">
-						</video>
-					</article>
-				</a>
-				<a class=" product-item yellow" href="/foreman.html"
-				   onmouseenter="this.querySelector('video').currentTime=0;">
-					<div class="product-button">
-						<div class="product-button-content">
-							<h3 class="title">Мобильный прораб</h3>
-							<p class="caption">Котроль скрытых работ в дополненной реальности</p>
-						</div>
-					</div>
-					<article>
-						<div class="content" style="background-image: url(assets/img/cf-angle.svg)">
-							<figure>
-								<img src="assets/img/CF.svg">
-							</figure>
-							<div class="description">
-								<h5 class="title">Контролируйте качество и скрытые работы</h5>
-								<p class="caption">
-									Демонстрируйте наглядно клиенту "как должно быть" и "как сделано на самом деле
-								</p>
-							</div>
-						</div>
-						<video autoplay class="background-video" loop muted poster="assets/video/CF.png" preload="auto">
-							<source src="assets/video/CF.mp4" type="video/mp4">
-						</video>
-					</article>
-				</a>
-			</div>
-			<div class="background-decoration">
-				<figure></figure>
-				<figure></figure>
-				<figure></figure>
-			</div>
-		</section>
-	</div>
-	<div class="section-wrapper">
-		<section id="about">
-			<h2 class="title">О нас</h2>
-			<div class="about-video-wrapper" onblur="this.querySelector('video').pause();" tabindex="-1">
-				<video controls poster="assets/video/promo.png" preload="metadata">
-					<source src="assets/video/promo.mp4" type="video/mp4">
-				</video>
-				<a class="close-video" href="#about" title="Закрыть видео"></a>
-			</div>
-			<div class="description">
-				<div class="item">
-					<h3 class="title">Наша миссия</h3>
-					<p class="caption">С другой стороны постоянное информационно-пропагандистское обеспечение нашей
-						деятельности позволяет оценить значение систем массового участия.</p>
-				</div>
-				<div class="item">
-					<h3 class="title">Ценности</h3>
-					<p class="caption">С другой стороны постоянное информационно-пропагандистское обеспечение нашей
-						деятельности.</p>
-				</div>
-			</div>
-			<div class="background-decoration">
-				<figure></figure>
-				<figure></figure>
-				<figure></figure>
-			</div>
-		</section>
-	</div>
-	<div class="section-wrapper hide-in-mobile">
-		<section id="command">
-			<h2 class="title">Команда</h2>
-			<div class="team-slider">
-				<div class="team-card">
-					<figure class="pic">
-						<img src="https://picsum.photos/600?random0">
-					</figure>
-					<div class="description">
-						<h3 class="title">Максим Бызов</h3>
-						<p class="caption">Архитектор</p>
-					</div>
-				</div>
-				<div class="team-card">
-					<figure class="pic">
-						<img src="https://picsum.photos/600?random1">
-					</figure>
-					<div class="description">
-						<h3 class="title">Максим Бызов</h3>
-						<p class="caption">Архитектор</p>
-					</div>
-				</div>
-				<div class="team-card">
-					<figure class="pic">
-						<img src="https://picsum.photos/600?random2">
-					</figure>
-					<div class="description">
-						<h3 class="title">Максим Бызов</h3>
-						<p class="caption">Архитектор</p>
-					</div>
-				</div>
-			</div>
-			<div class="background-decoration">
-				<figure></figure>
-				<figure></figure>
-				<figure></figure>
-				<figure></figure>
-				<figure></figure>
-				<figure></figure>
-			</div>
-		</section>
-	</div>
-	<div class="section-wrapper">
 		<section id="contacts">
-			<div class="hide-in-desktop" id="contact-form">
-				<h3 class="title">Связаться с нами и обсудить Ваши задачи</h3>
-				<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
-					<input name="value3" placeholder="Email" required type="email">
-					<input name="value1" placeholder="Имя" required type="text">
-					<input name="value2" placeholder="Телефон" required type="tel">
-					<button type="submit">Отправить</button>
-				</form>
-				<div class="form-result-section">
-					<div class="form-result-message"></div>
-					<div class="form-result-buttons">
-						<button class="form-reset-button invert-button">Изменить</button>
-					</div>
-				</div>
-			</div>
-			<div class="header header-space" id="contacts-section">
+			<div class="header" id="contacts-section">
 				<h2 class="title">Контакты</h2>
 				<select class="dropdown-menu hide-in-mobile">
 					<option disabled>Выберете страну</option>
@@ -403,6 +215,21 @@
 								<a class="ok-icon" href="#"></a>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hide-in-desktop" id="contact-form">
+				<h3 class="title">Связаться с нами и обсудить Ваши задачи</h3>
+				<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
+					<input name="value3" placeholder="Email" required type="email">
+					<input name="value1" placeholder="Имя" required type="text">
+					<input name="value2" placeholder="Телефон" required type="tel">
+					<button type="submit">Отправить</button>
+				</form>
+				<div class="form-result-section">
+					<div class="form-result-message"></div>
+					<div class="form-result-buttons">
+						<button class="form-reset-button invert-button">Изменить</button>
 					</div>
 				</div>
 			</div>

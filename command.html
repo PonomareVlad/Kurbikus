@@ -13,7 +13,7 @@
 	<link href="assets/css/base.css" rel="stylesheet">
 	<link href="assets/css/desktop.css" media="(min-width: 1025px)" rel="stylesheet">
 </head>
-<body>
+<body id="command-page">
 <aside class="feedback-menu" id="feedback">
 	<h5 class="title">Обсудить продукты</h5>
 	<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
@@ -48,7 +48,7 @@
 <a class="close-language" href="#" title="Закрыть меню выбора языка"></a>
 <header id="menu">
 	<div>
-		<figure class="logo"></figure>
+		<a class="logo" href="/" title="На главную"></a>
 		<nav>
 			<a href="/#intro">Главная</a>
 			<a class="hide-in-mobile" href="/#about">О нас</a>
@@ -58,7 +58,7 @@
 			<a class="hide-in-desktop" href="/command.html">Команда</a>
 			<a class="hide-in-mobile" href="/#command">Команда</a>
 			<a class="hide-in-mobile" href="/#contacts">Контакты</a>
-			<a class="hide-in-desktop" href="/#contacts-section">Контакты</a>
+			<a class="hide-in-desktop" href="/contacts.html">Контакты</a>
 		</nav>
 	</div>
 	<div>
@@ -114,6 +114,37 @@
 				<figure></figure>
 				<figure></figure>
 				<figure></figure>
+			</div>
+		</section>
+	</div>
+	<div class="section-wrapper">
+		<section id="about">
+			<div class="description">
+				<div class="item">
+					<h3 class="title">Наша миссия</h3>
+					<p class="caption">С другой стороны постоянное информационно-пропагандистское обеспечение нашей
+						деятельности позволяет оценить значение систем массового участия.</p>
+				</div>
+				<div class="item">
+					<h3 class="title">Ценности</h3>
+					<p class="caption">С другой стороны постоянное информационно-пропагандистское обеспечение нашей
+						деятельности.</p>
+				</div>
+			</div>
+			<div class="hide-in-desktop" id="contact-form">
+				<h3 class="title">Связаться с нами и обсудить Ваши задачи</h3>
+				<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
+					<input name="value3" placeholder="Email" required type="email">
+					<input name="value1" placeholder="Имя" required type="text">
+					<input name="value2" placeholder="Телефон" required type="tel">
+					<button type="submit">Отправить</button>
+				</form>
+				<div class="form-result-section">
+					<div class="form-result-message"></div>
+					<div class="form-result-buttons">
+						<button class="form-reset-button invert-button">Изменить</button>
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>

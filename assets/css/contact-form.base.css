@@ -6,7 +6,10 @@
     font-size: 33px;
     font-weight: bold;
     line-height: 1.18;
+}
 
+body#contacts-page #contact-form > .title {
+    color: var(--secondary-text-color);
 }
 
 #contact-form form {
