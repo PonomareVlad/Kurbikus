@@ -61,7 +61,7 @@ header nav > a {
 }
 
 main {
-
+    scroll-behavior: smooth;
 }
 
 main.horizontal-scroll {
