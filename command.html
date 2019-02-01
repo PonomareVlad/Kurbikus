@@ -150,6 +150,7 @@
 		</section>
 	</div>
 </main>
+<script src="https://unpkg.com/imask"></script>
 <script>
 	document.querySelectorAll('form').forEach(form => (form.onsubmit = (event) =>
 		fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
