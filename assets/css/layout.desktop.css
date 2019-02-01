@@ -1,3 +1,7 @@
+html, body {
+    overflow: hidden;
+}
+
 :root {
     --root-padding: 45px;
     --root-vertical-padding: var(--root-padding);
