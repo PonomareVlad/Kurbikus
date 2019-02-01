@@ -122,7 +122,7 @@ section#contacts .contacts-slider .country-card > .title {
 
 section#contacts .contacts-slider .country-card .country-content {
     display: flex;
-    max-height: 370px;
+    max-height: calc(100% - 50px);
 }
 
 section#contacts .contacts-slider .country-card .country-content .cities-section {
@@ -131,12 +131,15 @@ section#contacts .contacts-slider .country-card .country-content .cities-section
     flex-wrap: wrap;
     width: 60%;
     max-height: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 section#contacts .contacts-slider .country-card .country-content .cities-section a {
     font-size: 25px;
     font-weight: 300;
     margin-bottom: 10px;
+    margin-right: 30px;
     /*display: inline-block;*/
     max-width: 50%;
 }
@@ -154,6 +157,7 @@ section#contacts .contacts-slider .country-card .country-content .contacts-detai
     width: 40%;
     border-left: 1px solid #34517f;
     padding-left: 40px;
+    overflow-y: scroll;
 }
 
 section#contacts .dropdown-menu {

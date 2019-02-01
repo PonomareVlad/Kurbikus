@@ -44,7 +44,7 @@ section#command .team-slider .team-card {
 section#command .team-slider .team-card .pic {
     min-height: auto;
     min-width: auto;
-    max-height: unset;
+    max-height: 100%;
     max-width: unset;
     width: 411px;
     height: 411px;
