@@ -22,10 +22,11 @@
 	<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
 		<div class="input-line">
 			<input name="value1" placeholder="Имя" required type="text">
-			<input name="value2" placeholder="Телефон" required type="tel">
+			<input name="value2" placeholder="Телефон" required type="number">
 			<input name="value3" placeholder="Почта" required type="email">
 		</div>
 		<button type="submit">Получить</button>
+		<input name="capturePoint" type="hidden" value="Главная страница, ">
 	</form>
 	<div class="form-result-section">
 		<div class="form-result-message"></div>
@@ -85,7 +86,7 @@
 				<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
 					<p>Установите AR-приложение и получите 2 модели дома в дополненной реальности бесплатно</p>
 					<div>
-						<input name="value2" placeholder="Телефон" required type="tel">
+						<input name="value2" placeholder="Телефон" required type="number">
 						<input name="value1" placeholder="Имя" required type="text">
 						<button type="submit">Получить</button>
 					</div>
@@ -258,7 +259,7 @@
 				<form action="https://maker.ifttt.com/trigger/Kurbikus/with/key/c5hnJBCU0t-5kufqIvcbrnDsxLu-YY9jYHdjKk1BiJ3">
 					<input name="value3" placeholder="Email" required type="email">
 					<input name="value1" placeholder="Имя" required type="text">
-					<input name="value2" placeholder="Телефон" required type="tel">
+					<input name="value2" placeholder="Телефон" required type="number">
 					<button type="submit">Отправить</button>
 				</form>
 				<div class="form-result-section">
@@ -417,7 +418,6 @@
 		</section>
 	</div>
 </main>
-<script src="https://unpkg.com/imask"></script>
 <script>
 	document.querySelectorAll('form').forEach(form => (form.onsubmit = (event) =>
 		fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
@@ -427,10 +427,9 @@
 					event.target.value2.value) : false) && false) && form.parentNode.querySelector('.form-reset-button') ?
 		(form.parentNode.querySelector('.form-reset-button').onclick = () => form.parentNode.classList.toggle('form-result', false)) : false);
 
-	document.querySelectorAll('[type="tel"]').forEach(inputNode => new IMask(inputNode, {mask: '+{7}(000)000-00-00'}));
-
 	if (window.matchMedia("(min-width: 1025px)").matches)
 		document.querySelectorAll('.background-video').forEach(video => (video.preload = 'auto') && (video.autoplay = true));
+
 </script>
 </body>
 </html>
