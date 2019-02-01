@@ -193,7 +193,7 @@ main.landing .preview-section {
 }
 
 main.landing .preview-section.frame-iMac {
-    background: url("../img/imac.png") no-repeat top right -10vw/50vw 100%;
+    background: url("../img/imac.png") no-repeat top right -10vw/contain;
 }
 
 main.landing .preview-section.frame-iPad {
