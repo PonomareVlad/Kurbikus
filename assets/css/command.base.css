@@ -30,22 +30,22 @@ body#command-page section#command .team-slider {
     margin-bottom: 100px;
 }
 
-section#command .team-slider .team-card {
+section#command .team-card {
     counter-increment: section;
-    position: relative;
+    /*position: relative;*/
     display: flex;
     flex-direction: column;
-    min-width: 100%;
+    /*min-width: 100%;*/
     border-radius: 15px;
     background-color: white;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
     color: var(--primary-text-color);
-    margin-right: var(--root-padding);
-    scroll-snap-align: center;
+    /*margin-right: var(--root-padding);*/
+    /*scroll-snap-align: center;*/
 }
 
-section#command .team-slider .team-card:last-child {
-    margin-right: unset;
+section#command .team-card:last-child {
+    /*margin-right: unset;*/
 }
 
 section#command .team-slider:after {
@@ -55,8 +55,8 @@ section#command .team-slider:after {
     min-width: var(--root-padding);
 }
 
-section#command .team-slider .team-card .pic {
-    height: calc(100vmin - (var(--root-padding) * 2));
+section#command .team-card .pic {
+    /*height: calc(100vmin - (var(--root-padding) * 2));*/
     max-height: 325px;
     width: 100%;
     padding: unset;
@@ -66,27 +66,28 @@ section#command .team-slider .team-card .pic {
     overflow: hidden;
 }
 
-section#command .team-slider .team-card .pic img {
+section#command .team-card .pic img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 
-section#command .team-slider .team-card .pic .hover-pic {
+section#command .team-card .pic .hover-pic {
     display: none;
 }
 
-section#command .team-slider .team-card .description {
+section#command .team-card .description {
     padding: var(--root-padding) calc(var(--root-padding) * 2);
 }
 
-section#command .team-slider .team-card .description .title {
+section#command .team-card .description .title {
     margin: unset;
     font-size: 25px;
     font-weight: bold;
 }
 
-section#command .team-slider .team-card .description .caption {
+section#command .team-card .description .caption {
     font-size: 25px;
     margin-top: calc(var(--root-padding) * .5);
     margin-bottom: unset;

@@ -43,7 +43,7 @@ section#contacts .contacts-slider > * {
     margin-right: 30px !important;
 }
 
-section#contacts .contacts-slider .index-card .show-city-button {
+section#contacts .index-card .show-city-button {
     background: unset;
     color: #34517f;
     border: 1px solid #34517f;

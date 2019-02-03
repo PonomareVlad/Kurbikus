@@ -12,6 +12,7 @@
 	<link href="assets/css/fonts.css" rel="stylesheet">
 	<link href="assets/css/base.css" rel="stylesheet">
 	<link href="assets/css/desktop.css" media="(min-width: 1025px)" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css" rel="stylesheet">
 	<link href="/project.html" rel="prerender">
 	<link href="/magazine.html" rel="prerender">
 	<link href="/foreman.html" rel="prerender">
@@ -223,35 +224,43 @@
 	<div class="section-wrapper hide-in-mobile">
 		<section id="command">
 			<h2 class="title">Команда</h2>
-			<div class="team-slider">
-				<div class="team-card">
-					<figure class="pic">
-						<img class="base-pic" src="assets/img/team/02чб.jpg">
-						<img class="hover-pic" src="assets/img/team/01.jpg">
-					</figure>
-					<div class="description">
-						<h3 class="title">Максим Бызов</h3>
-						<p class="caption">Архитектор</p>
+			<div class="swiper-container" style="width: 1280px;height: 450px">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="team-card">
+							<figure class="pic">
+								<img class="base-pic" src="assets/img/team/02чб.jpg">
+								<img class="hover-pic" src="assets/img/team/01.jpg">
+							</figure>
+							<div class="description">
+								<h3 class="title">Максим Бызов</h3>
+								<p class="caption">Архитектор</p>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="team-card">
-					<figure class="pic">
-						<img class="base-pic" src="assets/img/team/02чб.jpg">
-						<img class="hover-pic" src="assets/img/team/01.jpg">
-					</figure>
-					<div class="description">
-						<h3 class="title">Максим Бызов</h3>
-						<p class="caption">Архитектор</p>
+					<div class="swiper-slide">
+						<div class="team-card">
+							<figure class="pic">
+								<img class="base-pic" src="assets/img/team/02чб.jpg">
+								<img class="hover-pic" src="assets/img/team/01.jpg">
+							</figure>
+							<div class="description">
+								<h3 class="title">Максим Бызов</h3>
+								<p class="caption">Архитектор</p>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="team-card">
-					<figure class="pic">
-						<img class="base-pic" src="assets/img/team/02чб.jpg">
-						<img class="hover-pic" src="assets/img/team/01.jpg">
-					</figure>
-					<div class="description">
-						<h3 class="title">Максим Бызов</h3>
-						<p class="caption">Архитектор</p>
+					<div class="swiper-slide">
+						<div class="team-card">
+							<figure class="pic">
+								<img class="base-pic" src="assets/img/team/02чб.jpg">
+								<img class="hover-pic" src="assets/img/team/01.jpg">
+							</figure>
+							<div class="description">
+								<h3 class="title">Максим Бызов</h3>
+								<p class="caption">Архитектор</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -288,73 +297,36 @@
 					<option disabled>Выберете страну</option>
 				</select>
 			</div>
-			<div class="contacts-slider">
-				<div class="index-card hide-in-desktop">
-					<label class="title" for="contacts-country-select">Выберете страну</label>
-					<select class="dropdown-menu" id="contacts-country-select">
-						<option disabled>Выберете страну</option>
-					</select>
-					<label class="title" for="contacts-city-select">Выберете город</label>
-					<select class="dropdown-menu" id="contacts-city-select">
-						<option disabled>Выберете город</option>
-					</select>
-					<button class="show-city-button" onclick="alert('Необходимо выбрать город')">Показать адрес/время
-						работы
-					</button>
-					<button class="show-map-button" onclick="alert('Необходимо выбрать город')">Показать на карте
-					</button>
-					<div class="social-icons">
-						<a class="vk-icon" href="#"></a>
-						<a class="fb-icon" href="#"></a>
-						<a class="yt-icon" href="#"></a>
-						<a class="ok-icon" href="#"></a>
-					</div>
-				</div>
-				<div class="city-card hide-in-desktop">
-					<h3 class="title">Екатеринбург</h3>
-					<div>
-						<h4 class="label">Адрес:</h4>
-						<p class="caption">Сибирский тракт 12 к.1А</p>
-					</div>
-					<div>
-						<h4 class="label">Рабочее время:</h4>
-						<p class="caption">С 9:00 до 18:00</p>
-					</div>
-					<div>
-						<h4 class="label">Email</h4>
-						<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
-					</div>
-					<button class="show-map-button">Показать на карте</button>
-					<div class="social-icons">
-						<a class="vk-icon" href="#"></a>
-						<a class="fb-icon" href="#"></a>
-						<a class="yt-icon" href="#"></a>
-						<a class="ok-icon" href="#"></a>
-					</div>
-				</div>
-				<div class="country-card hide-in-mobile">
-					<h3 class="title">Россия</h3>
-					<div class="country-content">
-						<div class="cities-section">
-							<a class="primary-city" href="#">Москва</a>
-							<a class="primary-city" href="#">Екатеринбург</a>
-							<a class="primary-city" href="#">Краснодар</a>
-							<a class="primary-city" href="#">Крым</a>
-							<a href="#">Новосибирск</a>
-							<a href="#">Ростов</a>
-							<a href="#">Сочи</a>
-							<a href="#">Санкт-Петербург</a>
-							<a href="#">Small town</a>
-							<a href="#">One more city</a>
-							<a href="#">City name</a>
-							<a href="#">City</a>
-							<a href="#">Small town</a>
-							<a href="#">One more city</a>
-							<a href="#">City name</a>
-							<a href="#">City</a>
-							<a href="#">Small town</a>
+			<div class="swiper-container" style="width: 1280px;height: 550px">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide hide-in-desktop">
+						<div class="index-card ">
+							<label class="title" for="contacts-country-select">Выберете страну</label>
+							<select class="dropdown-menu" id="contacts-country-select">
+								<option disabled>Выберете страну</option>
+							</select>
+							<label class="title" for="contacts-city-select">Выберете город</label>
+							<select class="dropdown-menu" id="contacts-city-select">
+								<option disabled>Выберете город</option>
+							</select>
+							<button class="show-city-button" onclick="alert('Необходимо выбрать город')">Показать
+								адрес/время
+								работы
+							</button>
+							<button class="show-map-button" onclick="alert('Необходимо выбрать город')">Показать на
+								карте
+							</button>
+							<div class="social-icons">
+								<a class="vk-icon" href="#"></a>
+								<a class="fb-icon" href="#"></a>
+								<a class="yt-icon" href="#"></a>
+								<a class="ok-icon" href="#"></a>
+							</div>
 						</div>
-						<div class="contacts-details">
+					</div>
+					<div class="swiper-slide hide-in-desktop">
+						<div class="city-card ">
+							<h3 class="title">Екатеринбург</h3>
 							<div>
 								<h4 class="label">Адрес:</h4>
 								<p class="caption">Сибирский тракт 12 к.1А</p>
@@ -367,7 +339,7 @@
 								<h4 class="label">Email</h4>
 								<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
 							</div>
-							<a class="show-feedback-button" href="#feedback">Оставить заявку</a>
+							<button class="show-map-button">Показать на карте</button>
 							<div class="social-icons">
 								<a class="vk-icon" href="#"></a>
 								<a class="fb-icon" href="#"></a>
@@ -376,50 +348,101 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="country-card hide-in-mobile">
-					<h3 class="title">Ukraine</h3>
-					<div class="country-content">
-						<div class="cities-section">
-							<a class="primary-city" href="#">Kiev</a>
-							<a class="primary-city" href="#">City</a>
-							<a class="primary-city" href="#">City with long name</a>
-							<a href="#">One more city</a>
-							<a href="#">City name</a>
-							<a href="#">City</a>
-							<a href="#">Small town</a>
-							<a href="#">City</a>
-							<a href="#">Small town</a>
-							<a href="#">One more city</a>
-							<a href="#">City name</a>
-							<a href="#">City</a>
-							<a href="#">Small town</a>
-							<a href="#">One more city</a>
-							<a href="#">City name</a>
-							<a href="#">City</a>
-							<a href="#">Small town</a>
+					<div class="swiper-slide hide-in-mobile">
+						<div class="country-card ">
+							<h3 class="title">Россия</h3>
+							<div class="country-content">
+								<div class="cities-section">
+									<a class="primary-city" href="#">Москва</a>
+									<a class="primary-city" href="#">Екатеринбург</a>
+									<a class="primary-city" href="#">Краснодар</a>
+									<a class="primary-city" href="#">Крым</a>
+									<a href="#">Новосибирск</a>
+									<a href="#">Ростов</a>
+									<a href="#">Сочи</a>
+									<a href="#">Санкт-Петербург</a>
+									<a href="#">Small town</a>
+									<a href="#">One more city</a>
+									<a href="#">City name</a>
+									<a href="#">City</a>
+									<a href="#">Small town</a>
+									<a href="#">One more city</a>
+									<a href="#">City name</a>
+									<a href="#">City</a>
+									<a href="#">Small town</a>
+								</div>
+								<div class="contacts-details">
+									<div>
+										<h4 class="label">Адрес:</h4>
+										<p class="caption">Сибирский тракт 12 к.1А</p>
+									</div>
+									<div>
+										<h4 class="label">Рабочее время:</h4>
+										<p class="caption">С 9:00 до 18:00</p>
+									</div>
+									<div>
+										<h4 class="label">Email</h4>
+										<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
+									</div>
+									<a class="show-feedback-button" href="#feedback">Оставить заявку</a>
+									<div class="social-icons">
+										<a class="vk-icon" href="#"></a>
+										<a class="fb-icon" href="#"></a>
+										<a class="yt-icon" href="#"></a>
+										<a class="ok-icon" href="#"></a>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="contacts-details">
-							<div>
-								<h4 class="label">Адрес:</h4>
-								<p class="caption">Сибирский тракт 12 к.1А</p>
-							</div>
-							<div>
-								<h4 class="label">Рабочее время:</h4>
-								<p class="caption">С 9:00 до 18:00</p>
-							</div>
-							<div>
-								<h4 class="label">Email</h4>
-								<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
-							</div>
-							<a class="show-feedback-button" href="#feedback">Оставить заявку</a>
-							<div class="social-icons">
-								<a class="vk-icon" href="#"></a>
-								<a class="fb-icon" href="#"></a>
-								<a class="yt-icon" href="#"></a>
-								<a class="ok-icon" href="#"></a>
+
+					</div>
+					<div class="swiper-slide hide-in-mobile">
+						<div class="country-card ">
+							<h3 class="title">Ukraine</h3>
+							<div class="country-content">
+								<div class="cities-section">
+									<a class="primary-city" href="#">Kiev</a>
+									<a class="primary-city" href="#">City</a>
+									<a class="primary-city" href="#">City with long name</a>
+									<a href="#">One more city</a>
+									<a href="#">City name</a>
+									<a href="#">City</a>
+									<a href="#">Small town</a>
+									<a href="#">City</a>
+									<a href="#">Small town</a>
+									<a href="#">One more city</a>
+									<a href="#">City name</a>
+									<a href="#">City</a>
+									<a href="#">Small town</a>
+									<a href="#">One more city</a>
+									<a href="#">City name</a>
+									<a href="#">City</a>
+									<a href="#">Small town</a>
+								</div>
+								<div class="contacts-details">
+									<div>
+										<h4 class="label">Адрес:</h4>
+										<p class="caption">Сибирский тракт 12 к.1А</p>
+									</div>
+									<div>
+										<h4 class="label">Рабочее время:</h4>
+										<p class="caption">С 9:00 до 18:00</p>
+									</div>
+									<div>
+										<h4 class="label">Email</h4>
+										<a class="caption" href="mailto:Example@mail.com">Example@mail.com</a>
+									</div>
+									<a class="show-feedback-button" href="#feedback">Оставить заявку</a>
+									<div class="social-icons">
+										<a class="vk-icon" href="#"></a>
+										<a class="fb-icon" href="#"></a>
+										<a class="yt-icon" href="#"></a>
+										<a class="ok-icon" href="#"></a>
+									</div>
+								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -431,6 +454,7 @@
 		</section>
 	</div>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
 <script>
 	document.querySelectorAll('form').forEach(form => (form.onsubmit = (event) =>
 		fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
@@ -442,6 +466,12 @@
 
 	if (window.matchMedia("(min-width: 1025px)").matches)
 		document.querySelectorAll('.background-video').forEach(video => (video.preload = 'auto') && (video.autoplay = true));
+
+	/*var mySwiper = new Swiper('.swiper-container', {
+		loop: true
+	});*/
+
+	document.querySelectorAll('.swiper-container').forEach(slider => new Swiper(slider));
 
 </script>
 </body>

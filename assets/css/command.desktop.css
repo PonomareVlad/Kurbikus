@@ -25,42 +25,42 @@ section#command .team-slider {
     padding-bottom: 30px;
 }
 
-section#command .team-slider .team-card {
+section#command .team-card {
     counter-increment: section;
     display: flex;
     flex-direction: row;
     background: unset;
     box-shadow: unset;
-    padding: unset;
-    margin: unset;
-    height: auto;
-    min-height: auto;
-    min-width: auto;
-    margin-right: 100px;
-    min-width: 60vw;
+    /*padding: unset;*/
+    /*margin: unset;*/
+    /*height: auto;*/
+    /*min-height: auto;*/
+    /*min-width: auto;*/
+    /*margin-right: 100px;*/
+    /*min-width: 60vw;*/
 
 }
 
-section#command .team-slider .team-card .pic {
-    min-height: auto;
-    min-width: auto;
-    max-height: 100%;
-    max-width: unset;
+section#command .team-card .pic {
+    /*min-height: auto;*/
+    /*min-width: auto;*/
+    /*max-height: 100%;*/
+    /*max-width: unset;*/
     width: 411px;
     height: 411px;
-    padding: unset;
-    margin: unset;
+    /*padding: unset;*/
+    /*margin: unset;*/
 }
 
-section#command .team-slider .team-card .pic:hover .base-pic {
+section#command .team-card .pic:hover .base-pic {
     display: none;
 }
 
-section#command .team-slider .team-card .pic:hover .hover-pic {
+section#command .team-card .pic:hover .hover-pic {
     display: initial;
 }
 
-section#command .team-slider .team-card .description {
+section#command .team-card .description {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ section#command .team-slider .team-card .description {
     /*margin: 0 auto;*/
 }
 
-section#command .team-slider .team-card .description:before {
+section#command .team-card .description:before {
     content: counter(section);
     position: absolute;
     top: -30px;
@@ -88,13 +88,13 @@ section#command .team-slider .team-card .description:before {
     color: #34517f;
 }
 
-section#command .team-slider .team-card .description .title {
+section#command .team-card .description .title {
     font-size: 35px;
     line-height: initial;
     font-weight: bold;
 }
 
-section#command .team-slider .team-card .description .caption {
+section#command .team-card .description .caption {
     font-size: 25px;
     line-height: initial;
     margin: unset;
@@ -139,7 +139,6 @@ section#command > .background-decoration > figure:nth-child(3) {
     background-color: #eec13b;
     z-index: -2;
 }
-
 
 section#command > .background-decoration > figure:nth-child(4) {
     right: -35vmin;

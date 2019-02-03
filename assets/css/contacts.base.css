@@ -19,19 +19,20 @@ section#contacts .contacts-slider {
     -webkit-overflow-scrolling: touch;
 }
 
-section#contacts .contacts-slider .city-card,
-section#contacts .contacts-slider .country-card,
-section#contacts .contacts-slider .index-card {
-    min-width: 100%;
+section#contacts .city-card,
+section#contacts .country-card,
+section#contacts .index-card {
+    /*min-width: 100%;*/
     border-radius: 15px;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
-    margin-right: var(--root-padding);
-    padding: var(--root-padding);
-    scroll-snap-align: center;
+    /*margin-right: var(--root-padding);*/
+    /*padding: var(--root-padding);*/
+    /*scroll-snap-align: center;*/
+    height: 100%;
     background: white;
 }
 
-section#contacts .contacts-slider .index-card {
+section#contacts .index-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,15 +50,15 @@ section#contacts .contacts-slider:after {
     min-width: 1px;
 }
 
-section#contacts .contacts-slider .city-card .title,
-section#contacts .contacts-slider .index-card .title {
+section#contacts .city-card .title,
+section#contacts .index-card .title {
     font-size: 30px;
     font-weight: 500;
     margin: unset;
 }
 
-section#contacts .contacts-slider .city-card > div,
-section#contacts .contacts-slider .index-card > div,
+section#contacts .city-card > div,
+section#contacts .index-card > div,
 section#contacts .contacts-slider .contacts-details > div {
     display: flex;
     flex-direction: column;
@@ -72,8 +73,8 @@ section#contacts .contacts-slider .contacts-details > div:first-child {
     margin-top: unset;
 }
 
-section#contacts .contacts-slider .city-card > div:last-child,
-section#contacts .contacts-slider .index-card > div:last-child {
+section#contacts .city-card > div:last-child,
+section#contacts .index-card > div:last-child {
     margin-bottom: unset;
 }
 
@@ -106,36 +107,36 @@ section#contacts .contacts-slider .show-city-button {
     /*width: 100%;*/
 }
 
-section#contacts .contacts-slider .index-card .show-city-button {
+section#contacts .index-card .show-city-button {
     background: #34517f;
     color: white;
 }
 
-section#contacts .contacts-slider .country-card {
+section#contacts .country-card {
     padding: 25px 30px 40px 30px;
 }
 
-section#contacts .contacts-slider .country-card > .title {
+section#contacts .country-card > .title {
     margin: unset;
     margin-bottom: 20px;
 }
 
-section#contacts .contacts-slider .country-card .country-content {
+section#contacts .country-card .country-content {
     display: flex;
     max-height: calc(100% - 50px);
 }
 
-section#contacts .contacts-slider .country-card .country-content .cities-section {
+section#contacts .country-card .country-content .cities-section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 60%;
-    max-height: 100%;
+    /*max-height: 100%;*/
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
 }
 
-section#contacts .contacts-slider .country-card .country-content .cities-section a {
+section#contacts .country-card .country-content .cities-section a {
     font-size: 25px;
     font-weight: 300;
     margin-bottom: 10px;
@@ -144,16 +145,16 @@ section#contacts .contacts-slider .country-card .country-content .cities-section
     max-width: 50%;
 }
 
-section#contacts .contacts-slider .country-card .country-content .cities-section a:hover,
-section#contacts .contacts-slider .country-card .country-content .cities-section a:active {
+section#contacts .country-card .country-content .cities-section a:hover,
+section#contacts .country-card .country-content .cities-section a:active {
     text-decoration: underline;
 }
 
-section#contacts .contacts-slider .country-card .country-content .cities-section a.primary-city {
+section#contacts .country-card .country-content .cities-section a.primary-city {
     font-weight: 500;
 }
 
-section#contacts .contacts-slider .country-card .country-content .contacts-details {
+section#contacts .country-card .country-content .contacts-details {
     width: 40%;
     border-left: 1px solid #34517f;
     padding-left: 40px;
