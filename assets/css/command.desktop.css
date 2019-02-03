@@ -52,6 +52,14 @@ section#command .team-slider .team-card .pic {
     margin: unset;
 }
 
+section#command .team-slider .team-card .pic:hover .base-pic {
+    display: none;
+}
+
+section#command .team-slider .team-card .pic:hover .hover-pic {
+    display: initial;
+}
+
 section#command .team-slider .team-card .description {
     position: relative;
     display: flex;

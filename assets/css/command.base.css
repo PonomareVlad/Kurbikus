@@ -72,6 +72,10 @@ section#command .team-slider .team-card .pic img {
     object-fit: cover;
 }
 
+section#command .team-slider .team-card .pic .hover-pic {
+    display: none;
+}
+
 section#command .team-slider .team-card .description {
     padding: var(--root-padding) calc(var(--root-padding) * 2);
 }
