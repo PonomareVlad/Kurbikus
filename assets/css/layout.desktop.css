@@ -83,7 +83,7 @@ main.horizontal-scroll > .section-wrapper {
     scroll-snap-align: start;
 }
 
-main > .section-wrapper > section {
+main > .section-wrapper section {
     height: 100vh;
     width: 100vw;
 }

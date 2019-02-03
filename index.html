@@ -12,6 +12,8 @@
 	<link href="assets/css/fonts.css" rel="stylesheet">
 	<link href="assets/css/base.css" rel="stylesheet">
 	<link href="assets/css/desktop.css" media="(min-width: 1025px)" rel="stylesheet">
+	<link href="assets/plugins/jquery.pagepiling.js/jquery.pagepiling.css" media="(min-width: 1025px)" rel="stylesheet"
+		  type="text/css"/>
 	<link href="/project.html" rel="prerender">
 	<link href="/magazine.html" rel="prerender">
 	<link href="/foreman.html" rel="prerender">
@@ -431,6 +433,8 @@
 		</section>
 	</div>
 </main>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="assets/plugins/jquery.pagepiling.js/jquery.pagepiling.js" type="text/javascript"></script>
 <script>
 	document.querySelectorAll('form').forEach(form => (form.onsubmit = (event) =>
 		fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
@@ -440,8 +444,17 @@
 					event.target.value2.value) : false) && false) && form.parentNode.querySelector('.form-reset-button') ?
 		(form.parentNode.querySelector('.form-reset-button').onclick = () => form.parentNode.classList.toggle('form-result', false)) : false);
 
-	if (window.matchMedia("(min-width: 1025px)").matches)
+	if (window.matchMedia("(min-width: 1025px)").matches) {
 		document.querySelectorAll('.background-video').forEach(video => (video.preload = 'auto') && (video.autoplay = true));
+		document.querySelector('main').classList.toggle('horizontal-scroll', false);
+		$(document).ready(function () {
+			$('main').pagepiling({
+				sectionSelector: '.section-wrapper',
+				direction: 'horizontal',
+				anchors: ['intro', 'about', 'command', 'contacts']
+			});
+		});
+	}
 
 </script>
 </body>
