@@ -329,6 +329,10 @@
 						</div>
 					</div>
 				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-scrollbar"></div>
 			</div>
 			<div class="background-decoration">
 				<figure></figure>
@@ -510,6 +514,10 @@
 						</div>
 					</div>
 				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-scrollbar"></div>
 			</div>
 			<div class="background-decoration">
 				<figure></figure>
@@ -561,7 +569,18 @@
 		loop: true
 	});*/
 
-	document.querySelectorAll('.swiper-container').forEach(slider => new Swiper(slider));
+	document.querySelectorAll('.swiper-container').forEach(slider => new Swiper(slider, {
+		navigation: {
+			nextEl: slider.querySelector('.swiper-button-next'),
+			prevEl: slider.querySelector('.swiper-button-prev')
+		},
+		pagination: {
+			el: slider.querySelector('.swiper-pagination')
+		},
+		scrollbar: {
+			el: slider.querySelector('.swiper-scrollbar')
+		}
+	}));
 
 </script>
 </body>
