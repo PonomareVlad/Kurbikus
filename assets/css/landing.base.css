@@ -263,7 +263,7 @@ main.landing .card-items-slider .item .caption {
     z-index: 1;
 }
 
-body > .background-decoration:before {
+body.landing > .background-decoration:before {
     content: '';
     position: absolute;
     top: -20vh;
@@ -276,7 +276,7 @@ body > .background-decoration:before {
     z-index: -1;
 }
 
-body > .background-decoration > figure:nth-child(1) {
+body.landing > .background-decoration > figure:nth-child(1) {
     position: absolute;
     display: block;
     top: 110vh;
@@ -290,7 +290,7 @@ body > .background-decoration > figure:nth-child(1) {
     z-index: -1;
 }
 
-body > .background-decoration > figure:nth-child(2) {
+body.landing > .background-decoration > figure:nth-child(2) {
     position: absolute;
     display: block;
     top: 145vh;
@@ -304,14 +304,14 @@ body > .background-decoration > figure:nth-child(2) {
     z-index: -2;
 }
 
-body.red-landing > .background-decoration:before, body.red-landing > .background-decoration:after, body.red-landing > .background-decoration > figure {
+body.landing.red-landing > .background-decoration:before, body.landing.red-landing > .background-decoration:after, body.landing.red-landing > .background-decoration > figure {
     background-color: #661f1f !important;
 }
 
-body.blue-landing > .background-decoration:before, body.blue-landing > .background-decoration:after, body.blue-landing > .background-decoration > figure {
+body.landing.blue-landing > .background-decoration:before, body.landing.blue-landing > .background-decoration:after, body.landing.blue-landing > .background-decoration > figure {
     background-color: #34517f !important;
 }
 
-body.yellow-landing > .background-decoration:before, body.yellow-landing > .background-decoration:after, body.yellow-landing > .background-decoration > figure {
+body.landing.yellow-landing > .background-decoration:before, body.landing.yellow-landing > .background-decoration:after, body.landing.yellow-landing > .background-decoration > figure {
     background-color: #f0b919 !important;
 }

@@ -461,7 +461,7 @@
 				sectionSelector: '.section-wrapper',
 				direction: 'horizontal',
 				// menu: '#sliderMenu',
-				// anchors: ['intro', 'about', 'command', 'contacts'],
+				anchors: sections,
 				onLeave: function (index, nextIndex, direction) {
 					if (sections[nextIndex - 1]) document.querySelector('#backgroundAnimation').dataset.slide = sections[nextIndex - 1];
 				}

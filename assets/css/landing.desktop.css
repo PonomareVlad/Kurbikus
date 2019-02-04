@@ -442,7 +442,7 @@ main.landing .feedback .section-title {
     font-weight: bold;
 }
 
-body > .background-decoration {
+body.landing > .background-decoration {
     position: absolute;
     left: 0;
     top: 0;
@@ -451,7 +451,7 @@ body > .background-decoration {
     transition: all .9s;
 }
 
-body > .background-decoration:before {
+body.landing > .background-decoration:before {
     content: '';
     position: absolute;
     top: -15vh;
@@ -464,7 +464,7 @@ body > .background-decoration:before {
     z-index: -1;
 }
 
-body > .background-decoration > figure:nth-child(1) {
+body.landing > .background-decoration > figure:nth-child(1) {
     position: absolute;
     display: block;
     top: 80vh;
@@ -478,7 +478,7 @@ body > .background-decoration > figure:nth-child(1) {
     z-index: -1;
 }
 
-body > .background-decoration > figure:nth-child(2) {
+body.landing > .background-decoration > figure:nth-child(2) {
     position: absolute;
     display: block;
     top: 145vh;
