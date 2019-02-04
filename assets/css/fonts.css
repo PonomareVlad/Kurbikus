@@ -21,3 +21,13 @@
     font-weight: 900;
     src: url("../fonts/Gilroy-Heavy.ttf");
 }
+
+@font-face {
+    font-family: MullerRegular;
+    src: url("../fonts/Fontfabric - MullerRegular.otf");
+}
+
+@font-face {
+    font-family: MullerLight;
+    src: url("../fonts/Fontfabric - MullerLight.otf");
+}
