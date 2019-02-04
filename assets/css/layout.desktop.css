@@ -88,6 +88,10 @@ main > .section-wrapper section {
     width: 100vw;
 }
 
+main > .section-wrapper.pp-section:not(.active) {
+    opacity: 0;
+}
+
 .feedback-menu, .language-menu {
     position: fixed;
     flex-direction: column;
