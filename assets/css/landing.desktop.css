@@ -1,7 +1,7 @@
 body.landing {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+    /*scroll-snap-type: y mandatory;*/
+    /*overflow-y: scroll;*/
+    /*height: 100vh;*/
 }
 
 body.red-landing header {
@@ -67,8 +67,8 @@ main.landing {
 }
 
 main.landing .background-decoration {
-    width: 100%;
-    height: 100%;
+    /*width: 100%;*/
+    /*height: 100%;*/
 }
 
 main.landing .layer-context {
@@ -90,6 +90,10 @@ main.landing > section {
     padding-top: calc(var(--header-height) + var(--root-vertical-padding));
     height: 100vh;
     scroll-snap-align: center;
+}
+
+main.landing > section.pp-section:not(.active) {
+    opacity: 0;
 }
 
 main.landing > section.intro {
@@ -438,7 +442,16 @@ main.landing .feedback .section-title {
     font-weight: bold;
 }
 
-main.landing .background-decoration:before {
+body > .background-decoration {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 500vh;
+    transition: all .9s;
+}
+
+body > .background-decoration:before {
     content: '';
     position: absolute;
     top: -15vh;
@@ -451,7 +464,7 @@ main.landing .background-decoration:before {
     z-index: -1;
 }
 
-main.landing .background-decoration > figure:nth-child(1) {
+body > .background-decoration > figure:nth-child(1) {
     position: absolute;
     display: block;
     top: 80vh;
@@ -465,7 +478,7 @@ main.landing .background-decoration > figure:nth-child(1) {
     z-index: -1;
 }
 
-main.landing .background-decoration > figure:nth-child(2) {
+body > .background-decoration > figure:nth-child(2) {
     position: absolute;
     display: block;
     top: 145vh;
@@ -479,7 +492,7 @@ main.landing .background-decoration > figure:nth-child(2) {
     z-index: -2;
 }
 
-main.landing.extended-landing .background-decoration:after {
+body.landing.extended-landing > .background-decoration:after {
     content: '';
     position: absolute;
     top: unset;

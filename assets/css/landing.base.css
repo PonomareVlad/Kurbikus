@@ -11,21 +11,21 @@
 }
 
 body.landing {
-    position: relative;
-    height: 100%;
+    /*position: relative;*/
+    /*height: 100%;*/
 }
 
 main.landing {
     /*color: var(--primary-text-color);*/
     --video-height: 250px;
-    position: relative;
+    /*position: relative;*/
 }
 
 main.landing > section {
-    position: relative;
+    /*position: relative;*/
     padding: var(--root-vertical-padding) var(--root-padding);
     /*min-height: 100vh;*/
-    max-width: 100vw;
+    /*max-width: 100vw;*/
 }
 
 main.landing > section:first-child {
@@ -44,7 +44,6 @@ main.landing > section .section-title {
     line-height: 1.21;
     margin-top: unset;
 }
-
 
 main.landing .capture-form {
     font-size: 16px;
@@ -264,7 +263,7 @@ main.landing .card-items-slider .item .caption {
     z-index: 1;
 }
 
-main.landing .background-decoration:before {
+body > .background-decoration:before {
     content: '';
     position: absolute;
     top: -20vh;
@@ -277,7 +276,7 @@ main.landing .background-decoration:before {
     z-index: -1;
 }
 
-main.landing .background-decoration > figure:nth-child(1) {
+body > .background-decoration > figure:nth-child(1) {
     position: absolute;
     display: block;
     top: 110vh;
@@ -291,7 +290,7 @@ main.landing .background-decoration > figure:nth-child(1) {
     z-index: -1;
 }
 
-main.landing .background-decoration > figure:nth-child(2) {
+body > .background-decoration > figure:nth-child(2) {
     position: absolute;
     display: block;
     top: 145vh;
@@ -305,14 +304,14 @@ main.landing .background-decoration > figure:nth-child(2) {
     z-index: -2;
 }
 
-.red-landing main.landing .background-decoration:before, .red-landing main.landing .background-decoration:after, .red-landing main.landing .background-decoration > figure {
+body.red-landing > .background-decoration:before, body.red-landing > .background-decoration:after, body.red-landing > .background-decoration > figure {
     background-color: #661f1f !important;
 }
 
-.blue-landing main.landing .background-decoration:before, .blue-landing main.landing .background-decoration:after, .blue-landing main.landing .background-decoration > figure {
+body.blue-landing > .background-decoration:before, body.blue-landing > .background-decoration:after, body.blue-landing > .background-decoration > figure {
     background-color: #34517f !important;
 }
 
-.yellow-landing main.landing .background-decoration:before, .yellow-landing main.landing .background-decoration:after, .yellow-landing main.landing .background-decoration > figure {
+body.yellow-landing > .background-decoration:before, body.yellow-landing > .background-decoration:after, body.yellow-landing > .background-decoration > figure {
     background-color: #f0b919 !important;
 }
