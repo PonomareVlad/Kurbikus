@@ -8,8 +8,8 @@ section#intro > .title {
     font-weight: bold;
     line-height: 1.22;
     color: var(--primary-text-color);
-    max-width: 50%;
-    min-width: 800px;
+    min-width: 50%;
+    max-width: 800px;
     margin: unset;
 }
 
@@ -17,8 +17,8 @@ section#intro .capture-form {
     font-size: 25px;
     line-height: initial;
     color: var(--primary-text-color);
-    max-width: 50%;
-    min-width: 800px;
+    min-width: 50%;
+    max-width: 600px;
 }
 
 section#intro .capture-form form > div {
@@ -415,7 +415,7 @@ section#intro .yellow article > .content {
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1410px) {
     section#intro .product-button-content .title {
         font-size: 30px;
     }

@@ -258,7 +258,7 @@ main > .section-wrapper.pp-section:not(.active) {
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 650px) {
     :root {
         --root-vertical-padding: 20px;
     }

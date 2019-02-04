@@ -8,7 +8,7 @@ section#contacts {
 
 section#contacts > .header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 section#contacts .header .title {
@@ -16,6 +16,7 @@ section#contacts .header .title {
     font-weight: bold;
     margin: unset;
     margin-right: 60px;
+    align-self: flex-start;
 }
 
 section#contacts .dropdown-menu {
@@ -94,4 +95,11 @@ section#contacts > .background-decoration > figure:nth-child(3) {
 
 body#contacts-page section#contacts > .background-decoration:before {
     content: unset;
+}
+
+@media (max-height: 800px) {
+
+    section#contacts .header .title {
+        font-size: 55px !important;
+    }
 }
