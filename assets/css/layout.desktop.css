@@ -92,6 +92,10 @@ main > .section-wrapper.pp-section:not(.active) {
     opacity: 0;
 }
 
+main .pp-tableCell {
+    -webkit-transform: translate3D(0, 0, 0);
+}
+
 .feedback-menu, .language-menu {
     position: fixed;
     flex-direction: column;
