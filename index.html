@@ -434,10 +434,11 @@
 <script>
 	document.querySelectorAll('form').forEach(form => (form.onsubmit = (event) =>
 		fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
-			.then(() => event.target.parentNode.classList.toggle('form-result', true) && event.target.parentNode.querySelector('.form-result-message') ?
+			.then(() => event.target.parentNode.classList.toggle('form-result', true) &&
+			(event.target.querySelector('[type="submit"]').disabled = false) && event.target.parentNode.querySelector('.form-result-message') ?
 				(event.target.parentNode.querySelector('.form-result-message').innerHTML = event.target.value1.value +
 					', спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время по телефону ' +
-					event.target.value2.value) : false) && false) && form.parentNode.querySelector('.form-reset-button') ?
+					event.target.value2.value) : false) && (event.target.querySelector('[type="submit"]').disabled = true) && false) && form.parentNode.querySelector('.form-reset-button') ?
 		(form.parentNode.querySelector('.form-reset-button').onclick = () => form.parentNode.classList.toggle('form-result', false)) : false);
 
 	if (window.matchMedia("(min-width: 1025px)").matches)

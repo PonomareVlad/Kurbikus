@@ -73,6 +73,26 @@ section#intro .capture-form button[type="submit"]:after {
     background: url(../img/android.svg) no-repeat center/30px;
 }
 
+section#intro .capture-form button[type="submit"]:disabled {
+    position: relative;
+    cursor: progress;
+    opacity: .5;
+    color: transparent;
+}
+
+section#intro .capture-form button[type="submit"]:disabled:before {
+    content: 'Загрузка...';
+    display: block;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+}
+
 section#intro .capture-form .form-result-message {
     color: var(--primary-text-color);
     font-size: 16px;
