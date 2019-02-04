@@ -1,4 +1,4 @@
-body > .background-decoration:before {
+body.horizontal-scroll > .background-decoration:before {
     content: '';
     display: block;
     position: absolute;
@@ -24,12 +24,12 @@ body > .background-decoration:before {
     transition: all .9s;
 }
 
-body > .background-decoration[data-slide="intro"]:before {
+body.horizontal-scroll > .background-decoration[data-slide="intro"]:before {
     left: -47vmin;
     --bottom-offset: -7vmin;
 }
 
-body > .background-decoration > figure {
+body.horizontal-scroll > .background-decoration > figure {
     display: none;
     position: absolute;
     --right-offset: 0;
@@ -50,20 +50,20 @@ body > .background-decoration > figure {
     transition: all .9s;
 }
 
-body > .background-decoration[data-slide="intro"] > figure:nth-child(1) {
+body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth-child(1) {
     display: block;
     top: -20vmin;
     --right-offset: -35vmin;
 }
 
-body > .background-decoration[data-slide="intro"] > figure:nth-child(2) {
+body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth-child(2) {
     display: block;
     top: 20vmin;
     --right-offset: -70vmin;
     background-color: #661f1f;
 }
 
-body > .background-decoration[data-slide="intro"] > figure:nth-child(3) {
+body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth-child(3) {
     display: block;
     top: -50vmin;
     --right-offset: -50vmin;
@@ -72,12 +72,12 @@ body > .background-decoration[data-slide="intro"] > figure:nth-child(3) {
 
 /*About*/
 
-body > .background-decoration[data-slide="about"]:before, body > .background-decoration[data-slide="about"]:after {
+body.horizontal-scroll > .background-decoration[data-slide="about"]:before, body.horizontal-scroll > .background-decoration[data-slide="about"]:after {
     /*content: none;*/
     /*left: -100vw;*/
 }
 
-body > .background-decoration[data-slide="about"] > figure {
+body.horizontal-scroll > .background-decoration[data-slide="about"] > figure {
     display: block;
     /*position: absolute;*/
     /*top: unset;*/
@@ -91,21 +91,21 @@ body > .background-decoration[data-slide="about"] > figure {
     /*box-shadow: 0 2px 25px 0 #212121;*/
 }
 
-body > .background-decoration[data-slide="about"] > figure:nth-child(1) {
+body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth-child(1) {
     top: 0;
     left: -83vmin;
     background-color: #34517f;
     z-index: -1;
 }
 
-body > .background-decoration[data-slide="about"] > figure:nth-child(2) {
+body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth-child(2) {
     top: 40vmin;
     left: -65vmin;
     background-color: #661f1f;
     z-index: -3;
 }
 
-body > .background-decoration[data-slide="about"] > figure:nth-child(3) {
+body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth-child(3) {
     top: -10vmin;
     left: -63vmin;
     --size-width: 90vmin;
@@ -114,7 +114,7 @@ body > .background-decoration[data-slide="about"] > figure:nth-child(3) {
     z-index: -2;
 }
 
-body > .background-decoration[data-slide="about"] > figure:nth-child(4) {
+body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth-child(4) {
     display: block;
     opacity: 0;
     --size-width: 50vmin;
@@ -125,7 +125,7 @@ body > .background-decoration[data-slide="about"] > figure:nth-child(4) {
     z-index: -6;
 }
 
-body > .background-decoration[data-slide="about"] > figure:nth-child(5) {
+body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth-child(5) {
     display: block;
     opacity: 0;
     --size-width: 50vmin;
@@ -136,7 +136,7 @@ body > .background-decoration[data-slide="about"] > figure:nth-child(5) {
     z-index: -5;
 }
 
-body > .background-decoration[data-slide="about"] > figure:nth-child(6) {
+body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth-child(6) {
     display: block;
     opacity: 0;
     --size-width: 50vmin;
@@ -150,12 +150,12 @@ body > .background-decoration[data-slide="about"] > figure:nth-child(6) {
 
 /*Command*/
 
-body > .background-decoration[data-slide="command"]:before {
+body.horizontal-scroll > .background-decoration[data-slide="command"]:before {
     /*content: none;*/
     /*left: -100vw;*/
 }
 
-body > .background-decoration[data-slide="command"] > figure {
+body.horizontal-scroll > .background-decoration[data-slide="command"] > figure {
     display: block;
     /*position: absolute;*/
     /*top: unset;*/
@@ -170,28 +170,28 @@ body > .background-decoration[data-slide="command"] > figure {
     /*box-shadow: 0 2px 25px 0 #212121;*/
 }
 
-body > .background-decoration[data-slide="command"] > figure:nth-child(1) {
+body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:nth-child(1) {
     left: -45vmin;
     --bottom-offset: -5vmin;
     background-color: #34517f;
     z-index: -1;
 }
 
-body > .background-decoration[data-slide="command"] > figure:nth-child(2) {
+body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:nth-child(2) {
     --bottom-offset: -45vmin;
     left: 0;
     background-color: #661f1f;
     z-index: -3;
 }
 
-body > .background-decoration[data-slide="command"] > figure:nth-child(3) {
+body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:nth-child(3) {
     top: -35vmin;
     left: -10vmin;
     background-color: #eec13b;
     z-index: -2;
 }
 
-body > .background-decoration[data-slide="command"] > figure:nth-child(4) {
+body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:nth-child(4) {
     display: block;
     --right-offset: -35vmin;
     top: -5vmin;
@@ -201,7 +201,7 @@ body > .background-decoration[data-slide="command"] > figure:nth-child(4) {
     z-index: -3;
 }
 
-body > .background-decoration[data-slide="command"] > figure:nth-child(5) {
+body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:nth-child(5) {
     display: block;
     --right-offset: -75vmin;
     --bottom-offset: -30vmin;
@@ -211,7 +211,7 @@ body > .background-decoration[data-slide="command"] > figure:nth-child(5) {
     z-index: -2;
 }
 
-body > .background-decoration[data-slide="command"] > figure:nth-child(6) {
+body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:nth-child(6) {
     display: block;
     --right-offset: -55vmin;
     top: -30vmin;
@@ -223,7 +223,7 @@ body > .background-decoration[data-slide="command"] > figure:nth-child(6) {
 
 /*Contacts*/
 
-body > .background-decoration[data-slide="contacts"] > figure {
+body.horizontal-scroll > .background-decoration[data-slide="contacts"] > figure {
     /*display: block;*/
     /*position: absolute;*/
     /*top: unset;*/
@@ -237,7 +237,7 @@ body > .background-decoration[data-slide="contacts"] > figure {
     /*box-shadow: 0 2px 25px 0 #212121;*/
 }
 
-body > .background-decoration[data-slide="contacts"] > figure:nth-child(1) {
+body.horizontal-scroll > .background-decoration[data-slide="contacts"] > figure:nth-child(1) {
     display: block;
     top: 0;
     left: -83vmin;
@@ -245,7 +245,7 @@ body > .background-decoration[data-slide="contacts"] > figure:nth-child(1) {
     z-index: -1;
 }
 
-body > .background-decoration[data-slide="contacts"] > figure:nth-child(2) {
+body.horizontal-scroll > .background-decoration[data-slide="contacts"] > figure:nth-child(2) {
     display: block;
     top: 40vmin;
     left: -65vmin;
@@ -253,7 +253,7 @@ body > .background-decoration[data-slide="contacts"] > figure:nth-child(2) {
     z-index: -3;
 }
 
-body > .background-decoration[data-slide="contacts"] > figure:nth-child(3) {
+body.horizontal-scroll > .background-decoration[data-slide="contacts"] > figure:nth-child(3) {
     display: block;
     top: -15vmin;
     left: -63vmin;
@@ -263,7 +263,7 @@ body > .background-decoration[data-slide="contacts"] > figure:nth-child(3) {
     z-index: -2;
 }
 
-body > .background-decoration[data-slide="contacts"] > figure:nth-child(4) {
+body.horizontal-scroll > .background-decoration[data-slide="contacts"] > figure:nth-child(4) {
     display: block;
     opacity: 0;
     --size-width: 50vmin;
@@ -274,7 +274,7 @@ body > .background-decoration[data-slide="contacts"] > figure:nth-child(4) {
     z-index: -6;
 }
 
-body > .background-decoration[data-slide="contacts"] > figure:nth-child(5) {
+body.horizontal-scroll > .background-decoration[data-slide="contacts"] > figure:nth-child(5) {
     display: block;
     opacity: 0;
     --size-width: 50vmin;
@@ -285,7 +285,7 @@ body > .background-decoration[data-slide="contacts"] > figure:nth-child(5) {
     z-index: -5;
 }
 
-body > .background-decoration[data-slide="contacts"] > figure:nth-child(6) {
+body.horizontal-scroll > .background-decoration[data-slide="contacts"] > figure:nth-child(6) {
     display: block;
     opacity: 0;
     --size-width: 50vmin;
