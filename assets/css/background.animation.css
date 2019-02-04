@@ -1,0 +1,297 @@
+body > .background-decoration:before {
+    content: '';
+    display: block;
+    position: absolute;
+
+    --size: 50vmin;
+    --size-height: var(--size);
+    --size-width: var(--size);
+
+    --right-offset: 200%;
+    --bottom-offset: 50%;
+    left: calc(100% - var(--size-width) + (var(--right-offset) * -1));
+    top: calc(100% - var(--size-height) + (var(--bottom-offset) * -1));
+    bottom: unset !important;
+    right: unset !important;
+
+    width: var(--size-width);
+    height: var(--size-height);
+
+    border-radius: 25px;
+    background-color: #661f1f;
+    box-shadow: unset;
+    transform: rotate(-30deg);
+    transition: all .9s;
+}
+
+body > .background-decoration[data-slide="intro"]:before {
+    left: -47vmin;
+    --bottom-offset: -7vmin;
+}
+
+body > .background-decoration > figure {
+    display: none;
+    position: absolute;
+    --right-offset: 0;
+    --bottom-offset: 0;
+    --size: 90vmin;
+    --size-height: var(--size);
+    --size-width: var(--size);
+    left: calc(100% - var(--size-width) + (var(--right-offset) * -1));
+    top: calc(100% - var(--size-height) + (var(--bottom-offset) * -1));
+    bottom: unset !important;
+    right: unset !important;
+    width: var(--size-width);
+    height: var(--size-height);
+    border-radius: 25px;
+    transform: rotate(-30deg);
+    background-color: #34517f;
+    box-shadow: 0 2px 25px 0 #212121;
+    transition: all .9s;
+}
+
+body > .background-decoration[data-slide="intro"] > figure:nth-child(1) {
+    display: block;
+    top: -20vmin;
+    --right-offset: -35vmin;
+}
+
+body > .background-decoration[data-slide="intro"] > figure:nth-child(2) {
+    display: block;
+    top: 20vmin;
+    --right-offset: -70vmin;
+    background-color: #661f1f;
+}
+
+body > .background-decoration[data-slide="intro"] > figure:nth-child(3) {
+    display: block;
+    top: -50vmin;
+    --right-offset: -50vmin;
+    background-color: #eec13b;
+}
+
+/*About*/
+
+body > .background-decoration[data-slide="about"]:before, body > .background-decoration[data-slide="about"]:after {
+    /*content: none;*/
+    /*left: -100vw;*/
+}
+
+body > .background-decoration[data-slide="about"] > figure {
+    display: block;
+    /*position: absolute;*/
+    /*top: unset;*/
+    /*bottom: unset;*/
+    /*right: unset;*/
+    /*left: unset;*/
+    --size-width: 90vmin;
+    --size-height: 90vmin;
+    /*border-radius: 25px;*/
+    transform: rotate(30deg);
+    /*box-shadow: 0 2px 25px 0 #212121;*/
+}
+
+body > .background-decoration[data-slide="about"] > figure:nth-child(1) {
+    top: 0;
+    left: -83vmin;
+    background-color: #34517f;
+    z-index: -1;
+}
+
+body > .background-decoration[data-slide="about"] > figure:nth-child(2) {
+    top: 40vmin;
+    left: -65vmin;
+    background-color: #661f1f;
+    z-index: -3;
+}
+
+body > .background-decoration[data-slide="about"] > figure:nth-child(3) {
+    top: -10vmin;
+    left: -63vmin;
+    --size-width: 90vmin;
+    --size-height: 70vmin;
+    background-color: #eec13b;
+    z-index: -2;
+}
+
+body > .background-decoration[data-slide="about"] > figure:nth-child(4) {
+    display: block;
+    opacity: 0;
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    left: -25vmin;
+    --bottom-offset: 25vmin;
+    background-color: #34517f;
+    z-index: -6;
+}
+
+body > .background-decoration[data-slide="about"] > figure:nth-child(5) {
+    display: block;
+    opacity: 0;
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    left: -25vmin;
+    --bottom-offset: 25vmin;
+    background-color: #661f1f;
+    z-index: -5;
+}
+
+body > .background-decoration[data-slide="about"] > figure:nth-child(6) {
+    display: block;
+    opacity: 0;
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    left: -25vmin;
+    --bottom-offset: 25vmin;
+    background-color: #eec13b;
+    z-index: -4;
+}
+
+
+/*Command*/
+
+body > .background-decoration[data-slide="command"]:before {
+    /*content: none;*/
+    /*left: -100vw;*/
+}
+
+body > .background-decoration[data-slide="command"] > figure {
+    display: block;
+    /*position: absolute;*/
+    /*top: unset;*/
+    /*bottom: unset;*/
+    /*right: unset;*/
+    /*left: unset;*/
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    /*border-radius: 25px;*/
+    transform: rotate(60deg);
+    opacity: 1;
+    /*box-shadow: 0 2px 25px 0 #212121;*/
+}
+
+body > .background-decoration[data-slide="command"] > figure:nth-child(1) {
+    left: -45vmin;
+    --bottom-offset: -5vmin;
+    background-color: #34517f;
+    z-index: -1;
+}
+
+body > .background-decoration[data-slide="command"] > figure:nth-child(2) {
+    --bottom-offset: -45vmin;
+    left: 0;
+    background-color: #661f1f;
+    z-index: -3;
+}
+
+body > .background-decoration[data-slide="command"] > figure:nth-child(3) {
+    top: -35vmin;
+    left: -10vmin;
+    background-color: #eec13b;
+    z-index: -2;
+}
+
+body > .background-decoration[data-slide="command"] > figure:nth-child(4) {
+    display: block;
+    --right-offset: -35vmin;
+    top: -5vmin;
+    --size-height: 80vmin;
+    --size-width: 80vmin;
+    background-color: #34517f;
+    z-index: -3;
+}
+
+body > .background-decoration[data-slide="command"] > figure:nth-child(5) {
+    display: block;
+    --right-offset: -75vmin;
+    --bottom-offset: -30vmin;
+    --size-height: 80vmin;
+    --size-width: 80vmin;
+    background-color: #661f1f;
+    z-index: -2;
+}
+
+body > .background-decoration[data-slide="command"] > figure:nth-child(6) {
+    display: block;
+    --right-offset: -55vmin;
+    top: -30vmin;
+    --size-height: 80vmin;
+    --size-width: 80vmin;
+    background-color: #eec13b;
+    z-index: -1;
+}
+
+/*Contacts*/
+
+body > .background-decoration[data-slide="contacts"] > figure {
+    /*display: block;*/
+    /*position: absolute;*/
+    /*top: unset;*/
+    /*bottom: unset;*/
+    /*right: unset;*/
+    /*left: unset;*/
+    --size-width: 90vmin;
+    --size-height: 90vmin;
+    /*border-radius: 25px;*/
+    transform: rotate(30deg);
+    /*box-shadow: 0 2px 25px 0 #212121;*/
+}
+
+body > .background-decoration[data-slide="contacts"] > figure:nth-child(1) {
+    display: block;
+    top: 0;
+    left: -83vmin;
+    background-color: #34517f;
+    z-index: -1;
+}
+
+body > .background-decoration[data-slide="contacts"] > figure:nth-child(2) {
+    display: block;
+    top: 40vmin;
+    left: -65vmin;
+    background-color: #661f1f;
+    z-index: -3;
+}
+
+body > .background-decoration[data-slide="contacts"] > figure:nth-child(3) {
+    display: block;
+    top: -15vmin;
+    left: -63vmin;
+    --size-width: 90vmin;
+    --size-height: 70vmin;
+    background-color: #eec13b;
+    z-index: -2;
+}
+
+body > .background-decoration[data-slide="contacts"] > figure:nth-child(4) {
+    display: block;
+    opacity: 0;
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    --right-offset: -75vmin;
+    --bottom-offset: 25vmin;
+    background-color: #34517f;
+    z-index: -6;
+}
+
+body > .background-decoration[data-slide="contacts"] > figure:nth-child(5) {
+    display: block;
+    opacity: 0;
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    --right-offset: -75vmin;
+    --bottom-offset: 25vmin;
+    background-color: #661f1f;
+    z-index: -5;
+}
+
+body > .background-decoration[data-slide="contacts"] > figure:nth-child(6) {
+    display: block;
+    opacity: 0;
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    --right-offset: -75vmin;
+    --bottom-offset: 25vmin;
+    background-color: #eec13b;
+    z-index: -4;
+}
