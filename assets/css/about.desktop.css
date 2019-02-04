@@ -169,3 +169,13 @@ section#about > .background-decoration > figure:nth-child(3) {
     background-color: #eec13b;
     z-index: -2;
 }
+
+@media (max-height: 800px) {
+    section#about > .title {
+        margin-bottom: unset;
+    }
+
+    section#about .description > .item:first-child {
+        margin-top: unset;
+    }
+}
