@@ -92,6 +92,10 @@ main > .section-wrapper.pp-section:not(.active) {
     opacity: 0;
 }
 
+main > .section-wrapper section .background-decoration {
+    display: none !important;
+}
+
 main .pp-tableCell {
     -webkit-transform: translate3D(0, 0, 0);
 }
