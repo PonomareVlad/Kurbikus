@@ -5,6 +5,7 @@
 @import "contacts.base.css";
 @import "contact-form.base.css";
 @import "landing.base.css";
+@import "slider.base.css";
 
 section > *:first-child, .section > *:first-child, .products .product-button > div > *:first-child {
     margin-top: unset;
