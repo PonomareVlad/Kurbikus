@@ -11,6 +11,51 @@ section#command .title {
     font-weight: bold;
 }
 
+section#command .swiper-container {
+    counter-reset: section;
+    width: 100vw;
+    margin-left: calc(var(--root-padding) * -1);
+    min-height: 450px;
+}
+
+section#command .swiper-container .swiper-wrapper {
+    margin-top: 25px;
+}
+
+section#command .swiper-container .swiper-wrapper .swiper-slide {
+    width: 1000px;
+    counter-increment: section;
+}
+
+section#command .swiper-container .swiper-button-prev,
+section#command .swiper-container .swiper-button-next {
+    position: absolute;
+    top: unset;
+    left: 45%;
+    right: unset;
+    bottom: 25%;
+}
+
+section#command .swiper-container .swiper-button-next {
+    left: calc(45% + 60px);
+}
+
+section#command .swiper-container .swiper-scrollbar {
+    position: absolute;
+    top: unset;
+    left: 50%;
+    right: unset;
+    bottom: 40%;
+    width: 20%;
+    border: 1px solid #34517f;
+    background: unset;
+}
+
+section#command .swiper-container .swiper-scrollbar .swiper-scrollbar-drag {
+    background: #34517f;
+    border: unset;
+}
+
 section#command .team-slider {
     /*display: none;*/
     counter-reset: section;
@@ -26,7 +71,7 @@ section#command .team-slider {
 }
 
 section#command .team-card {
-    counter-increment: section;
+    /*counter-increment: section;*/
     display: flex;
     flex-direction: row;
     background: unset;
