@@ -172,6 +172,24 @@ main > .section-wrapper.pp-section:not(.active) {
     padding: unset;
 }
 
+.feedback-menu button:disabled, .feedback-menu .button:disabled {
+    position: relative;
+    cursor: progress;
+    opacity: .5;
+    color: transparent;
+}
+
+.feedback-menu button:disabled:before, .feedback-menu .button:disabled:before {
+    content: 'Загрузка...';
+    display: block;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+}
+
 .feedback-menu .invert-button {
     background-color: white;
     color: #34517f;
