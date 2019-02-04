@@ -389,8 +389,8 @@ section#intro .yellow article > .content {
 
 @media (max-height: 800px) {
     section#intro > .title {
-        max-width: 100%;
-        min-width: 100%;
+        /*max-width: 100%;*/
+        /*min-width: 100%;*/
         line-height: 1em;
     }
 
@@ -412,5 +412,15 @@ section#intro .yellow article > .content {
 
     section#intro .products .product-item > .product-button {
         padding-top: 20px;
+    }
+}
+
+@media (max-width: 1280px) {
+    section#intro .product-button-content .title {
+        font-size: 30px;
+    }
+
+    section#intro .product-button-content > .caption {
+        font-size: 15px;
     }
 }
