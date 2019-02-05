@@ -238,6 +238,7 @@ section#intro .products .product-item > article > .content > figure > img {
 section#intro .products .product-item > article > .content > .description {
     min-width: 668px;
     max-width: 60%;
+    align-self: flex-start;
 }
 
 section#intro .products .product-item > article > .content > .description > .title {
@@ -424,5 +425,9 @@ section#intro .yellow article > .content {
 
     section#intro .product-button-content > .caption {
         font-size: 15px;
+    }
+
+    section#intro .products .product-item > article > .content > figure {
+        margin: unset;
     }
 }
