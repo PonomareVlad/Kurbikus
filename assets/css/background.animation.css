@@ -45,7 +45,6 @@ body.horizontal-scroll > .background-decoration > figure {
     height: var(--size-height);
     border-radius: 25px;
     transform: rotate(-30deg);
-    background-color: #34517f;
     box-shadow: 0 2px 25px 0 #212121;
     transition: all .9s;
 }
@@ -54,6 +53,7 @@ body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth
     display: block;
     top: -20vmin;
     --right-offset: -35vmin;
+    background-color: #34517f;
 }
 
 body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth-child(2) {
@@ -68,6 +68,39 @@ body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth
     top: -50vmin;
     --right-offset: -50vmin;
     background-color: #eec13b;
+}
+
+body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth-child(4) {
+    display: block;
+    opacity: 0;
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    --right-offset: -75vmin;
+    --bottom-offset: 25vmin;
+    background-color: #34517f;
+    z-index: -6;
+}
+
+body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth-child(5) {
+    display: block;
+    opacity: 0;
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    --right-offset: -75vmin;
+    --bottom-offset: 25vmin;
+    background-color: #661f1f;
+    z-index: -5;
+}
+
+body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth-child(6) {
+    display: block;
+    opacity: 0;
+    --size-width: 50vmin;
+    --size-height: 50vmin;
+    --right-offset: -75vmin;
+    --bottom-offset: 25vmin;
+    background-color: #eec13b;
+    z-index: -4;
 }
 
 /*About*/
@@ -95,23 +128,26 @@ body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth
     top: 0;
     left: -83vmin;
     background-color: #34517f;
-    z-index: -1;
+    /*z-index: -1;*/
+    top: -10vmin;
+    left: -63vmin;
+    --size-width: 90vmin;
+    --size-height: 70vmin;
 }
 
 body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth-child(2) {
     top: 40vmin;
     left: -65vmin;
     background-color: #661f1f;
-    z-index: -3;
+    /*z-index: -3;*/
 }
 
 body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth-child(3) {
-    top: -10vmin;
-    left: -63vmin;
-    --size-width: 90vmin;
-    --size-height: 70vmin;
+
     background-color: #eec13b;
-    z-index: -2;
+    /*z-index: -2;*/
+    top: 0;
+    left: -83vmin;
 }
 
 body.horizontal-scroll > .background-decoration[data-slide="about"] > figure:nth-child(4) {
@@ -174,21 +210,21 @@ body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:n
     left: -45vmin;
     --bottom-offset: -5vmin;
     background-color: #34517f;
-    z-index: -1;
+    /*z-index: -1;*/
 }
 
 body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:nth-child(2) {
     --bottom-offset: -45vmin;
     left: 0;
     background-color: #661f1f;
-    z-index: -3;
+    /*z-index: -3;*/
 }
 
 body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:nth-child(3) {
     top: -35vmin;
     left: -10vmin;
     background-color: #eec13b;
-    z-index: -2;
+    /*z-index: -2;*/
 }
 
 body.horizontal-scroll > .background-decoration[data-slide="command"] > figure:nth-child(4) {
