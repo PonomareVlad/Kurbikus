@@ -174,7 +174,7 @@
 		<figure></figure>
 	</div>
 </main>
-
+<script src="/assets/js/foreach.polyfill.js"></script>
 <script>
 	document.querySelectorAll('form').forEach(form => (form.onsubmit = (event) =>
 		fetch(event.target.action + '?' + new URLSearchParams(new FormData(event.target)).toString(), {mode: "no-cors"})
