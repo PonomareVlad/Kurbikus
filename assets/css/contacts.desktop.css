@@ -60,7 +60,7 @@ section#contacts .swiper-control-section {
     display: flex;
     align-items: center;
     right: calc(var(--root-padding) * -1);
-    width: 40vw;
+    width: calc(100vw - 830px);
     padding-right: 45px;
 }
 

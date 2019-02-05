@@ -1,9 +1,9 @@
 section#command {
     --root-padding: 160px;
-    padding-bottom: var(--root-padding);
+    padding-bottom: var(--root-vertical-padding);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 section#command .title {
@@ -15,11 +15,14 @@ section#command .swiper-container {
     counter-reset: section;
     width: 100vw;
     margin-left: calc(var(--root-padding) * -1);
-    min-height: 450px;
+    max-height: 450px;
+    margin-top: var(--root-vertical-padding);
+    height: 100%;
 }
 
 section#command .swiper-container .swiper-wrapper {
     margin-top: 25px;
+    max-height: 90%;
 }
 
 section#command .swiper-container .swiper-wrapper .swiper-slide {
@@ -31,19 +34,19 @@ section#command .swiper-container .swiper-button-prev,
 section#command .swiper-container .swiper-button-next {
     position: absolute;
     top: unset;
-    left: 45%;
+    left: 620px;
     right: unset;
     bottom: 25%;
 }
 
 section#command .swiper-container .swiper-button-next {
-    left: calc(45% + 60px);
+    left: calc(620px + 60px);
 }
 
 section#command .swiper-container .swiper-scrollbar {
     position: absolute;
     top: unset;
-    left: 50%;
+    left: 690px;
     right: unset;
     bottom: 40%;
     width: 20%;
@@ -76,6 +79,7 @@ section#command .team-card {
     flex-direction: row;
     background: unset;
     box-shadow: unset;
+    min-height: 100%;
     /*padding: unset;*/
     /*margin: unset;*/
     /*height: auto;*/
@@ -92,9 +96,21 @@ section#command .team-card .pic {
     /*max-height: 100%;*/
     /*max-width: unset;*/
     width: 411px;
-    height: 411px;
+    min-height: 100%;
+    max-height: 411px;
     /*padding: unset;*/
     /*margin: unset;*/
+    position: relative;
+}
+
+section#command .team-card .pic img,
+section#command .team-card .pic picture {
+    /*display: block;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
 }
 
 section#command .team-card .pic:hover .base-pic {
@@ -131,6 +147,7 @@ section#command .team-card .description:before {
     font-weight: bold;
     opacity: .5;
     color: #34517f;
+    z-index: -1;
 }
 
 section#command .team-card .description .title {
