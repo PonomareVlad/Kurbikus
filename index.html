@@ -142,7 +142,7 @@
 					<div class="product-button">
 						<div class="product-button-content">
 							<h3 class="title">AR - приложение</h3>
-							<p class="caption">Мобильный католог домов в дополенной реальности</p>
+							<p class="caption">Мобильный каталог домов в дополненной реальности</p>
 						</div>
 					</div>
 					<article>
@@ -167,7 +167,7 @@
 					<div class="product-button">
 						<div class="product-button-content">
 							<h3 class="title">Мобильный прораб</h3>
-							<p class="caption">Котроль скрытых работ в дополненной реальности</p>
+							<p class="caption">Контроль скрытых работ в дополненной реальности</p>
 						</div>
 					</div>
 					<article>
@@ -366,8 +366,13 @@
 				<select class="dropdown-menu hide-in-mobile">
 					<option disabled>Выберете страну</option>
 				</select>
+				<div class="swiper-control-section">
+					<div class="swiper-scrollbar"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
 			</div>
-			<div class="swiper-container" style="width: 1280px;height: 550px">
+			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide hide-in-desktop">
 						<div class="index-card ">
@@ -514,10 +519,6 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-				<div class="swiper-scrollbar"></div>
 			</div>
 			<div class="background-decoration">
 				<figure></figure>
@@ -565,25 +566,33 @@
 		});
 	}
 
-	/*var mySwiper = new Swiper('.swiper-container', {
-		loop: true
-	});*/
-
-	document.querySelectorAll('.swiper-container').forEach(slider => new Swiper(slider, {
+	const commandSliderNode = document.querySelector('#command').querySelector('.swiper-container');
+	if (commandSliderNode) new Swiper(commandSliderNode, {
 		navigation: {
-			nextEl: slider.querySelector('.swiper-button-next'),
-			prevEl: slider.querySelector('.swiper-button-prev')
-		},
-		pagination: {
-			el: slider.querySelector('.swiper-pagination')
+			nextEl: commandSliderNode.querySelector('.swiper-button-next'),
+			prevEl: commandSliderNode.querySelector('.swiper-button-prev')
 		},
 		scrollbar: {
-			el: slider.querySelector('.swiper-scrollbar')
+			el: commandSliderNode.querySelector('.swiper-scrollbar')
 		},
 		slidesPerView: 'auto',
 		slidesOffsetBefore: 160,
 		slidesOffsetAfter: window.innerWidth - 1000 - 160
-	}));
+	});
+	const contactsNode = document.querySelector('#contacts');
+	if (contactsNode.querySelector('.swiper-container')) new Swiper(contactsNode.querySelector('.swiper-container'), {
+		navigation: {
+			nextEl: contactsNode.querySelector('.swiper-button-next'),
+			prevEl: contactsNode.querySelector('.swiper-button-prev')
+		},
+		scrollbar: {
+			el: contactsNode.querySelector('.swiper-scrollbar')
+		},
+		slidesPerView: 'auto',
+		slidesOffsetBefore: 160,
+		slidesOffsetAfter: window.innerWidth - 1000 - 160 - 30,
+		spaceBetween: 30
+	});
 
 </script>
 </body>

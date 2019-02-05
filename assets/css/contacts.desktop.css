@@ -7,6 +7,7 @@ section#contacts {
 }
 
 section#contacts > .header {
+    position: relative;
     display: flex;
     align-items: flex-start;
 }
@@ -33,6 +34,76 @@ section#contacts .dropdown-menu {
     background-size: 20px 20px;
     min-width: 300px;
 }
+
+section#contacts .swiper-container {
+    counter-reset: section;
+    width: 100vw;
+    margin-left: calc(var(--root-padding) * -1);
+    height: 100%;
+    max-height: 550px;
+}
+
+section#contacts .swiper-container .swiper-wrapper {
+    height: calc(100% - 50px);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+section#contacts .swiper-container .swiper-wrapper .swiper-slide {
+    width: 1000px;
+    counter-increment: section;
+}
+
+section#contacts .swiper-control-section {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    right: calc(var(--root-padding) * -1);
+    width: 40vw;
+    padding-right: 45px;
+}
+
+section#contacts .swiper-control-section .swiper-button-prev,
+section#contacts .swiper-control-section .swiper-button-next {
+    position: static;
+    display: block;
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    margin: unset;
+}
+
+section#contacts .swiper-control-section .swiper-button-next {
+    left: calc(45% + 60px);
+    margin-left: 20px;
+}
+
+section#contacts .swiper-control-section .swiper-scrollbar {
+    position: static;
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    /*width: 20%;*/
+    border: 1px solid #34517f;
+    background: unset;
+    margin-right: 30px;
+    height: 5px;
+    width: 100%;
+}
+
+section#contacts .swiper-control-section .swiper-scrollbar .swiper-scrollbar-drag {
+    background: #34517f;
+    border: unset;
+}
+
+section#contacts .country-card {
+    /*max-height: 515px;*/
+    height: 100%;
+}
+
 
 section#contacts .contacts-slider {
     margin-top: 60px;
