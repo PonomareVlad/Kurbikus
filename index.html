@@ -65,9 +65,9 @@
 <a class="close-language" href="#" title="Закрыть меню выбора языка"></a>
 <header id="menu">
     <div>
-        <a class="logo" href="/#" title="На главную"></a>
+        <a class="logo" href="#intro" title="На главную"></a>
         <nav id="slidesMenu">
-            <a data-menu-slide="intro" href="#intro">Главная</a>
+            <a href="#intro">Главная</a>
             <a class="hide-in-mobile" href="#about">О нас</a>
             <a class="hide-in-desktop" href="/project.html">3D калькулятор</a>
             <a class="hide-in-desktop" href="/magazine.html">Каталог домов</a>
@@ -634,7 +634,7 @@
                 anchors: sections,
                 onLeave: function (index, nextIndex, direction) {
                     document.querySelectorAll('#slidesMenu a').forEach(node => node.classList.toggle('active', false));
-                    document.querySelector(`[href="${location.hash}"]`).classList.toggle('active', true);
+                    document.querySelector(`#slidesMenu a[href="${location.hash}"]`).classList.toggle('active', true);
                     if (sections[nextIndex - 1]) document.querySelector('#backgroundAnimation').dataset.slide = sections[nextIndex - 1];
                     document.querySelector('#pp-nav').classList.toggle('black', nextIndex === 2 || nextIndex === 4);
                     document.querySelector('#pp-nav').classList.toggle('opacity', nextIndex === 4);
