@@ -17,6 +17,10 @@ header {
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
+header .logo {
+    height: calc(var(--header-height) - (45px / 2));
+}
+
 header > div {
     display: flex;
     align-items: center;
@@ -117,7 +121,8 @@ main .pp-tableCell {
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
     background-color: #34517f;
     padding: var(--root-vertical-padding) var(--root-padding);
-    padding-top: calc(var(--header-height) + var(--root-vertical-padding));
+    padding-top: calc(var(--header-height) + 45px);
+    padding-bottom: 45px;
     color: white;
     z-index: 1000;
 }
@@ -342,6 +347,13 @@ main .pp-tableCell {
     display: none !important;
 }
 
+@media (min-width: 1440px) {
+    :root {
+        --root-padding: calc((100vw - 1440px + 90px) / 2);
+        --root-vertical-padding: 45px;
+    }
+}
+
 @media (max-height: 800px) {
 
     main > .section-wrapper > section {
@@ -357,5 +369,11 @@ main .pp-tableCell {
 @media (max-height: 650px) {
     :root {
         --root-vertical-padding: 20px;
+    }
+}
+
+@media (min-height: 900px) {
+    :root {
+        --root-vertical-padding: calc((100vh - 900px + 90px) / 2);
     }
 }

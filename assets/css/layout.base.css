@@ -84,7 +84,7 @@ header .logo {
     display: block;
     text-decoration: unset;
     background: url("../img/logo.png") no-repeat center left/contain;
-    height: calc(var(--header-height) - (var(--root-padding) / 2));
+    height: calc(var(--header-height) - (var(--root-vertical-padding) / 2));
     width: 150px;
     margin: 0;
     padding: 0;

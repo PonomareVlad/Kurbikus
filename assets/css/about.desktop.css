@@ -110,7 +110,7 @@ section#about .description > .item {
     border-radius: initial;
     background-color: initial;
     margin: initial;
-    margin-top: var(--root-vertical-padding);
+    margin-top: 45px;
     padding: initial;
 }
 
@@ -121,7 +121,7 @@ section#about .description .item .title {
 
 section#about .description .item .caption {
     margin: initial;
-    margin-top: calc(var(--root-vertical-padding) * .5);
+    margin-top: calc(45px * .5);
     z-index: initial;
 }
 
