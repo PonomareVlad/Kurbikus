@@ -148,7 +148,15 @@ header > .background-decoration:after {
     display: flex;
 }
 
-header nav, header:not(:target) .close-menu, header:target .open-menu, header:not(:target) > .background-decoration, .feedback-menu, .close-feedback, .language-menu, .close-language {
+header nav,
+header:not(:target) .close-menu,
+header:target .open-menu,
+header:not(:target) > .background-decoration,
+.feedback-menu,
+.close-feedback,
+.language-menu,
+.close-language,
+.slide-position {
     display: none;
 }
 

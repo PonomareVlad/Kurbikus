@@ -46,7 +46,7 @@ body.horizontal-scroll > .background-decoration > figure {
     border-radius: 25px;
     transform: rotate(-30deg);
     box-shadow: 0 2px 25px 0 #212121;
-    transition: all .9s;
+    transition: all .9s .2s;
 }
 
 body.horizontal-scroll > .background-decoration[data-slide="intro"] > figure:nth-child(1) {
