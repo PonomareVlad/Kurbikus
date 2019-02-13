@@ -20,7 +20,8 @@
 		  "en": "9:00 to 18:00"
 		},
 		"phone": "",
-		"email": "Example@mail.com"
+		"email": "Example@mail.com",
+		"mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A63fc2b46e61eba026e451e92345df31fc89f5acef610cd50396c0ad7b28f7c6c"
 	  },
 	  "Ekaterinburg": {
 		"title": {
@@ -37,7 +38,8 @@
 		  "en": "9:00 to 18:00"
 		},
 		"phone": "",
-		"email": "Example@mail.com"
+		"email": "Example@mail.com",
+		"mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A63fc2b46e61eba026e451e92345df31fc89f5acef610cd50396c0ad7b28f7c6c"
 	  }
 	}
   },
@@ -62,7 +64,8 @@
 		  "en": "9:00 to 18:00"
 		},
 		"phone": "",
-		"email": "Example@mail.com"
+		"email": "Example@mail.com",
+		"mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A63fc2b46e61eba026e451e92345df31fc89f5acef610cd50396c0ad7b28f7c6c"
 	  },
 	  "City": {
 		"title": {
@@ -78,7 +81,8 @@
 		  "en": "9:00 to 18:00"
 		},
 		"phone": "",
-		"email": "Example@mail.com"
+		"email": "Example@mail.com",
+		"mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A63fc2b46e61eba026e451e92345df31fc89f5acef610cd50396c0ad7b28f7c6c"
 	  }
 	}
   }

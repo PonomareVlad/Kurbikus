@@ -103,6 +103,9 @@ section#contacts .contacts-slider .show-city-button {
     border-radius: 25px;
     background: unset;
     min-width: 200px;
+    cursor: pointer;
+    margin: unset;
+    /*padding: unset;*/
     /*width: 100%;*/
 }
 
@@ -113,6 +116,8 @@ section#contacts .contacts-slider .index-card .show-city-button {
 
 section#contacts .contacts-slider .country-card {
     padding: 25px 30px 40px 30px;
+    position: relative;
+    /*overflow: hidden;*/
 }
 
 section#contacts .contacts-slider .country-card > .title {
@@ -159,6 +164,68 @@ section#contacts .contacts-slider .country-card .country-content .contacts-detai
     border-left: 1px solid #34517f;
     padding-left: 40px;
     overflow-y: scroll;
+}
+
+section#contacts .contacts-slider .country-card .country-content .contacts-details .buttons-row {
+    display: flex;
+    flex-direction: row;
+}
+
+section#contacts .contacts-slider .country-card .country-content .contacts-details .buttons-row > * {
+    min-width: auto;
+    width: 100%;
+    margin-right: 20px;
+}
+
+section#contacts .contacts-slider .country-card .country-content .contacts-details .buttons-row > *:last-child {
+    margin-right: unset;
+}
+
+section#contacts .contacts-slider .country-card .map-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    border-radius: 15px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+section#contacts .contacts-slider .country-card .map-wrapper .title {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    margin: unset;
+    pointer-events: none;
+    font-size: 35px;
+}
+
+section#contacts .contacts-slider .country-card .map-wrapper .map-close-button {
+    -webkit-appearance: none;
+    border: unset;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    color: #34517f;
+    -webkit-transform: translate3d(0, 0, 0);
+    font-family: sans-serif;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    padding: unset;
+    cursor: pointer;
+    z-index: 10;
 }
 
 section#contacts .dropdown-menu {
