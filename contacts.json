@@ -1,0 +1,89 @@
+{
+  "Russia": {
+	"title": {
+	  "ru": "Россия",
+	  "en": "Russia"
+	},
+	"cities": {
+	  "Moscow": {
+		"title": {
+		  "ru": "Москва",
+		  "en": "Moscow"
+		},
+		"primary": true,
+		"address": {
+		  "ru": "Большой бульвар, 30 ст1",
+		  "en": "Grand Boulevard, 30 st1"
+		},
+		"time": {
+		  "ru": "С 9:00 до 18:00",
+		  "en": "9:00 to 18:00"
+		},
+		"phone": "",
+		"email": "Example@mail.com",
+		"mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A63fc2b46e61eba026e451e92345df31fc89f5acef610cd50396c0ad7b28f7c6c"
+	  },
+	  "Ekaterinburg": {
+		"title": {
+		  "ru": "Екатеринбург",
+		  "en": "Ekaterinburg"
+		},
+		"primary": true,
+		"address": {
+		  "ru": "Сибирский тракт 12 к.1А",
+		  "en": "Siberian tract 12 k.1A"
+		},
+		"time": {
+		  "ru": "С 9:00 до 18:00",
+		  "en": "9:00 to 18:00"
+		},
+		"phone": "",
+		"email": "Example@mail.com",
+		"mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A63fc2b46e61eba026e451e92345df31fc89f5acef610cd50396c0ad7b28f7c6c"
+	  }
+	}
+  },
+  "Ukraine": {
+	"title": {
+	  "ru": "Украина",
+	  "en": "Ukraine"
+	},
+	"cities": {
+	  "Kiev": {
+		"title": {
+		  "ru": "Киев",
+		  "en": "Kiev"
+		},
+		"primary": true,
+		"address": {
+		  "ru": "Сибирский тракт 12 к.1А",
+		  "en": "Siberian tract 12 k.1A"
+		},
+		"time": {
+		  "ru": "С 9:00 до 18:00",
+		  "en": "9:00 to 18:00"
+		},
+		"phone": "",
+		"email": "Example@mail.com",
+		"mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A63fc2b46e61eba026e451e92345df31fc89f5acef610cd50396c0ad7b28f7c6c"
+	  },
+	  "City": {
+		"title": {
+		  "en": "City"
+		},
+		"primary": true,
+		"address": {
+		  "ru": "Сибирский тракт 12 к.1А",
+		  "en": "Siberian tract 12 k.1A"
+		},
+		"time": {
+		  "ru": "С 9:00 до 18:00",
+		  "en": "9:00 to 18:00"
+		},
+		"phone": "",
+		"email": "Example@mail.com",
+		"mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A63fc2b46e61eba026e451e92345df31fc89f5acef610cd50396c0ad7b28f7c6c"
+	  }
+	}
+  }
+}
