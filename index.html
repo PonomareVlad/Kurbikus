@@ -423,7 +423,7 @@
             </div>
             <div class="header header-space" id="contacts-section">
                 <h2 class="title">Контакты</h2>
-				<select class="dropdown-menu hide-in-mobile" id="countriesMenu">
+                <select class="dropdown-menu hide-in-mobile" id="countriesMenu">
                     <option disabled>Выберете страну</option>
                 </select>
                 <div class="swiper-control-section">
@@ -433,7 +433,7 @@
                 </div>
             </div>
             <div class="swiper-container">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper contacts-slider">
                     <div class="swiper-slide hide-in-desktop">
                         <div class="index-card ">
                             <label class="title" for="contacts-country-select">Выберете страну</label>
@@ -673,10 +673,16 @@
         slidesPerView: 'auto',
         slidesOffsetBefore: 160,
         slidesOffsetAfter: window.innerWidth - 1000 - 160 - 30,
-        spaceBetween: 30
+        spaceBetween: 30,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        on: {
+            init: function () {
+                window.contacts = new Contacts({desktop: window.matchMedia("(min-width: 1025px)").matches})
+            },
+            click: e => console.debug(e.target)
+        }
     });
-
-    console.debug(new Contacts({desktop:window.matchMedia("(min-width: 1025px)").matches}));
 
 </script>
 </body>

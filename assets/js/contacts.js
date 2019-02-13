@@ -24,18 +24,21 @@ export default class Contacts {
         const menuNode = document.querySelector('#countriesMenu');
         menuNode.onchange = event => this.selectCountry(event.target.value);
         menuNode.innerHTML = '';
-        this.countries.forEach(country => {
+        this.countries.forEach((country, index) => {
             const optionNode = document.createElement('option');
-            optionNode.value = country[0];
+            optionNode.value = index;//country[0];
             optionNode.innerText = this.getL10n(country[1].title);
             menuNode.appendChild(optionNode);
         })
     }
 
     renderCountriesSlider() {
-        const sliderNode = document.querySelector('.contacts-slider');
-        sliderNode.innerHTML = '';
+        const sliderNode = document.querySelector('#contacts .swiper-wrapper');
+        // sliderNode.innerHTML = '';
+        sliderNode.parentNode.swiper.removeAllSlides();
         this.countries.forEach(country => {
+            const slideWrapper = document.createElement('div');
+            slideWrapper.className = 'swiper-slide swiper-no-swiping';
             const slideNode = document.createElement('div');
             slideNode.className = 'country-card';
             slideNode.dataset.country = country[0];
@@ -47,12 +50,18 @@ export default class Contacts {
             country[1].citiesList.forEach(city => {
                 const cityLinkNode = document.createElement('a');
                 cityLinkNode.innerText = this.getL10n(city[1].title);
-                cityLinkNode.onclick = event => this.renderCity(country[0], city[0]);
+                // cityLinkNode.clickHandler = () => contacts.renderCity(country[0], city[0]);
+                // cityLinkNode.test = 'test';
+                // cityLinkNode.onclick = event => console.debug(event);//this.renderCity(country[0], city[0]);
+                cityLinkNode.setAttribute('onclick', `contacts.renderCity("${country[0]}", "${city[0]}");`);
+                // cityLinkNode.addEventListener('click', e => console.debug(e));
                 cityLinkNode.classList.toggle('primary-city', city[1]['primary']);
                 citiesSectionNode.appendChild(cityLinkNode);
             });
-            sliderNode.appendChild(slideNode);
-        })
+            slideWrapper.appendChild(slideNode);
+            // sliderNode.appendChild(slideWrapper);
+            sliderNode.parentNode.swiper.appendSlide(slideWrapper.outerHTML);
+        });
     }
 
     renderCity(country, city) {
@@ -104,15 +113,16 @@ export default class Contacts {
         if (oldMapWrapperNode) oldMapWrapperNode.parentNode.removeChild(oldMapWrapperNode);
     }
 
-    selectCountry(country) {
-        if (this.parameters.desktop) this.scrollToCountry(country);
+    selectCountry(index) {
+        if (this.parameters.desktop) this.scrollToCountry(false, index);
     }
 
-    scrollToCountry(country) {
-        document.querySelector('.contacts-slider').scrollTo({
+    scrollToCountry(country, index) {
+        document.querySelector('#contacts .swiper-wrapper').parentNode.swiper.slideTo(index);
+        /*document.querySelector('.contacts-slider').scrollTo({
             left: document.querySelector(`.country-card[data-country="${country}"]`).offsetLeft - 160,
             behavior: 'smooth'
-        });
+        });*/
     }
 
     getL10n(value, language = 'ru') {

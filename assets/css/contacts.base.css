@@ -8,15 +8,15 @@ section#contacts .title {
 }
 
 section#contacts .contacts-slider {
-    margin-left: calc(var(--root-padding) * -1);
-    width: 100vw;
-    display: flex;
-    overflow-x: scroll;
-    padding: 0 var(--root-padding);
-    padding-top: 15px;
-    padding-bottom: 30px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    /*margin-left: calc(var(--root-padding) * -1);*/
+    /*width: 100vw;*/
+    /*display: flex;*/
+    /*overflow-x: scroll;*/
+    /*padding: 0 var(--root-padding);*/
+    /*padding-top: 15px;*/
+    /*padding-bottom: 30px;*/
+    /*scroll-snap-type: x mandatory;*/
+    /*-webkit-overflow-scrolling: touch;*/
 }
 
 section#contacts .city-card,
@@ -39,15 +39,15 @@ section#contacts .index-card {
 }
 
 section#contacts .contacts-slider > *:last-child {
-    margin-right: unset;
+    /*margin-right: unset;*/
 }
 
 section#contacts .contacts-slider:after {
-    content: '';
-    display: block;
-    min-height: 100%;
+    /*content: '';*/
+    /*display: block;*/
+    /*min-height: 100%;*/
     /*min-width: var(--root-padding);*/
-    min-width: 1px;
+    /*min-width: 1px;*/
 }
 
 section#contacts .city-card .title,

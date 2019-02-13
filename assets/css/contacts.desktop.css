@@ -106,13 +106,13 @@ section#contacts .country-card {
 
 
 section#contacts .contacts-slider {
-    margin-top: 60px;
+    /*margin-top: 60px;*/
 }
 
 section#contacts .contacts-slider > * {
-    min-width: 90% !important;
-    max-width: 90% !important;
-    margin-right: 30px !important;
+    /*min-width: 90% !important;*/
+    /*max-width: 90% !important;*/
+    /*margin-right: 30px !important;*/
 }
 
 section#contacts .index-card .show-city-button {
