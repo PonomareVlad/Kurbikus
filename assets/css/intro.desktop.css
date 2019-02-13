@@ -185,7 +185,8 @@ section#intro .product-item:not(:hover) .product-button-content .caption {
 }
 
 section#intro .products .product-item > article {
-    display: none;
+    /*display: none;*/
+    display: flex;
     pointer-events: none;
     position: absolute;
     left: 0;
@@ -195,8 +196,10 @@ section#intro .products .product-item > article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: white;
+    /*background: white;*/
     will-change: all;
+    opacity: 0;
+    /*transition: opacity .5s;*/
 }
 
 section#intro .products .product-item > article * {
@@ -218,6 +221,8 @@ section#intro .products .product-item > article > .content {
     border-radius: 15px;
     top: calc(var(--header-height) + var(--root-vertical-padding));
     padding: var(--root-vertical-padding) calc(130px);
+    opacity: 0;
+    transition: opacity .3s;
 }
 
 section#intro .products .product-item > article > .content > figure {
@@ -262,6 +267,8 @@ section#intro .products .product-item > article > .background-video {
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    opacity: 0;
+    transition: opacity .3s;
 }
 
 section#intro .products .product-item:hover > .product-button {
@@ -276,7 +283,9 @@ section#intro .products .product-item:hover ~ .product-item:before {
 }
 
 section#intro .products .product-item:hover > article {
-    display: flex;
+    /*display: flex;*/
+    opacity: 1;
+    /*transition: opacity 0ms;*/
 }
 
 section#intro > .background-decoration:before {
@@ -290,6 +299,14 @@ section#intro > .background-decoration:before {
     background-color: #661f1f;
     box-shadow: unset;
     transform: rotate(-30deg);
+}
+
+section#intro .products .product-item:hover > article > .content {
+    opacity: 1;
+}
+
+section#intro .products .product-item:hover > article > .background-video {
+    opacity: 1;
 }
 
 section#intro > .background-decoration > figure {
