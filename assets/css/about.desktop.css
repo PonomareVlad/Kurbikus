@@ -62,24 +62,27 @@ section#about .about-video-wrapper:focus, section#about .about-video-wrapper:act
 
 section#about .about-video-wrapper .close-video {
     position: absolute;
-    height: 50px;
-    width: 50px;
-    top: -25px;
-    right: -25px;
+    height: 40px;
+    width: 40px;
+    top: 20px;
+    right: 20px;
     border-radius: 50%;
-    background-color: gray;
-    color: white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    color: #34517f;
     -webkit-transform: translate3d(0, 0, 0);
 }
 
 section#about .about-video-wrapper .close-video:before {
     content: '✕';
+    font-family: sans-serif;
     position: absolute;
-    width: 50px;
-    height: 48px;
-    line-height: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    /*font-weight: 600;*/
     bottom: 0;
-    font-size: 30px;
+    font-size: 18px;
     text-align: center;
 }
 
